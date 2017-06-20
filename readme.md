@@ -9,7 +9,7 @@ The base CSS/JS/Fonts are from Larry Ullman, added in Version 0.2
 Version 0.2 <br>
 - added folder structure<br>
 - PHP Storm set up for automatic push with SSH<br>
-- added Ullman CSS/JS/PHP, get it from <a href="https://github.com/LarryUllman/phpvqs-5ed"> <button>here </button></a>
+- added Ullman CSS/JS/Fonts, get it from <a href="https://github.com/LarryUllman/phpvqs-5ed"> <button>here </button></a>
 
 
 History:<br>
