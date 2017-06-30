@@ -7,11 +7,11 @@
  */
 
     session_start();
-    $_SESSION['start'] = "Session started";
-    echo "hello, main index page started load";
+    $_SESSION['start'] = "Session started successfully";
+    echo "<h1>Main index page started loaded</h1> <br> ";
 
-    include('php/test.php');
-
+    echo "loading navigation menu:<br>";
     include('mainPageMenu.html');
 
+    echo "confirming session started:";
     echo $_SESSION['start'];
