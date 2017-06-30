@@ -7,7 +7,7 @@
  */
     echo "<h1> Registration Page: </h1>";
 
-    include("../html/registrationForm.html");
+    include("html/registrationForm.html");
 
     function createUser($username , $password, $hash){
 

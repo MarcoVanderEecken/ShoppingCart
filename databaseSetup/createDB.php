@@ -20,5 +20,5 @@
     $conn->close();
 
     echo "<br>";
-    echo "<a href='../../index.php'> Return to main page</a>";
+    echo "<a href='../index.php'> Return to main page</a>";
 
