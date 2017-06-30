@@ -11,14 +11,15 @@
     //create database
     $sql = "CREATE DATABASE shoppingCart";
     if($conn->query($sql) === TRUE){
-        echo "Database created successfully";
+        $msg = "Database created successfully";
     } else {
-        echo "Error creating database: " . $conn->error;
+        $msg = "Error creating database: " . $conn->error;
     }
 
     //close database connection
     $conn->close();
 
-    echo "<br>";
-    echo "<a href='../index.php'> Return to main page</a>";
+    $msg = $msg . "<br>";
+    $msg = $msg . "<a href='../index.php'> Return to main page</a>";
 
+    echo $msg;

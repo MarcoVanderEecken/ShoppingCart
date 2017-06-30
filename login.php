@@ -13,6 +13,8 @@
     include('html/indexHeader.html');
     include('mainMenu.html');
 
+    //javascript alert
+    include('php/mainFunctions.php');
 
     if(isset($_SESSION['welcomeMessage'])){ //redirect to index page once user welcomed.
         header("Location: index.php");
@@ -21,6 +23,22 @@
     if(!isset($_SESSION)){ //in case session hasn't been started, e.g. user accessed page directly.
         session_start();
     }
+
+    if(!isset($_SESSION['username'])){ //don't show the login page if logged in.
+        include("html\login.html");
+    }else{//Welcome user
+
+        echo "
+            <div class='container'>
+                <div class='jumbotron'>
+                    <meta http-equiv=\"refresh\" content='3; url=index.php' property=';'>
+                    Welcome {$_SESSION['username']} <br>
+                    You will be redirected in 3 seconds...
+                </div>
+            </div>";
+        $_SESSION['welcomeMessage'] = true;
+    }
+
 
     if(isset($_POST['username']) && isset($_POST['password']) ){ //username and password given
         if(!empty($_POST['username']) && !empty($_POST['password']) ){ //not empty
@@ -33,32 +51,18 @@
                 try{
                     if(password_verify($_POST['password'], $row[0])){//password is correct
                         $_SESSION['username'] = $_POST['username'];
+                        $_SESSION['loggedIn'] = TRUE;
                     }else{ //incorrect password
-                        echo "Incorrect password, please try again. ";
+                        jsAlert("Incorrect password, please try again. ");
                     }
                 }catch (Exception $e){
-                    echo "Username not found " . $e;
+                    jsAlert("Username not found {$e}");
                 }
 
             }catch (Exception $exception){
-                echo "Exception occurred: " . $exception;
+               jsAlert("Exception occurred: " . $exception);
             }
 
         }
-    }
-
-    if(!isset($_SESSION['username'])){ //don't show the login page if logged in.
-        include("html\login.html");
-    }else{//Welcome user
-
-        echo "
-        <div class='container'>
-            <div class='jumbotron'>
-                <meta http-equiv=\"refresh\" content='3; url=index.php' property=';'>
-                Welcome {$_SESSION['username']} <br>
-                You will be redirected in 3 seconds...
-            </div>
-        </div>";
-        $_SESSION['welcomeMessage'] = true;
     }
 

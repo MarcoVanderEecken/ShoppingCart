@@ -12,6 +12,9 @@
 
     include("html/registrationForm.html");
 
+    //javascript error message
+    include('php/mainFunctions.php');
+
     function createUser($username , $password, $hash){
 
     }
@@ -32,12 +35,12 @@
 
             try{
                 if($conn->query($sql) === TRUE) {
-                    echo "Successful registration";
+                    jsAlert("Successful registration");
                 } else {
-                    echo "User not added" . $conn->error;
+                    jsAlert("User not added" . $conn->error);
                 }
             } catch (Exception $e){
-                echo "Exception occurred: " . $conn->error;
+                jsAlert("Exception occurred: " . $conn->error);
             }
 
             $conn->close();

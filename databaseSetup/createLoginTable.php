@@ -26,6 +26,7 @@
     include("dummyValues.php");
     echo "<br>dummy value insertion complete.<br>";
 
+    echo "<a href='../index.php'> Return to main page</a>";
     //close database connection
     $conn->close();
 
