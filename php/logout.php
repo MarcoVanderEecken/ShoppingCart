@@ -6,5 +6,17 @@
  * Time: 12:59 PM
  */
 
-    session_destroy();
-    header('Location: index.php');
+
+    /**
+     * Starts session if no session started, then destroys session.
+     */
+    function logout() {
+        if(!isset($_SESSION)){
+            session_start();
+        }
+        session_destroy();
+        echo "logout page.";
+        header('Location: ../index.php'); //.. redirects to parent directory.
+    }
+
+    logout();
