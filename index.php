@@ -7,7 +7,7 @@
  */
 
     session_start();
-    $_SESSION['start'] = "started";
+    $_SESSION['start'] = "Session started";
     echo "hello, main index page started load";
 
     include('php/test.php');
