@@ -9,8 +9,13 @@
     //Login section to be added here. Consider making it an embed function so that it is on all pages for ease of use.
     //think forum wise, so Username: text Password: password
 
+    //navigation header
+    include('html/indexHeader.html');
+    include('mainMenu.html');
+
+
     if(isset($_SESSION['welcomeMessage'])){ //redirect to index page once user welcomed.
-        header("Location: ../index.php");
+        header("Location: index.php");
     }
 
     if(!isset($_SESSION)){ //in case session hasn't been started, e.g. user accessed page directly.
@@ -46,10 +51,14 @@
         include("html\login.html");
     }else{//Welcome user
 
-        echo "Welcome " . $_SESSION['username']. ". <br>
-        <meta http-equiv=\"refresh\" content='3; url=../index.php'>
-        You will be redirected in 3 seconds...
-        ";
+        echo "
+        <div class='container'>
+            <div class='jumbotron'>
+                <meta http-equiv=\"refresh\" content='3; url=index.php' property=';'>
+                Welcome {$_SESSION['username']} <br>
+                You will be redirected in 3 seconds...
+            </div>
+        </div>";
         $_SESSION['welcomeMessage'] = true;
     }
 

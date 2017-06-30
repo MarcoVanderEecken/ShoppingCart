@@ -7,23 +7,13 @@
  */
 
     include('html/indexHeader.html');
+    include('mainMenu.html');
 
     session_start();
     $_SESSION['start'] = "Session started successfully";
-    echo "<h1>Main index page started loaded</h1> <br> ";
 
-    echo "loading navigation menu:<br>";
-    include('mainPageMenu.html');
 
-    echo "<br>confirming session started: ";
-    echo $_SESSION['start'];
-
-    echo "<br> Checking if user logged in: ";
-    if(isset($_SESSION['username'])){
-        echo $_SESSION['username'] . " is logged in.";
-    }else{
-        echo "false";
-    }
+    include('html/indexBody.html');
 
     include('html/indexFooter.html');
 

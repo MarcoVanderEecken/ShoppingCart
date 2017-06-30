@@ -9,6 +9,11 @@ This project is the work of: <br>
 This is our assignment for ADP362S. <br>
 The base CSS/JS/Fonts are from Larry Ullman, added in Version 0.2
 
+<h2>Version 0.3.6 </h2>
+- changed the navigation system to a top-bar <br>
+- added js to change active navigation <br>
+- encapsulated all main divs inside jumbotrox class div. <br>
+
 <h2>Version 0.3.5</h2>
 - added login and registration <br>
 - added base setup files for database <br>

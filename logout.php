@@ -17,7 +17,7 @@
         session_unset();
         session_destroy();
         echo "logout page.";
-        header('Location: ../index.php'); //.. redirects to parent directory.
+        header('Location: index.php'); //.. redirects to parent directory.
         exit();
     }
 

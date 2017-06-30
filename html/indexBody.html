@@ -1,0 +1,18 @@
+        <!-- body started end of header -->
+        <div class="container">
+            <div class="jumbotron">
+                <h3> Welcome to the home page.</h3>
+
+                confirming session started: <?php echo $_SESSION['start']; ?>
+
+                <br> Checking if user logged in:
+                <?php
+                    if(isset($_SESSION['username'])){
+                        echo $_SESSION['username'] . " is logged in.";
+                    }else{
+                        echo "false";
+                    }
+                ?>
+            </div>
+        </div>
+        <!-- body and html ends in indexFooter -->
