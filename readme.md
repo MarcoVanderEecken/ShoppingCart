@@ -10,9 +10,9 @@ This is our assignment for ADP362S. <br>
 The base CSS/JS/Fonts are from Larry Ullman, added in Version 0.2
 
 <h2>Version 0.3.5</h2>
-- added login and registration
-- added base setup files for database
-- use the dbConn file for db connections, don't forget to close()
+- added login and registration <br>
+- added base setup files for database <br>
+- use the dbConn file for db connections, don't forget to close() <br>
 
 <h2>Version 0.2 </h2>
 - added GNU3 License<br>
