@@ -16,5 +16,10 @@
     echo "<br>confirming session started: ";
     echo $_SESSION['start'];
 
-    include("php/register.php");
+    echo "<br> Checking if user logged in: ";
+    if(isset($_SESSION['username'])){
+        echo $_SESSION['username'] . " is logged in.";
+    }else{
+        echo "false";
+    }
 

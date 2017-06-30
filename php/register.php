@@ -7,7 +7,7 @@
  */
     echo "<h1> Registration Page: </h1>";
 
-    include("html/registrationForm.html");
+    include("../html/registrationForm.html");
 
     function createUser($username , $password, $hash){
 
@@ -17,10 +17,26 @@
         session_start();
     }
 
-    if(isset($_POST['username']) & isset($_POST['password'])){ //variables are set
-        if(!empty($_POST['username']) & !empty($_POST['password'])){ //variables aren't empty strings
+    if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])){ //variables are set
+        if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['email'])){ //variables aren't empty strings
             //we can now create the user account.
             $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
+            include('dbConn.php');
+
+            $sql = "INSERT INTO login (username, password, email, regdate)
+                    VALUES ('{$_POST['username']}', '{$hash}' , '{$_POST['email']}', NOW())"; //note use of '' for literal
+
+            try{
+                if($conn->query($sql) === TRUE) {
+                    echo "Successful registration";
+                } else {
+                    echo "User not added" . $conn->error;
+                }
+            } catch (Exception $e){
+                echo "Exception occurred: " . $conn->error;
+            }
+
+            $conn->close();
         }
     }

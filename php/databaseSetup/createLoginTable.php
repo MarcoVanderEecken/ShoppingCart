@@ -13,8 +13,7 @@
     $sql =
         "CREATE TABLE Login(
         username VARCHAR(50) PRIMARY KEY,
-        password VARCHAR(255),
-        hash VARCHAR(255),
+        password CHAR(60),
         email VARCHAR(50),
         regdate TIMESTAMP
         )";
@@ -22,6 +21,10 @@
     if($conn->query($sql) === TRUE){
         echo "table \"Login\" created successfully";
     }else echo "Failed to create table \"Login\"" . $conn->error;
+
+    echo "<br>Starting dummy value insertion <br>";
+    include("dummyValues.php");
+    echo "<br>dummy value insertion complete.<br>";
 
     //close database connection
     $conn->close();

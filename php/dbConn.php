@@ -7,4 +7,4 @@
  */
 
     include('dbConnStart.php');
-    $conn->select_db("shoppingCart");
+    $conn->select_db("shoppingcart");
