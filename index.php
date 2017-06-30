@@ -13,5 +13,5 @@
     echo "loading navigation menu:<br>";
     include('mainPageMenu.html');
 
-    echo "confirming session started:";
+    echo "<br>confirming session started: ";
     echo $_SESSION['start'];

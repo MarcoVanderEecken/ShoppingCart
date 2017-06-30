@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/register.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/databaseSetup/createDB.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/databaseSetup/createLoginTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/dbConnStart.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainPageMenu.html" afterPath="$PROJECT_DIR$/mainPageMenu.html" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="315">
+              <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding>
                 <element signature="e#6#92#0#PHP" expanded="true" />
               </folding>
@@ -42,11 +43,37 @@
       <file leaf-file-name="mainPageMenu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainPageMenu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+            <state relative-caret-position="126">
+              <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
               <folding>
                 <element signature="e#159#165#0" expanded="true" />
                 <element signature="e#211#217#0" expanded="true" />
+                <element signature="e#264#270#0" expanded="true" />
+                <element signature="e#341#347#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createLoginTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/databaseSetup/createLoginTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#92#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbConnStart.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/dbConnStart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="e#6#92#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,7 +111,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logout.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/logout.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="441">
@@ -96,38 +123,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/databaseSetup/createDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#92#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="210">
                 <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="License.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/License.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="336">
-                <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="42">
-                <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -166,9 +179,14 @@
         <option value="$PROJECT_DIR$/html/mainMenu.html" />
         <option value="$PROJECT_DIR$/html/topMenu.html" />
         <option value="$PROJECT_DIR$/php/register.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/mainPageMenu.html" />
         <option value="$PROJECT_DIR$/php/login.php" />
+        <option value="$PROJECT_DIR$/mainPageMenu.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/php/createDB.php" />
+        <option value="$PROJECT_DIR$/php/dbConnect.php" />
+        <option value="$PROJECT_DIR$/php/dbConnStart.php" />
+        <option value="$PROJECT_DIR$/php/databaseSetup/createDB.php" />
+        <option value="$PROJECT_DIR$/php/databaseSetup/createLoginTable.php" />
       </list>
     </option>
   </component>
@@ -240,6 +258,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="databaseSetup" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShoppingCart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShoppingCart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="html" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -254,6 +290,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ShoppingCart\php" />
+      <recent name="C:\wamp64\www\ShoppingCart\php\databaseSetup" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -351,7 +393,7 @@
       <updated>1497964116064</updated>
       <workItem from="1497964117519" duration="7274000" />
       <workItem from="1497988215614" duration="534000" />
-      <workItem from="1498814771664" duration="4131000" />
+      <workItem from="1498814771664" duration="7063000" />
     </task>
     <task id="LOCAL-00001" summary="Test 1">
       <created>1497966272368</created>
@@ -486,11 +528,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498822396698</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Version 0.3.2 update. Changed menu. &#10;                                                                       Main page uses mainPageMenu, all others to use the html subfolder menu.">
+      <created>1498822702772</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1498822702772</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11939000" />
+    <option name="totallyTimeSpent" value="14871000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -574,7 +623,8 @@
     <MESSAGE value="Version 0.2 update" />
     <MESSAGE value="Version 0.3.1 update. Added logout." />
     <MESSAGE value="Version 0.3.2 update. Changed menu. &#10;Main page uses mainPageMenu, all others to use the html subfolder menu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.3.2 update. Changed menu. &#10;Main page uses mainPageMenu, all others to use the html subfolder menu." />
+    <MESSAGE value="Version 0.3.2 update. Changed menu. &#10;                                                                       Main page uses mainPageMenu, all others to use the html subfolder menu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.3.2 update. Changed menu. &#10;                                                                       Main page uses mainPageMenu, all others to use the html subfolder menu." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -725,27 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainPageMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding>
-            <element signature="e#159#165#0" expanded="true" />
-            <element signature="e#211#217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -760,6 +789,75 @@
           <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
             <element signature="e#6#104#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPageMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
+          <folding>
+            <element signature="e#159#165#0" expanded="true" />
+            <element signature="e#211#217#0" expanded="true" />
+            <element signature="e#264#270#0" expanded="true" />
+            <element signature="e#341#347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/dbConnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/dbConnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/databaseSetup/createLoginTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/dbConnStart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/databaseSetup/createDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
