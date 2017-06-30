@@ -14,9 +14,11 @@
         if(!isset($_SESSION)){
             session_start();
         }
+        session_unset();
         session_destroy();
         echo "logout page.";
         header('Location: ../index.php'); //.. redirects to parent directory.
+        exit();
     }
 
     logout();

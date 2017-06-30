@@ -15,3 +15,6 @@
 
     echo "<br>confirming session started: ";
     echo $_SESSION['start'];
+
+    include("php/register.php");
+

@@ -7,10 +7,21 @@
  */
 
     //invoke database connection
-    include('../dbConnStart.php');
+    include('../dbConn.php');
 
+    //create username and password table, password being
+    $sql =
+        "CREATE TABLE Login(
+        username VARCHAR(50) PRIMARY KEY,
+        password VARCHAR(255),
+        hash VARCHAR(255),
+        email VARCHAR(50),
+        regdate TIMESTAMP
+        )";
 
-
+    if($conn->query($sql) === TRUE){
+        echo "table \"Login\" created successfully";
+    }else echo "Failed to create table \"Login\"" . $conn->error;
 
     //close database connection
     $conn->close();
