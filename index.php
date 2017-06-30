@@ -6,6 +6,8 @@
  * Time: 4:27 PM
  */
 
+    include('html/indexHeader.html');
+
     session_start();
     $_SESSION['start'] = "Session started successfully";
     echo "<h1>Main index page started loaded</h1> <br> ";
@@ -22,4 +24,6 @@
     }else{
         echo "false";
     }
+
+    include('html/indexFooter.html');
 
