@@ -9,35 +9,28 @@ This project is the work of: <br>
 This is our assignment for ADP362S. <br>
 The base CSS/JS/Fonts are from Larry Ullman, added in Version 0.2
 
-<h2> Version 0.3.9 update.</h2>  
-- Menu system properly reflect if logged in or out. <br>
-- Bug discovered: Double Login 
-<a href="https://github.com/MarcoVanderEecken/ShoppingCart/issues/1">#1</a><br>
+<h1>Installation: </h1>
+Download the repository and host using <a href="http://www.wampserver.com/en/">WAMP (Windows) </a>, 
+<a href="https://www.linux.com/learn/easy-lamp-server-installation">LAMP (Linux)</a>,
+<a href="https://www.mamp.info/en/">MAMP (Mac)</a> or any other web server.
 
-<h2>Version 0.3.8 update.</h2>
-- Grid system for login, table for user registration.<br>
-
-<h2>Version 0.3.7 update.</h2>
-- changed nav style to top-bar <br>
-- added js to change active page in nav <br>
-- encapsulated all main divs inside jumbotrox class div <br>
-
-
-<h2>Version 0.3.6 </h2>
-- changed the navigation system to a top-bar <br>
-- added js to change active navigation <br>
-- encapsulated all main divs inside jumbotrox class div. <br>
-
-<h2>Version 0.3.5</h2>
-- added login and registration <br>
-- added base setup files for database <br>
-- use the dbConn file for db connections, don't forget to close() <br>
-
-<h2>Version 0.2 </h2>
-- added GNU3 License<br>
-- added folder structure<br>
-- PHP Storm set up for automatic push with SSH<br>
-- added Ullman CSS/JS/Fonts, get it from <a href="https://github.com/LarryUllman/phpvqs-5ed">here</a>
-
-<h2>Version 0.1</h2>
- - starting up: create repository, push folders.
+<br><br>
+Once installed, move the project files to the relevant folder and navigate to 
+localhost/ShoppingCart, you may have to add the port to localhost.
+<br><br>
+Once you can access ShoppingCart/index.php, please use the Setup/Create Database
+ and then the CreateTable to create the database and tables required for the shopping cart.
+ Dummy data will also be included.
+ <br><br>
+ Once complete, one is good to go.
+ <br>
+ <h5> Default users and password:</h5>
+ 
+ 
+| Username      | Password      |
+| ------------- |:-------------:|
+| admin         | 123456        |
+| user1         | user1         |
+| user2         | user2         |
+| user3         | user3         |
+| user4         | user4         |
