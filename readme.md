@@ -14,6 +14,9 @@ The base CSS/JS/Fonts are from Larry Ullman, added in Version 0.2
 - Bug discovered: Double Login 
 <a href="https://github.com/MarcoVanderEecken/ShoppingCart/issues/1">#1</a><br>
 
+<h2>Version 0.3.8 update.</h2>
+- Grid system for login, table for user registration.<br>
+
 <h2>Version 0.3.7 update.</h2>
 - changed nav style to top-bar <br>
 - added js to change active page in nav <br>
