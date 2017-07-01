@@ -1,4 +1,3 @@
-#1
 <h1>About</h1> <br>
 This project is the work of: <br>
 <ul>
