@@ -9,6 +9,16 @@ This project is the work of: <br>
 This is our assignment for ADP362S. <br>
 The base CSS/JS/Fonts are from Larry Ullman, added in Version 0.2
 
+<h2> Version 0.3.9 update.</2h>  
+-Menu system properly reflect if logged in or out. <br>
+- Bug discovered: Double Login <a href="/issues/1" #1<br>
+
+<h2>Version 0.3.7 update.</h2>
+- changed nav style to top-bar <br>
+- added js to change active page in nav <br>
+- encapsulated all main divs inside jumbotrox class div <br>
+
+
 <h2>Version 0.3.6 </h2>
 - changed the navigation system to a top-bar <br>
 - added js to change active navigation <br>
