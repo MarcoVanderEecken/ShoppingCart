@@ -1,10 +1,21 @@
 
     <div class="container">
         <div class="jumbotron">
-            <form method="post" action="login.php" name = "loginForm">
-                Username: <input type="text" placeholder="Enter username" name="username" required> &nbsp;
-                Password: <input type="password" placeholder="Enter password" name="password" required> &nbsp;
-                <input type="submit" value="Log in">
-            </form>
+            <div class="container-fluid">
+
+                <form method="post" action="login.php" name = "loginForm">
+                    <div class="row">
+                        <div class="col-sm-4" style="padding-top:2%;">
+                            Username: <input type="text" placeholder="Enter username" name="username" required> &nbsp;
+                        </div>
+                        <div class="col-sm-4" style="padding-top:2%;">
+                                Password : <input type="password" placeholder="Enter password" name="password" required> &nbsp;
+                        </div>
+                        <div class="col-sm-4" style="padding-top:2%;">
+                            <input type="submit" value="Log in">
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
