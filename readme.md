@@ -21,10 +21,9 @@ localhost/ShoppingCart, you may have to add the port to localhost.
 Once you can access ShoppingCart/index.php, please use the Setup/Create Database
  and then the CreateTable to create the database and tables required for the shopping cart.
  Dummy data will also be included.
- <br><br>
- Once complete, one is good to go.
+ <
  <br>
- <h5> Default users and password:</h5>
+ <h4> Default users and password:</h4>
  
  
 | Username      | Password      |
