@@ -34,3 +34,7 @@ Once you can access ShoppingCart/index.php, please use the Setup/Create Database
 | user2         | user2         |
 | user3         | user3         |
 | user4         | user4         |
+
+<h1> Release history </h1>
+Please see the <a href="https://github.com/MarcoVanderEecken/ShoppingCart/wiki/Version-history">
+wiki page entitled Version history.</a>
