@@ -62,6 +62,7 @@
             }catch (Exception $exception){
                jsAlert("Exception occurred: " . $exception);
             }
+            $conn->close();
 
         }
     }

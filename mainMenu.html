@@ -14,11 +14,30 @@
             </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
-                <li><a href="register.php"> Register </a></li>
-                <li><a href="logout.php"> Log Out</a></li>
-                <li><a href='login.php'> Log in </a><li>
-                <li><a href="databaseSetup/createDB.php"> Create Database</a></li>
-                <li><a href="databaseSetup/createLoginTable.php"> Create Login Table</a></li>
+
+                <?php
+                    if(!isset($_SESSION)) session_start();
+
+                    if(isset($_SESSION['loggedIn']) === TRUE){
+                        include('html/loggedIn.html');
+                    }else include('html/loggedOut.html');
+                ?>
+
+                <!-- only show if user not logged in -->
+
+
+                <!-- only show if user logged in -->
+
+
+                <!-- for development set-up. To remove after completion! -->
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Setup <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="databaseSetup/createDB.php"> Create Database</a></li>
+                        <li><a href="databaseSetup/createLoginTable.php"> Create Login Table</a></li>
+                    </ul>
+                </li>
+                <!-- / for development set-up. To remove after completion! -->
+
             </ul>
         </div>
         </div>

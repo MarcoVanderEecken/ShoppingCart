@@ -9,7 +9,7 @@
     include('html/indexHeader.html');
     include('mainMenu.html');
 
-    session_start();
+    if(!isset($_SESSION)) session_start();
     $_SESSION['start'] = "Session started successfully";
 
 
