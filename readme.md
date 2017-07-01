@@ -11,7 +11,8 @@ The base CSS/JS/Fonts are from Larry Ullman, added in Version 0.2
 
 <h2> Version 0.3.9 update.</h2>  
 - Menu system properly reflect if logged in or out. <br>
-- Bug discovered: Double Login <a href="ShoppingCart/issues/1">#1 </a><br>
+- Bug discovered: Double Login 
+<a href="https://github.com/MarcoVanderEecken/ShoppingCart/issues/1">#1</a><br>
 
 <h2>Version 0.3.7 update.</h2>
 - changed nav style to top-bar <br>
