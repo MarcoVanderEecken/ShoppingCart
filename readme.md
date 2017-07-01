@@ -9,9 +9,9 @@ This project is the work of: <br>
 This is our assignment for ADP362S. <br>
 The base CSS/JS/Fonts are from Larry Ullman, added in Version 0.2
 
-<h2> Version 0.3.9 update.</2h>  
--Menu system properly reflect if logged in or out. <br>
-- Bug discovered: Double Login <a href="/issues/1" #1<br>
+<h2> Version 0.3.9 update.</h2>  
+- Menu system properly reflect if logged in or out. <br>
+- Bug discovered: Double Login <a href="/issues/1">#1 </a><br>
 
 <h2>Version 0.3.7 update.</h2>
 - changed nav style to top-bar <br>
