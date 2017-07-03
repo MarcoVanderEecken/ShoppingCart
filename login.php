@@ -28,7 +28,6 @@
     if(!isset($_SESSION['username'])){ //don't show the login page if logged in.
         include("html\login.html");
     }else{//Welcome user
-
         echo "
             <div class='container'>
                 <div class='jumbotron'>

@@ -7,6 +7,9 @@
  */
 
     function jsAlert($msg){
-        echo 'hello';
         echo "<script type='text/javascript'>alert('$msg');</script>";
     };
+
+    function is_decimal($num){
+        return is_numeric($num) && floor($num) != $num;
+    }
