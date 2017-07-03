@@ -25,9 +25,11 @@
         session_start();
     }
 
-    if(!isset($_SESSION['username'])){ //don't show the login page if logged in.
-        include("html\login.html");
-    }else{//Welcome user
+    function refreshPage(){
+        echo "<meta http-equiv=\"refresh\" content='0'>";
+    }
+
+    function redirectUser(){
         echo "
             <div class='container'>
                 <div class='jumbotron'>
@@ -37,6 +39,12 @@
                 </div>
             </div>";
         $_SESSION['welcomeMessage'] = true;
+    }
+
+    if(!isset($_SESSION['loggedIn'])){ //don't show the login page if logged in.
+        include("html\login.html");
+    }else{//Welcome user
+        redirectUser();
     }
 
 
@@ -52,6 +60,7 @@
                     if(password_verify($_POST['password'], $row[0])){//password is correct
                         $_SESSION['username'] = $_POST['username'];
                         $_SESSION['loggedIn'] = TRUE;
+                        refreshPage();
                     }else{ //incorrect password
                         jsAlert("Incorrect password, please try again. ");
                     }
