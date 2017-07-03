@@ -25,10 +25,6 @@
         session_start();
     }
 
-    function refreshPage(){
-        echo "<meta http-equiv=\"refresh\" content='0'>";
-    }
-
     function redirectUser(){
         echo "
             <div class='container'>

@@ -13,3 +13,7 @@
     function is_decimal($num){
         return is_numeric($num) && floor($num) != $num;
     }
+
+    function refreshPage(){
+        echo "<meta http-equiv=\"refresh\" content='0'>";
+    }

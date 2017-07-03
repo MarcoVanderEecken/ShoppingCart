@@ -4,6 +4,7 @@
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/mainFunctions.php" afterPath="$PROJECT_DIR$/php/mainFunctions.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -142,17 +143,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="35" column="67" lean-forward="false" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+            <state relative-caret-position="441">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
-                <marker date="1499121911612" expanded="true" signature="889:1177" ph="..." />
-                <marker date="1499121911612" expanded="true" signature="929:1158" ph="..." />
-                <marker date="1499121911612" expanded="true" signature="1640:1685" ph="SELECT usern... login" />
-                <marker date="1499121911612" expanded="true" signature="1640:1706" ph="SELECT usern... login" />
+                <marker date="1499122041378" expanded="true" signature="796:1084" ph="..." />
+                <marker date="1499122041378" expanded="true" signature="836:1065" ph="..." />
+                <marker date="1499122041378" expanded="true" signature="1547:1592" ph="SELECT usern... login" />
+                <marker date="1499122041378" expanded="true" signature="1547:1613" ph="SELECT usern... login" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainFunctions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/mainFunctions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -255,11 +266,11 @@
         <option value="$PROJECT_DIR$/databaseSetup/dummyValuesProducts.php" />
         <option value="$PROJECT_DIR$/html/addProduct.html" />
         <option value="$PROJECT_DIR$/html/devFooterAutoRefresh.html" />
-        <option value="$PROJECT_DIR$/php/mainFunctions.php" />
         <option value="$PROJECT_DIR$/addProduct.php" />
         <option value="$PROJECT_DIR$/html/productItem.html" />
         <option value="$PROJECT_DIR$/shop.php" />
         <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/php/mainFunctions.php" />
       </list>
     </option>
   </component>
@@ -487,7 +498,7 @@
       <workItem from="1498814771664" duration="28715000" />
       <workItem from="1498848857964" duration="4728000" />
       <workItem from="1498940962074" duration="7384000" />
-      <workItem from="1499109670535" duration="11156000" />
+      <workItem from="1499109670535" duration="11278000" />
     </task>
     <task id="LOCAL-00001" summary="Test 1">
       <created>1497966272368</created>
@@ -790,11 +801,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499120973347</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Version 0.4.1.1 update.&#10;- Double login bug fixed">
+      <created>1499121960046</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1499121960046</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59791000" />
+    <option name="totallyTimeSpent" value="59913000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -890,7 +908,8 @@
     <MESSAGE value="Version 0.3.9 update.&#10;Menu system properly reflect if logged in or out. &#10;- Bug discovered: Double Login #1" />
     <MESSAGE value="Version 0.4 update.&#10;- adding product table with dummy values&#10;- adding shop page&#10;- adding option to add product&#10;- Bug still at large: Double Login #1" />
     <MESSAGE value="Version 0.4.1 update.&#10;- shop page now dynamically lists all items&#10;- Bug still at large: Double Login #1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.1 update.&#10;- shop page now dynamically lists all items&#10;- Bug still at large: Double Login #1" />
+    <MESSAGE value="Version 0.4.1.1 update.&#10;- Double login bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.1.1 update.&#10;- Double login bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1140,14 +1159,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/mainFunctions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/765ffcb9/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/shoppingcart.product">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1247,14 +1258,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="35" column="67" lean-forward="false" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+        <state relative-caret-position="441">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <marker date="1499121911612" expanded="true" signature="889:1177" ph="..." />
-            <marker date="1499121911612" expanded="true" signature="929:1158" ph="..." />
-            <marker date="1499121911612" expanded="true" signature="1640:1685" ph="SELECT usern... login" />
-            <marker date="1499121911612" expanded="true" signature="1640:1706" ph="SELECT usern... login" />
+            <marker date="1499122041378" expanded="true" signature="796:1084" ph="..." />
+            <marker date="1499122041378" expanded="true" signature="836:1065" ph="..." />
+            <marker date="1499122041378" expanded="true" signature="1547:1592" ph="SELECT usern... login" />
+            <marker date="1499122041378" expanded="true" signature="1547:1613" ph="SELECT usern... login" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/mainFunctions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
