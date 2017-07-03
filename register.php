@@ -7,7 +7,8 @@
  */
 
     //navigation header
-    include('html/indexHeader.html');
+    $title = "Register";
+    include('html/baseHeader.html');
     include('mainMenu.html');
 
     include("html/registrationForm.html");

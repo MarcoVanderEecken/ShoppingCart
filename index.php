@@ -6,7 +6,8 @@
  * Time: 4:27 PM
  */
 
-    include('html/indexHeader.html');
+    $title = "Home Page";
+    include('html/baseHeader.html');
     include('mainMenu.html');
 
     if(!isset($_SESSION)) session_start();

@@ -14,6 +14,8 @@
             </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
+                <li><a href="shop.php"> Shop</a></li>
+
 
                 <?php
                     if(!isset($_SESSION)) session_start();
@@ -23,11 +25,20 @@
                     }else include('html/loggedOut.html'); //else show if user not logged in
                 ?>
 
+                <!-- Only admin can change this. To be cordoned off later. -->
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Admin <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="addProduct.php"> Add new product</a></li>
+                    </ul>
+                </li>
+                <!-- end of admin dropdown -->
+
                 <!-- for development set-up. To remove after completion! -->
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Setup <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="databaseSetup/createDB.php"> Create Database</a></li>
                         <li><a href="databaseSetup/createLoginTable.php"> Create Login Table</a></li>
+                        <li><a href="databaseSetup/createProducts.php"> Create Product Table</a></li>
                     </ul>
                 </li>
                 <!-- / for development set-up. To remove after completion! -->

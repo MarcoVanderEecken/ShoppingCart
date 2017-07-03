@@ -1,0 +1,36 @@
+    <!-- body of add product -->
+    <div class="container">
+        <div class="jumbotron">
+            <h2> Add a product: </h2>
+            <br>
+            <form method="Post" name="addProductForm" action="addProduct.php">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td>Product Name: </td>
+                        <td><input type="text" placeholder="Enter product name" name="productName" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>Product Description: </td>
+                        <td><textarea placeholder="Enter product description" name="productDescription" required></textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td>Price: </td>
+                        <td><input type="number" placeholder="Enter price" name="productPrice" required min="0" value="0" step=".01"></td>
+                    </tr>
+                    <tr>
+                        <td>Stock: </td>
+                        <td><input type="number" placeholder="Enter quantity" name="productStock" required></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="padding-left:35%;"><input type="submit" value="Submit registration"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+    <!-- end of add product body -->

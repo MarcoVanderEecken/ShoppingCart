@@ -23,7 +23,7 @@
     }else echo "Failed to create table \"Login\"" . $conn->error;
 
     echo "<br>Starting dummy value insertion <br>";
-    include("dummyValues.php");
+    include("dummyValuesLogin.php");
     echo "<br>dummy value insertion complete.<br>";
 
     echo "<a href='../index.php'> Return to main page</a>";

@@ -10,7 +10,8 @@
     //think forum wise, so Username: text Password: password
 
     //navigation header
-    include('html/indexHeader.html');
+    $title = "Login";
+    include('html/baseHeader.html');
     include('mainMenu.html');
 
     //javascript alert
