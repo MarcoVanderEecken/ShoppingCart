@@ -1,7 +1,15 @@
-            <div class="col-sm-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading"> <?php echo $result['productName'] ?> </div>
-                    <div class="panel-body"> <?php echo $result['productDescription'] ?> </div>
-                    <div class="panel-footer"> Quantity: <?php echo $result['productStock'] ?> <br> Price: R <?php echo $result['productPrice'] ?></div>
-                </div>
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <i>Product Image location</i>
             </div>
+            <div class="col-md-6">
+                <div class="row"><h2><?php echo $result['productName'] ?></h2></div>
+                <div class="row"><span><?php echo $result['productDescription']?></span></div>
+                <div class="row"><span>Quantity: <?php echo $result['productStock'] ?> &nbsp; Price: R <?php echo $result['productPrice'] ?></span></div>
+            </div>
+
+        </div>
+    </div>
+</div>

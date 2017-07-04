@@ -6,12 +6,20 @@
     if(!isset($_SESSION)) session_start(); //start session in case user directly navigated to this page.
     $_SESSION['start'] = "Session started successfully";
 
+    include("php/mainFunctions.php");
+
+
+    if(isset($_GET['id'])){//if product ID has been selected.
+        echo "HELLO THE PRODUCT ID HAS BEEN SET.";
+        //redirect to productItem page
+        redirectPage("productItem.php?id=1");
+    }
+
     //connect to database to fetch products.
     include("dbConn.php");
-    $products = array();
 
     //set up statement for: get product name, description, price and current stock
-    $sql = "SELECT productName, productDescription, productPrice, productStock FROM product;";
+    $sql = "SELECT productID, productName, productDescription, productPrice, productStock FROM product;";
 
     //save query results
     $results = $conn->query($sql);
@@ -29,7 +37,7 @@
             if($resultID !== 0)echo "</div>";
             echo "<div class='row'>";
         }
-        include('html/productItem.html');
+        include('html/productListItem.html');
         $resultID++; //increment item number
     }
 

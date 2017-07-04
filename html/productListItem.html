@@ -1,0 +1,9 @@
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <?php echo "<a href='productItem.php?id={$result['productID']}'" . ">" .  $result['productName'] ?> <?php echo "</a>" ?></div>
+                    <div class="panel-body"> <?php echo $result['productDescription'] ?> <br>
+                        <?php echo "<a href='productItem.php?id={$result['productID']}'" ?>>Take me to the item <?php echo '</a>' ?></div>
+                    <div class="panel-footer"> Quantity: <?php echo $result['productStock'] ?> <br> Price: R <?php echo $result['productPrice'] ?></div>
+                </div>
+            </div>
