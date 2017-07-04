@@ -7,4 +7,6 @@
  */
 
     include('dbConnStart.php');
-    $conn->select_db("shoppingcart");
+    if (isset($conn)) {
+        $conn->select_db("shoppingcart");
+    }

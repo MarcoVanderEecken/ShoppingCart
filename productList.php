@@ -6,7 +6,7 @@
     if(!isset($_SESSION)) session_start(); //start session in case user directly navigated to this page.
     $_SESSION['start'] = "Session started successfully";
 
-    include("php/mainFunctions.php");
+    include("mainFunctions.php");
 
 
     if(isset($_GET['id'])){//if product ID has been selected.
@@ -19,7 +19,8 @@
     include("dbConn.php");
 
     //set up statement for: get product name, description, price and current stock
-    $sql = "SELECT productID, productName, productDescription, productPrice, productStock FROM product;";
+    $sql = "SELECT product.productID, productName, productDescription, productPrice, productStock, imageName, imagePath FROM product
+          INNER JOIN productimage ON product.productID = productimage.productID;";
 
     //save query results
     $results = $conn->query($sql);
@@ -30,6 +31,8 @@
     //container for the products:
     echo "<div class='container'>
 ";
+
+    $imgPath = 'images/products/';
 
     //for each row
     while ($result = mysqli_fetch_assoc($results) ){
