@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
+    <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="Version 0.4.5 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/toDo.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -180,14 +181,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addProduct.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addProduct.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/addProduct.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+            <state relative-caret-position="336">
+              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#5;n#tbody#0;n#table#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toDo.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/toDo.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -231,7 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/php/dbConnect.php" />
         <option value="$PROJECT_DIR$/php/databaseSetup/createDB.php" />
         <option value="$PROJECT_DIR$/php/logout.php" />
         <option value="dbtable:/765ffcb9/b0563dd1-88c1-4f50-a928-2882a5ba6f2d/shoppingcart.login" />
@@ -282,6 +292,7 @@
         <option value="$PROJECT_DIR$/productList.php" />
         <option value="$PROJECT_DIR$/html/productListItem.html" />
         <option value="$PROJECT_DIR$/productAdd.php" />
+        <option value="$PROJECT_DIR$/toDo.txt" />
       </list>
     </option>
   </component>
@@ -555,7 +566,7 @@
       <workItem from="1498848857964" duration="4728000" />
       <workItem from="1498940962074" duration="7384000" />
       <workItem from="1499109670535" duration="34451000" />
-      <workItem from="1499195628770" duration="13000" />
+      <workItem from="1499195628770" duration="958000" />
     </task>
     <task id="LOCAL-00001" summary="Test 1">
       <created>1497966272368</created>
@@ -893,11 +904,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499193478967</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Version 0.4.5 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID">
+      <created>1499195659537</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1499195659537</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83099000" />
+    <option name="totallyTimeSpent" value="84044000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -914,7 +932,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20082389" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.49677765" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.50322235" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.50322235" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32706767" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.49677765" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1021,7 +1039,8 @@
     <MESSAGE value="Version 0.4.3 update.&#10;- Currently adding image support to upload&#10;&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
     <MESSAGE value="Version 0.4.4 update.&#10;- product image support.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
     <MESSAGE value="Version 0.4.4 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.4 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
+    <MESSAGE value="Version 0.4.5 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.5 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1030,13 +1049,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/npm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/countdown.js" />
     <entry file="file://$PROJECT_DIR$/php/welcome.php" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/console.sql">
@@ -1396,11 +1408,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/addProduct.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        <state relative-caret-position="336">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#5;n#tbody#0;n#table#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toDo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
