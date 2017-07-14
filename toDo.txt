@@ -28,6 +28,3 @@ Add User:
 - change registration page to only be accessed by admin/mod.
 - admin must have further option between customer and moderator. For mod: auto populate normal user
 
-Add User:
-- change registration page to only be accessed by admin/mod.
-- admin must have further option between customer and moderator. For mod: auto populate normal user
