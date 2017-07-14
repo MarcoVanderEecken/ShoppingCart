@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="Version 0.4.5 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/toDo.txt" />
+    <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/menuDevelopment.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/test - blank.psd" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databaseSetup/createLoginTable.php" afterPath="$PROJECT_DIR$/databaseSetup/createLoginTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainMenu.html" afterPath="$PROJECT_DIR$/mainMenu.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,6 +83,24 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="loginlevel" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="shoppingCart@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="shoppingcart" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="login" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
@@ -88,129 +109,135 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="dummyValuesProductImage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/databaseSetup/dummyValuesProductImage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-              <folding>
-                <marker date="1499192055911" expanded="true" signature="70:177" ph="INSERT INTO productImage... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dummyValuesProducts.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/databaseSetup/dummyValuesProducts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <marker date="1499114484766" expanded="true" signature="23:189" ph="INSERT INTO product... " />
-                <marker date="1499114484766" expanded="true" signature="23:197" ph="INSERT INTO product... " />
-                <marker date="1499114484766" expanded="true" signature="397:581" ph="INSERT INTO product... " />
-                <marker date="1499114484766" expanded="true" signature="782:967" ph="INSERT INTO product... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainFunctions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainFunctions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-              <folding>
-                <marker date="1499187420691" expanded="true" signature="1266:1373" ph="SELECT produ... product" />
-                <marker date="1499187420691" expanded="true" signature="1266:1382" ph="SELECT produ... product" />
-                <marker date="1499187420691" expanded="true" signature="1773:1917" ph="INSERT INTO productImage... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productListItem.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/productListItem.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="76" lean-forward="false" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productItem.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productItem.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productAdd.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productAdd.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
-                <marker date="1499194643281" expanded="true" signature="1458:1555" ph="INSERT INTO product... " />
-                <marker date="1499194643281" expanded="true" signature="1906:1955" ph="SELECT produ... product" />
-                <marker date="1499194643281" expanded="true" signature="1906:1956" ph="SELECT produ... product" />
-                <marker date="1499194643281" expanded="true" signature="1906:1957" ph="SELECT produ... product" />
-                <marker date="1499194643281" expanded="true" signature="1906:1981" ph="SELECT produ... product" />
-                <marker date="1499194643281" expanded="true" signature="3010:3067" ph="INSERT INTO productImage... " />
-                <marker date="1499194643281" expanded="true" signature="3010:3082" ph="INSERT INTO productImage... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productList.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productList.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-              <folding>
-                <marker date="1499193734229" expanded="true" signature="667:787" ph="SELECT produ... product" />
-                <marker date="1499193734229" expanded="true" signature="667:867" ph="SELECT produ... product" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addProduct.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/addProduct.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#5;n#tbody#0;n#table#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="toDo.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="toDo.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toDo.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="336">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createProductImage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/databaseSetup/createProductImage.php">
+      <file leaf-file-name="mainMenu.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mainMenu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+            <state relative-caret-position="528">
+              <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menuAddProduct.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/menuAddProduct.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="89" lean-forward="false" selection-start-line="0" selection-start-column="89" selection-end-line="0" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="55" column="65" lean-forward="false" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
               <folding>
-                <marker date="1499165801308" expanded="true" signature="163:330" ph="CREATE TABLE... Product" />
+                <marker date="1500064334265" expanded="true" signature="792:1113" ph="..." />
+                <marker date="1500064334265" expanded="true" signature="832:984" ph="..." />
+                <marker date="1500064334265" expanded="true" signature="832:1094" ph="..." />
+                <marker date="1500064334265" expanded="true" signature="1576:1628" ph="SELECT usern... login" />
+                <marker date="1500064334265" expanded="true" signature="1576:1649" ph="SELECT usern... login" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menuDevelopment.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/menuDevelopment.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createLoginTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseSetup/createLoginTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+              <folding>
+                <marker date="1500063695345" expanded="true" signature="235:455" ph="CREATE TABLE... Login" />
+                <marker date="1500063695345" expanded="true" signature="235:868" ph="CREATE TABLE... Login" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createLoginLevel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseSetup/createLoginLevel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="32" column="49" lean-forward="false" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+              <folding>
+                <marker date="1500064057896" expanded="true" signature="148:245" ph="CREATE TABLE... Login" />
+                <marker date="1500064057896" expanded="true" signature="478:556" ph="INSERT INTO login... " />
+                <marker date="1500064057896" expanded="true" signature="478:557" ph="INSERT INTO login... " />
+                <marker date="1500064057896" expanded="true" signature="478:569" ph="INSERT INTO login... " />
+                <marker date="1500064057896" expanded="true" signature="478:570" ph="INSERT INTO login... " />
+                <marker date="1500064057896" expanded="true" signature="478:571" ph="INSERT INTO LoginLevel... " />
+                <marker date="1500064057896" expanded="true" signature="753:848" ph="INSERT INTO LoginLevel... " />
+                <marker date="1500064057896" expanded="true" signature="1030:1121" ph="INSERT INTO LoginLevel... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createProducts.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseSetup/createProducts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <marker date="1499114393179" expanded="true" signature="163:408" ph="CREATE TABLE... Login" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dummyValuesLogin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseSetup/dummyValuesLogin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="633">
+              <caret line="44" column="91" lean-forward="false" selection-start-line="44" selection-start-column="91" selection-end-line="44" selection-end-column="91" />
+              <folding>
+                <marker date="1500064364433" expanded="true" signature="295:441" ph="INSERT INTO login... " />
+                <marker date="1500064364433" expanded="true" signature="673:823" ph="INSERT INTO login... " />
+                <marker date="1500064364433" expanded="true" signature="1054:1200" ph="INSERT INTO login... " />
+                <marker date="1500064364433" expanded="true" signature="1054:1204" ph="INSERT INTO login... " />
+                <marker date="1500064364433" expanded="true" signature="1435:1581" ph="INSERT INTO login... " />
+                <marker date="1500064364433" expanded="true" signature="1435:1585" ph="INSERT INTO login... " />
+                <marker date="1500064364433" expanded="true" signature="1816:1970" ph="INSERT INTO login... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shoppingcart.login" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/765ffcb9/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/shoppingcart.login">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -242,10 +269,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/php/databaseSetup/createDB.php" />
-        <option value="$PROJECT_DIR$/php/logout.php" />
-        <option value="dbtable:/765ffcb9/b0563dd1-88c1-4f50-a928-2882a5ba6f2d/shoppingcart.login" />
-        <option value="$PROJECT_DIR$/php/dbConnStart.php" />
         <option value="$PROJECT_DIR$/php/databaseSetup/dummyValues.php" />
         <option value="$PROJECT_DIR$/php/register.php" />
         <option value="$PROJECT_DIR$/php/welcome.php" />
@@ -261,7 +284,6 @@
         <option value="$PROJECT_DIR$/html/login.php" />
         <option value="$PROJECT_DIR$/html/createDB.html" />
         <option value="$PROJECT_DIR$/databaseSetup/createDB.php" />
-        <option value="$PROJECT_DIR$/databaseSetup/createLoginTable.php" />
         <option value="$PROJECT_DIR$/html/login.html" />
         <option value="$PROJECT_DIR$/html/registrationForm.html" />
         <option value="$PROJECT_DIR$/html/loggedOut.html" />
@@ -281,11 +303,9 @@
         <option value="$PROJECT_DIR$/databaseSetup/createProductImage.php" />
         <option value="$PROJECT_DIR$/php/mainFunctions.php" />
         <option value="$PROJECT_DIR$/register.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/dbConn.php" />
         <option value="$PROJECT_DIR$/mainFunctions.php" />
         <option value="$PROJECT_DIR$/html/addProduct.html" />
-        <option value="$PROJECT_DIR$/mainMenu.html" />
         <option value="$PROJECT_DIR$/databaseSetup/dummyValuesProductImage.php" />
         <option value="$PROJECT_DIR$/productItem.php" />
         <option value="$PROJECT_DIR$/html/productItem.html" />
@@ -293,6 +313,13 @@
         <option value="$PROJECT_DIR$/html/productListItem.html" />
         <option value="$PROJECT_DIR$/productAdd.php" />
         <option value="$PROJECT_DIR$/toDo.txt" />
+        <option value="$PROJECT_DIR$/databaseSetup/createLoginTable.php" />
+        <option value="$PROJECT_DIR$/html/menuDevelopment.html" />
+        <option value="$PROJECT_DIR$/databaseSetup/createLoginLevel.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/databaseSetup/dummyValuesLogin.php" />
+        <option value="$PROJECT_DIR$/html/menuAddProduct.html" />
+        <option value="$PROJECT_DIR$/mainMenu.html" />
       </list>
     </option>
   </component>
@@ -304,10 +331,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2391" />
+    <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="2018" />
-    <option name="height" value="1093" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -392,7 +419,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -402,6 +428,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ShoppingCart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShoppingCart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShoppingCart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -449,6 +489,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -566,14 +607,9 @@
       <workItem from="1498848857964" duration="4728000" />
       <workItem from="1498940962074" duration="7384000" />
       <workItem from="1499109670535" duration="34451000" />
-      <workItem from="1499195628770" duration="958000" />
-    </task>
-    <task id="LOCAL-00001" summary="Test 1">
-      <created>1497966272368</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1497966272368</updated>
+      <workItem from="1499195628770" duration="1352000" />
+      <workItem from="1499977022389" duration="671000" />
+      <workItem from="1500062563248" duration="2976000" />
     </task>
     <task id="LOCAL-00002" summary="Test 1">
       <created>1497966618170</created>
@@ -911,11 +947,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499195659537</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Version 0.4.5.1 update.&#10;Added to do list">
+      <created>1499196602871</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1499196602871</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84044000" />
+    <option name="totallyTimeSpent" value="88085000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -927,14 +970,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2391" y="-9" width="2018" height="1093" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20082389" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21535982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.49677765" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.50322235" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32706767" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.49677765" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.49677765" order="7" side_tool="false" content_ui="tabs" x="2400" y="793" width="2000" height="282" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
@@ -1040,25 +1083,16 @@
     <MESSAGE value="Version 0.4.4 update.&#10;- product image support.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
     <MESSAGE value="Version 0.4.4 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
     <MESSAGE value="Version 0.4.5 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.5 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
+    <MESSAGE value="Version 0.4.5.1 update.&#10;Added to do list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.5.1 update.&#10;Added to do list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/countdown.js" />
-    <entry file="file://$PROJECT_DIR$/php/welcome.php" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php" />
     <entry file="file://$PROJECT_DIR$/Test" />
     <entry file="file://$PROJECT_DIR$/html/topMenu.html" />
     <entry file="file://$PROJECT_DIR$/js/bootstrap.min.js">
@@ -1079,23 +1113,23 @@
     <entry file="file://$PROJECT_DIR$/php.php" />
     <entry file="file://$PROJECT_DIR$/html/createDB.html" />
     <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="0" column="91115" lean-forward="false" selection-start-line="0" selection-start-column="91109" selection-end-line="0" selection-end-column="91115" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.css.map">
       <provider editor-type-id="sourcemapFileViewerProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css.map">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
@@ -1123,17 +1157,6 @@
     <entry file="file://$PROJECT_DIR$/images/test - blank.psd">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/databaseSetup/createLoginTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <marker date="1499113317322" expanded="true" signature="235:386" ph="CREATE TABLE... Login" />
-            <marker date="1499113317322" expanded="true" signature="235:799" ph="CREATE TABLE... Login" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/devFooterAutoRefresh.html" />
@@ -1198,59 +1221,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/dbConn.php" />
-    <entry file="file://$PROJECT_DIR$/databaseSetup/dummyValuesLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="22" column="66" lean-forward="false" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
-          <folding>
-            <marker date="1498835011161" expanded="true" signature="295:431" ph="INSERT INTO login... " />
-            <marker date="1498835011161" expanded="true" signature="663:803" ph="INSERT INTO login... " />
-            <marker date="1498835011161" expanded="true" signature="1034:1174" ph="INSERT INTO login... " />
-            <marker date="1498835011161" expanded="true" signature="1405:1545" ph="INSERT INTO login... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <marker date="1499166117575" expanded="true" signature="792:1080" ph="..." />
-            <marker date="1499166117575" expanded="true" signature="832:1061" ph="..." />
-            <marker date="1499166117575" expanded="true" signature="1543:1588" ph="SELECT usern... login" />
-            <marker date="1499166117575" expanded="true" signature="1543:1609" ph="SELECT usern... login" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbConn.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/databaseSetup/createProducts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <marker date="1499114393179" expanded="true" signature="163:408" ph="CREATE TABLE... Login" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/765ffcb9/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/shoppingcart.product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1280,13 +1255,6 @@
         <state relative-caret-position="231">
           <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1409,17 +1377,133 @@
     <entry file="file://$PROJECT_DIR$/html/addProduct.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#5;n#tbody#0;n#table#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/toDo.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="336">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSetup/createProducts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1499114393179" expanded="true" signature="163:408" ph="CREATE TABLE... Login" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSetup/createLoginTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding>
+            <marker date="1500063695345" expanded="true" signature="235:455" ph="CREATE TABLE... Login" />
+            <marker date="1500063695345" expanded="true" signature="235:868" ph="CREATE TABLE... Login" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSetup/createLoginLevel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" column="49" lean-forward="false" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+          <folding>
+            <marker date="1500064057896" expanded="true" signature="148:245" ph="CREATE TABLE... Login" />
+            <marker date="1500064057896" expanded="true" signature="478:556" ph="INSERT INTO login... " />
+            <marker date="1500064057896" expanded="true" signature="478:557" ph="INSERT INTO login... " />
+            <marker date="1500064057896" expanded="true" signature="478:569" ph="INSERT INTO login... " />
+            <marker date="1500064057896" expanded="true" signature="478:570" ph="INSERT INTO login... " />
+            <marker date="1500064057896" expanded="true" signature="478:571" ph="INSERT INTO LoginLevel... " />
+            <marker date="1500064057896" expanded="true" signature="753:848" ph="INSERT INTO LoginLevel... " />
+            <marker date="1500064057896" expanded="true" signature="1030:1121" ph="INSERT INTO LoginLevel... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/765ffcb9/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/shoppingcart.product">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSetup/dummyValuesLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="44" column="91" lean-forward="false" selection-start-line="44" selection-start-column="91" selection-end-line="44" selection-end-column="91" />
+          <folding>
+            <marker date="1500064364433" expanded="true" signature="295:441" ph="INSERT INTO login... " />
+            <marker date="1500064364433" expanded="true" signature="673:823" ph="INSERT INTO login... " />
+            <marker date="1500064364433" expanded="true" signature="1054:1200" ph="INSERT INTO login... " />
+            <marker date="1500064364433" expanded="true" signature="1054:1204" ph="INSERT INTO login... " />
+            <marker date="1500064364433" expanded="true" signature="1435:1581" ph="INSERT INTO login... " />
+            <marker date="1500064364433" expanded="true" signature="1435:1585" ph="INSERT INTO login... " />
+            <marker date="1500064364433" expanded="true" signature="1816:1970" ph="INSERT INTO login... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/765ffcb9/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/shoppingcart.login">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/menuDevelopment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="55" column="65" lean-forward="false" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+          <folding>
+            <marker date="1500064334265" expanded="true" signature="792:1113" ph="..." />
+            <marker date="1500064334265" expanded="true" signature="832:984" ph="..." />
+            <marker date="1500064334265" expanded="true" signature="832:1094" ph="..." />
+            <marker date="1500064334265" expanded="true" signature="1576:1628" ph="SELECT usern... login" />
+            <marker date="1500064334265" expanded="true" signature="1576:1649" ph="SELECT usern... login" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/menuAddProduct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="89" lean-forward="false" selection-start-line="0" selection-start-column="89" selection-end-line="0" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
           <folding />
         </state>
       </provider>

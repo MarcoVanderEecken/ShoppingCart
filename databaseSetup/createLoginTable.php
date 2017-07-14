@@ -15,7 +15,8 @@
         username VARCHAR(50) PRIMARY KEY,
         password CHAR(60),
         email VARCHAR(50),
-        regdate TIMESTAMP
+        regdate TIMESTAMP,
+        level INT, FOREIGN KEY (level) REFERENCES LoginLevel(level)
         )";
 
     if($conn->query($sql) === TRUE){

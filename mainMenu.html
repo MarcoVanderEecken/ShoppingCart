@@ -20,28 +20,21 @@
                 <?php
                     if(!isset($_SESSION)) session_start();
 
-                    if(isset($_SESSION['loggedIn']) === TRUE){ //only show if user logged in
+                    if(isset($_SESSION['loggedIn'])){ //only show if user logged in
                         include('html/loggedIn.html');
+
+                        //Only moderator (level 1) and admin (level 2) can add items
+                        if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
+                             include('html/menuAddProduct.html');
+                        }
+
                     }else include('html/loggedOut.html'); //else show if user not logged in
                 ?>
 
-                <!-- Only admin can change this. To be cordoned off later. -->
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Admin <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="productAdd.php"> Add new product</a></li>
-                    </ul>
-                </li>
-                <!-- end of admin dropdown -->
-
-                <!-- for development set-up. To remove after completion! -->
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Setup <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="databaseSetup/createDB.php"> Create Database</a></li>
-                        <li><a href="databaseSetup/createLoginTable.php"> Create Login Table</a></li>
-                        <li><a href="databaseSetup/createProducts.php"> Create Product Table</a></li>
-                        <li><a href="databaseSetup/createProductImage.php"> Create Product Image Table</a></li>
-                    </ul>
-                </li>
+                <!-- for development set-up. To remove afterwards -->
+                <?php
+                        include('html/menuDevelopment.html');
+                ?>
                 <!-- / for development set-up. To remove after completion! -->
             </ul>
         </div>
