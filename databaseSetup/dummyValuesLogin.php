@@ -12,30 +12,37 @@
 
     //login table values.
     $hash = password_hash('user1', PASSWORD_DEFAULT);
-    $sql = "INSERT INTO login (username, password, email, regdate)
-                    VALUES ('user1', '{$hash}' , 'user1@shoppingcart.com', NOW())"; //note use of '' for literal
+    $sql = "INSERT INTO login (username, password, email, regdate, level)
+                    VALUES ('user1', '{$hash}' , 'user1@shoppingcart.com', NOW(), 0)"; //note use of '' for literal
     if($conn->query($sql) === TRUE){
         echo "<br>user1 created";
     }else echo "<br>Failed to create user1 " . $conn->error;
 
 
     $hash = password_hash('user2', PASSWORD_DEFAULT);
-    $sql = "INSERT INTO login (username, password, email, regdate)
-                        VALUES ('user2', '{$hash}' , 'user2@shoppingcart.com', NOW())"; //note use of '' for literal
+    $sql = "INSERT INTO login (username, password, email, regdate, level)
+                        VALUES ('user2', '{$hash}' , 'user2@shoppingcart.com', NOW(), 1)"; //note use of '' for literal
     if($conn->query($sql) === TRUE){
         echo "<br>user2 created";
     }else echo "<br>Failed to create user2 " . $conn->error;
 
     $hash = password_hash('user3', PASSWORD_DEFAULT);
-    $sql = "INSERT INTO login (username, password, email, regdate)
-                        VALUES ('user3', '{$hash}' , 'user3@shoppingcart.com', NOW())"; //note use of '' for literal
+    $sql = "INSERT INTO login (username, password, email, regdate, level)
+                        VALUES ('user3', '{$hash}' , 'user3@shoppingcart.com', NOW(), 1)"; //note use of '' for literal
     if($conn->query($sql) === TRUE){
         echo "<br>user3 created";
     }else echo "<br>Failed to create user3 " . $conn->error;
 
     $hash = password_hash('user4', PASSWORD_DEFAULT);
-    $sql = "INSERT INTO login (username, password, email, regdate)
-                        VALUES ('user4', '{$hash}' , 'user4@shoppingcart.com', NOW())"; //note use of '' for literal
+    $sql = "INSERT INTO login (username, password, email, regdate, level)
+                        VALUES ('user4', '{$hash}' , 'user4@shoppingcart.com', NOW(), 0)"; //note use of '' for literal
     if($conn->query($sql) === TRUE){
         echo "<br>user4 created";
     }else echo "<br>Failed to create user4 " . $conn->error;
+
+    $hash = password_hash('admin', PASSWORD_DEFAULT);
+    $sql = "INSERT INTO login (username, password, email, regdate, level)
+                            VALUES ('admin', '{$hash}' , 'admin@shoppingcart.com', NOW(), 2)"; //note use of '' for literal
+    if($conn->query($sql) === TRUE){
+        echo "<br>admin created";
+    }else echo "<br>Failed to create admin " . $conn->error;

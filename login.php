@@ -30,7 +30,7 @@
             <div class='container'>
                 <div class='jumbotron'>
                     <meta http-equiv=\"refresh\" content='3; url=index.php' property=';'>
-                    Welcome {$_SESSION['username']} <br>
+                    Welcome {$_SESSION['username']} (Level: {$_SESSION['loggedIn']}) <br>
                     You will be redirected in 3 seconds...
                 </div>
             </div>";
@@ -48,14 +48,14 @@
         if(!empty($_POST['username']) && !empty($_POST['password']) ){ //not empty
 
             include("dbConn.php");
-            $sql = "SELECT password FROM login WHERE username = '{$_POST['username']}';";
+            $sql = "SELECT password, level FROM login WHERE username = '{$_POST['username']}';";
             try{
                 $result = $conn->query($sql);
                 $row = mysqli_fetch_row($result);
                 try{
                     if(password_verify($_POST['password'], $row[0])){//password is correct
                         $_SESSION['username'] = $_POST['username'];
-                        $_SESSION['loggedIn'] = TRUE;
+                        $_SESSION['loggedIn'] = $row[1];
                         refreshPage();
                     }else{ //incorrect password
                         jsAlert("Incorrect password, please try again. ");

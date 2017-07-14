@@ -4,16 +4,15 @@ To Do:
 Customers:
 - add customer addresses
 
-Site editor:
-- admin can remove products
-- admin can edit products
+Moderator:
+- can add customers
+- can change customer password
+- can remove products
+- can edit products
 
 Admin
-- admin only allowed to access admin files
+- only admin allowed to access admin files
 - able to edit site editor details / add and remove them as well
-
-Login table:
-- add user level: customer, site editor, admin
 
 
 Shop:
@@ -23,4 +22,8 @@ Add product:
 - constraints on image:
     > data size (2MB?)
     > pixel size (500x500) -> force it or max?
+
+Add User:
+- change registration page to only be accessed by admin/mod.
+- admin must have further option between customer and moderator. For mod: auto populate normal user
 
