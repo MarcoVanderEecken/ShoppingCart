@@ -12,7 +12,7 @@
     if(isset($_GET['id'])){//if product ID has been selected.
         echo "HELLO THE PRODUCT ID HAS BEEN SET.";
         //redirect to productItem page
-        redirectPage("productItem.php?id=1");
+        redirectPage("productItem.php?id={$_GET['id']}");
     }
 
     //connect to database to fetch products.
@@ -35,7 +35,7 @@
     $imgPath = 'images/products/';
 
     //for each row
-    while ($result = mysqli_fetch_assoc($results) ){
+    while ($result = mysqli_fetch_assoc($results)){
         if ($resultID %3 === 0){
             if($resultID !== 0)echo "</div>";
             echo "<div class='row'>";
