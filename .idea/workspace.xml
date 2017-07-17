@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/toDo.txt" afterPath="$PROJECT_DIR$/toDo.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -491,14 +490,7 @@
       <workItem from="1500066358494" duration="267000" />
       <workItem from="1500066686664" duration="104000" />
       <workItem from="1500281574886" duration="2969000" />
-      <workItem from="1500286915043" duration="447000" />
-    </task>
-    <task id="LOCAL-00004" summary="Test 1">
-      <created>1497966703854</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1497966703854</updated>
+      <workItem from="1500286915043" duration="457000" />
     </task>
     <task id="LOCAL-00005" summary="Test 1">
       <created>1497967017549</created>
@@ -836,11 +828,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500066757610</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Version 0.5.1 update.&#10;- Bugfix: productList?id=# will redirect to correct productItem page.&#10;- add product will only allow user to access if they have sufficient privileges&#10;- updated To Do list">
+      <created>1500287372575</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1500287372576</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92678000" />
+    <option name="totallyTimeSpent" value="92688000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
