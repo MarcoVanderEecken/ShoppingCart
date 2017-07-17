@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="Version 0.5.1 update.&#10;- Bugfix: productList?id=# will redirect to correct productItem page.&#10;- add product will only allow user to access if they have sufficient privileges&#10;- updated To Do list">
+    <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productAdd.php" afterPath="$PROJECT_DIR$/productAdd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productList.php" afterPath="$PROJECT_DIR$/productList.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/toDo.txt" afterPath="$PROJECT_DIR$/toDo.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -108,11 +106,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="toDo.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="toDo.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/toDo.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="814">
+              <caret line="42" column="3" lean-forward="false" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -171,11 +169,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productAdd.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="productAdd.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/productAdd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="94" column="128" lean-forward="false" selection-start-line="94" selection-start-column="128" selection-end-line="94" selection-end-column="128" />
+            <state relative-caret-position="147">
+              <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
               <folding>
                 <element signature="e#6#92#0#PHP" expanded="true" />
                 <marker date="1500284545384" expanded="true" signature="1808:1905" ph="INSERT INTO product... " />
@@ -311,8 +309,8 @@
         <option value="$PROJECT_DIR$/mainFunctions.php" />
         <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/productList.php" />
-        <option value="$PROJECT_DIR$/toDo.txt" />
         <option value="$PROJECT_DIR$/productAdd.php" />
+        <option value="$PROJECT_DIR$/toDo.txt" />
       </list>
     </option>
   </component>
@@ -324,10 +322,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
+    <option name="x" value="2391" />
     <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="width" value="2018" />
+    <option name="height" value="1093" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -492,7 +490,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/css/bootstrap.css" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Issue.Navigation" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="MySQL" />
@@ -609,14 +607,7 @@
       <workItem from="1500062563248" duration="3782000" />
       <workItem from="1500066358494" duration="267000" />
       <workItem from="1500066686664" duration="104000" />
-      <workItem from="1500281574886" duration="2969000" />
-    </task>
-    <task id="LOCAL-00004" summary="Test 1">
-      <created>1497966703854</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1497966703854</updated>
+      <workItem from="1500281574886" duration="4294000" />
     </task>
     <task id="LOCAL-00005" summary="Test 1">
       <created>1497967017549</created>
@@ -954,11 +945,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500066757610</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Version 0.5.1 update.&#10;- Bugfix: productList?id=# will redirect to correct productItem page.&#10;- add product will only allow user to access if they have sufficient privileges&#10;- updated To Do list">
+      <created>1500284555164</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1500284555164</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92231000" />
+    <option name="totallyTimeSpent" value="93556000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -970,10 +968,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="2391" y="-9" width="2018" height="1093" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22502685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21575695" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.49677765" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.50322235" order="7" side_tool="true" content_ui="tabs" />
@@ -1492,18 +1490,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/toDo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productAdd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="94" column="128" lean-forward="false" selection-start-line="94" selection-start-column="128" selection-end-line="94" selection-end-column="128" />
+        <state relative-caret-position="147">
+          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
             <marker date="1500284545384" expanded="true" signature="1808:1905" ph="INSERT INTO product... " />
@@ -1514,6 +1504,14 @@
             <marker date="1500284545384" expanded="true" signature="3358:3415" ph="INSERT INTO productImage... " />
             <marker date="1500284545384" expanded="true" signature="3358:3430" ph="INSERT INTO productImage... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toDo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="42" column="3" lean-forward="false" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
