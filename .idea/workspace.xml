@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="Version 0.5.1 update.&#10;- Bugfix: productList?id=# will redirect to correct productItem page.&#10;- add product will only allow user to access if they have sufficient privileges&#10;- updated To Do list">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productAdd.php" afterPath="$PROJECT_DIR$/productAdd.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -109,18 +109,8 @@
       <file leaf-file-name="toDo.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toDo.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/new.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,16 +150,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productAdd.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="productAdd.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/productAdd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+            <state relative-caret-position="1481">
+              <caret line="88" column="28" lean-forward="true" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
               <folding>
                 <element signature="e#6#92#0#PHP" expanded="true" />
-                <marker date="1500286899704" expanded="true" signature="1808:1905" ph="INSERT INTO product... " />
-                <marker date="1500286899704" expanded="true" signature="2256:2331" ph="SELECT produ... product" />
-                <marker date="1500286899704" expanded="true" signature="3358:3430" ph="INSERT INTO productImage... " />
+                <marker date="1500299784076" expanded="true" signature="1808:1905" ph="INSERT INTO product... " />
+                <marker date="1500299784076" expanded="true" signature="2256:2331" ph="SELECT produ... product" />
+                <marker date="1500299784076" expanded="true" signature="3544:3616" ph="INSERT INTO productImage... " />
               </folding>
             </state>
           </provider>
@@ -231,6 +221,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>footer</find>
+      <find>size</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -293,9 +284,9 @@
         <option value="$PROJECT_DIR$/mainFunctions.php" />
         <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/productList.php" />
-        <option value="$PROJECT_DIR$/productAdd.php" />
         <option value="$PROJECT_DIR$/toDo.txt" />
         <option value="$PROJECT_DIR$/new.php" />
+        <option value="$PROJECT_DIR$/productAdd.php" />
       </list>
     </option>
   </component>
@@ -307,10 +298,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+    <option name="x" value="-7" />
     <option name="width" value="1378" />
-    <option name="height" value="780" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -593,14 +583,7 @@
       <workItem from="1500066358494" duration="267000" />
       <workItem from="1500066686664" duration="104000" />
       <workItem from="1500281574886" duration="4294000" />
-      <workItem from="1500287607677" duration="317000" />
-    </task>
-    <task id="LOCAL-00005" summary="Test 1">
-      <created>1497967017549</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1497967017549</updated>
+      <workItem from="1500287607677" duration="3626000" />
     </task>
     <task id="LOCAL-00006" summary="Test 1">
       <created>1497968167423</created>
@@ -938,11 +921,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500284555164</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Version 0.5.1 update.&#10;- Bugfix: productList?id=# will redirect to correct productItem page.&#10;- add product will only allow user to access if they have sufficient privileges&#10;- updated To Do list">
+      <created>1500287939609</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1500287939609</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93873000" />
+    <option name="totallyTimeSpent" value="97182000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -954,7 +944,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1378" height="780" extended-state="0" />
+    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21512482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1379,19 +1369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/productAdd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-            <marker date="1500286899704" expanded="true" signature="1808:1905" ph="INSERT INTO product... " />
-            <marker date="1500286899704" expanded="true" signature="2256:2331" ph="SELECT produ... product" />
-            <marker date="1500286899704" expanded="true" signature="3358:3430" ph="INSERT INTO productImage... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1404,19 +1381,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/toDo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/new.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toDo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productAdd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1481">
+          <caret line="88" column="28" lean-forward="true" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+            <marker date="1500299784076" expanded="true" signature="1808:1905" ph="INSERT INTO product... " />
+            <marker date="1500299784076" expanded="true" signature="2256:2331" ph="SELECT produ... product" />
+            <marker date="1500299784076" expanded="true" signature="3544:3616" ph="INSERT INTO productImage... " />
+          </folding>
         </state>
       </provider>
     </entry>
