@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/productListItem.html" afterPath="$PROJECT_DIR$/html/productListItem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productList.php" afterPath="$PROJECT_DIR$/productList.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -158,8 +156,8 @@
       <file leaf-file-name="productListItem.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/productListItem.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            <state relative-caret-position="147">
+              <caret line="7" column="67" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="67" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -624,14 +622,7 @@
       <workItem from="1500281574886" duration="4294000" />
       <workItem from="1500360692516" duration="2206000" />
       <workItem from="1500446940987" duration="925000" />
-      <workItem from="1500474229069" duration="5424000" />
-    </task>
-    <task id="LOCAL-00010" summary="Version 0.2 update">
-      <created>1497970079875</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1497970079875</updated>
+      <workItem from="1500474229069" duration="6862000" />
     </task>
     <task id="LOCAL-00011" summary="Version 0.2 update">
       <created>1497970918052</created>
@@ -969,11 +960,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500475584428</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Version 0.5.3 update.&#10;- Item list div is now defined in EM, it will create a scroll pane if over 4 lines.&#10;- Image height defined in em">
+      <created>1500479859548</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1500479859548</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103943000" />
+    <option name="totallyTimeSpent" value="105381000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1076,7 +1074,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Uploading Folder structure" />
     <MESSAGE value="Version 0.2 update" />
     <MESSAGE value="Version 0.3.1 update. Added logout." />
     <MESSAGE value="Version 0.3.2 update. Changed menu. &#10;Main page uses mainPageMenu, all others to use the html subfolder menu." />
@@ -1101,7 +1098,8 @@
     <MESSAGE value="Version 0.5 update.&#10;Added LoginLevel table&#10;Now there are 3 user levels, normal, moderatotr and admin&#10;Only moderator and admin can add products" />
     <MESSAGE value="Version 0.5.1 update.&#10;- Bugfix: productList?id=# will redirect to correct productItem page.&#10;- add product will only allow user to access if they have sufficient privileges&#10;- updated To Do list" />
     <MESSAGE value="Version 0.5.2 update.&#10;- Image max size 1MB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.5.2 update.&#10;- Image max size 1MB" />
+    <MESSAGE value="Version 0.5.3 update.&#10;- Item list div is now defined in EM, it will create a scroll pane if over 4 lines.&#10;- Image height defined in em" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.5.3 update.&#10;- Item list div is now defined in EM, it will create a scroll pane if over 4 lines.&#10;- Image height defined in em" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1523,8 +1521,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/productListItem.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        <state relative-caret-position="147">
+          <caret line="7" column="67" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="67" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
