@@ -1,11 +1,15 @@
             <div class="col-sm-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <?php echo "<a href='productItem.php?id={$result['productID']}'" . ">" .  $result['productName'] ?> <?php echo "</a>" ?></div>
+                        <?php echo "<a href='productItem.php?id={$result['productID']}'" . ">" .  $result['productName'] ?> <?php echo "</a>" ?>
+                    </div>
                     <div class="panel-body">
-                        <img src="<?= $result['imagePath'] . $result['imageName']?>" width="90%"><br>
-                        <?php echo $result['productDescription'] ?> <br>
-                        <?php echo "<a href='productItem.php?id={$result['productID']}'" ?>>Take me to the item <?php echo '</a>' ?></div>
-                    <div class="panel-footer"> Quantity: <?php echo $result['productStock'] ?> <br> Price: R <?php echo $result['productPrice'] ?></div>
+                        <img src="<?= $result['imagePath'] . $result['imageName']?>" width="100%" height="250em"><br>
+                        <div style="overflow-y:auto; height: 4em;"> <?php echo $result['productDescription']?></div>
+                        <?php echo "<a href='productItem.php?id={$result['productID']}'" ?>>Take me to the item <?php echo '</a>' ?>
+                    </div>
+                    <div class="panel-footer">
+                        Quantity: <?php echo $result['productStock'] ?> <br> Price: R <?php echo $result['productPrice'] ?>
+                    </div>
                 </div>
             </div>

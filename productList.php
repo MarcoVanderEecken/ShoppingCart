@@ -20,7 +20,7 @@
 
     //set up statement for: get product name, description, price and current stock
     $sql = "SELECT product.productID, productName, productDescription, productPrice, productStock, imageName, imagePath FROM product
-          INNER JOIN productimage ON product.productID = productimage.productID;";
+          INNER JOIN productimage ON product.productID = productimage.productID ORDER BY product.productID;";
 
     //save query results
     $results = $conn->query($sql);
@@ -38,7 +38,7 @@
     while ($result = mysqli_fetch_assoc($results)){
         if ($resultID %3 === 0){
             if($resultID !== 0)echo "</div>";
-            echo "<div class='row'>";
+            echo "<div class='row '>";
         }
         include('html/productListItem.html');
         $resultID++; //increment item number
