@@ -43,32 +43,30 @@
         redirectUser();
     }
 
-
     if(isset($_POST['username']) && isset($_POST['password']) ){ //username and password given
-        if(!empty($_POST['username']) && !empty($_POST['password']) ){ //not empty
 
             include("dbConn.php");
             $sql = "SELECT password, level FROM login WHERE username = '{$_POST['username']}';";
-            try{
+            try {
                 $result = $conn->query($sql);
                 $row = mysqli_fetch_row($result);
-                try{
-                    if(password_verify($_POST['password'], $row[0])){//password is correct
+                try {
+                    if (password_verify($_POST['password'], $row[0])) {//password is correct
                         $_SESSION['username'] = $_POST['username'];
                         $_SESSION['loggedIn'] = $row[1];
+                        if (isset($_POST['remember'])) {
+                            setcookie('username', $_POST['username'], time() + 60 * 60 * 24);
+                        }else unset($_COOKIE['username']);
                         refreshPage();
-                    }else{ //incorrect password
+                    } else { //incorrect password
                         jsAlert("Incorrect password, please try again. ");
                     }
-                }catch (Exception $e){
+                } catch (Exception $e) {
                     jsAlert("Username not found {$e}");
                 }
-
-            }catch (Exception $exception){
-               jsAlert("Exception occurred: " . $exception);
+            } catch (Exception $exception) {
+                jsAlert("Exception occurred: " . $exception);
             }
             $conn->close();
-
-        }
     }
 

@@ -8,6 +8,8 @@
  * This is a product shopping cart.
  *
  */
+
+
     class ProductItem{
         //this is a product item. It has the same details as the product table.
 
