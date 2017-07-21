@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/productCart.php" />
+    <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="Version 0.6.1 update.&#10;- Product Cart">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/productApprove.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/productItem.html" afterPath="$PROJECT_DIR$/html/productItem.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productCart.php" afterPath="$PROJECT_DIR$/productCart.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -119,20 +121,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dummyValuesLogin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/databaseSetup/dummyValuesLogin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="23" column="92" lean-forward="true" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
-              <folding>
-                <marker date="1500064364433" expanded="true" signature="295:441" ph="INSERT INTO login... " />
-                <marker date="1500064364433" expanded="true" signature="673:823" ph="INSERT INTO login... " />
-                <marker date="1500064364433" expanded="true" signature="1054:1204" ph="INSERT INTO login... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="productAdd.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/productAdd.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -149,11 +137,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productItem.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="productItem.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/productItem.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="59" lean-forward="true" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+            <state relative-caret-position="546">
+              <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productApprove.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/productApprove.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -162,8 +160,8 @@
       <file leaf-file-name="mainMenu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainMenu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+            <state relative-caret-position="465">
+              <caret line="30" column="91" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="30" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -179,11 +177,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productCart.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="productCart.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/productCart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="147">
+              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -246,8 +244,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/php/register.php" />
-        <option value="$PROJECT_DIR$/php/welcome.php" />
         <option value="$PROJECT_DIR$/html/welcomeUser.html" />
         <option value="$PROJECT_DIR$/php/databaseSetup/createLoginTable.php" />
         <option value="$PROJECT_DIR$/php/login.php" />
@@ -280,7 +276,6 @@
         <option value="$PROJECT_DIR$/html/addProduct.html" />
         <option value="$PROJECT_DIR$/databaseSetup/dummyValuesProductImage.php" />
         <option value="$PROJECT_DIR$/productItem.php" />
-        <option value="$PROJECT_DIR$/html/productItem.html" />
         <option value="$PROJECT_DIR$/databaseSetup/createLoginTable.php" />
         <option value="$PROJECT_DIR$/html/menuDevelopment.html" />
         <option value="$PROJECT_DIR$/databaseSetup/createLoginLevel.php" />
@@ -297,6 +292,9 @@
         <option value="$PROJECT_DIR$/html/productListItem.html" />
         <option value="$PROJECT_DIR$/html/indexFooter.html" />
         <option value="$PROJECT_DIR$/productAdd.php" />
+        <option value="$PROJECT_DIR$/productCart.php" />
+        <option value="$PROJECT_DIR$/html/productApprove.html" />
+        <option value="$PROJECT_DIR$/html/productItem.html" />
       </list>
     </option>
   </component>
@@ -641,14 +639,7 @@
       <workItem from="1500446940987" duration="925000" />
       <workItem from="1500474229069" duration="8091000" />
       <workItem from="1500537629066" duration="72000" />
-      <workItem from="1500618997617" duration="2839000" />
-    </task>
-    <task id="LOCAL-00013" summary="Version 0.2 update">
-      <created>1497971315870</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1497971315870</updated>
+      <workItem from="1500618997617" duration="3735000" />
     </task>
     <task id="LOCAL-00014" summary="Version 0.2 update">
       <created>1497971597636</created>
@@ -986,11 +977,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500622011900</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Version 0.6.1 update.&#10;- Product Cart">
+      <created>1500623492065</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1500623492065</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109521000" />
+    <option name="totallyTimeSpent" value="110417000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1007,6 +1005,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23147154" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.49677765" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.50322235" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32706767" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.49677765" order="7" side_tool="false" content_ui="tabs" x="2400" y="793" width="2000" height="282" />
@@ -1016,7 +1015,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1093,7 +1091,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version 0.2 update" />
     <MESSAGE value="Version 0.3.1 update. Added logout." />
     <MESSAGE value="Version 0.3.2 update. Changed menu. &#10;Main page uses mainPageMenu, all others to use the html subfolder menu." />
     <MESSAGE value="Version 0.3.2 update. Changed menu. &#10;                                                                       Main page uses mainPageMenu, all others to use the html subfolder menu." />
@@ -1118,7 +1115,8 @@
     <MESSAGE value="Version 0.5.1 update.&#10;- Bugfix: productList?id=# will redirect to correct productItem page.&#10;- add product will only allow user to access if they have sufficient privileges&#10;- updated To Do list" />
     <MESSAGE value="Version 0.5.2 update.&#10;- Image max size 1MB" />
     <MESSAGE value="Version 0.5.3 update.&#10;- Item list div is now defined in EM, it will create a scroll pane if over 4 lines.&#10;- Image height defined in em" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.5.3 update.&#10;- Item list div is now defined in EM, it will create a scroll pane if over 4 lines.&#10;- Image height defined in em" />
+    <MESSAGE value="Version 0.6.1 update.&#10;- Product Cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.6.1 update.&#10;- Product Cart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1127,7 +1125,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php.php" />
     <entry file="file://$PROJECT_DIR$/html/createDB.html" />
     <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css.map">
       <provider selected="true" editor-type-id="text-editor">
@@ -1497,22 +1494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/productItem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="59" lean-forward="true" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/changeActive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -1521,10 +1502,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/html/productApprove.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/productCart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="147">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="30" column="91" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="30" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/productItem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
           <folding />
         </state>
       </provider>

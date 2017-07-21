@@ -9,6 +9,17 @@
                 <div class="row"><h2><?php echo $result['productName'] ?></h2></div>
                 <div class="row"><span><?php echo $result['productDescription']?></span></div>
                 <div class="row"><span>Quantity: <?php echo $result['productStock'] ?> &nbsp; Price: R <?php echo $result['productPrice'] ?></span></div>
+                <?php
+                if(!isset($_SESSION)) session_start();
+
+                if(isset($_SESSION['loggedIn'])){ //only show if user logged in
+                    //Only moderator (level 1) and admin (level 2) can add items
+                    if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
+                    include('html/productApprove.html');
+                    }
+                }
+                ?>
+
             </div>
 
         </div>
