@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="Version 0.6.1 update.&#10;- Product Cart">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/productApprove.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/productItem.html" afterPath="$PROJECT_DIR$/html/productItem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productCart.php" afterPath="$PROJECT_DIR$/productCart.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -639,14 +636,7 @@
       <workItem from="1500446940987" duration="925000" />
       <workItem from="1500474229069" duration="8091000" />
       <workItem from="1500537629066" duration="72000" />
-      <workItem from="1500618997617" duration="3735000" />
-    </task>
-    <task id="LOCAL-00014" summary="Version 0.2 update">
-      <created>1497971597636</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1497971597636</updated>
+      <workItem from="1500618997617" duration="4104000" />
     </task>
     <task id="LOCAL-00015" summary="Version 0.2 update">
       <created>1497971937884</created>
@@ -984,11 +974,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500623492065</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Version 0.6.1 update.&#10;- Product Cart">
+      <created>1500624324658</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1500624324658</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110417000" />
+    <option name="totallyTimeSpent" value="110786000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
