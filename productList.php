@@ -2,7 +2,7 @@
     $title = "Shop";
     include('html/baseHeader.html');
     include('mainMenu.html');
-
+    require_once("productCart.php");
     if(!isset($_SESSION)) session_start(); //start session in case user directly navigated to this page.
     $_SESSION['start'] = "Session started successfully";
 

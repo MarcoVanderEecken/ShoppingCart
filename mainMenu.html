@@ -37,6 +37,12 @@
                 ?>
                 <!-- / for development set-up. To remove after completion! -->
             </ul>
+            <ul class="nav navbar-right">
+                <a class="navbar-brand" href="productCartPage.php"> Cart <?php if(isset($_SESSION['userCart'])) echo "(".count($_SESSION['userCart']).")"; ?>
+
+                </a>
+
+            </ul>
         </div>
         </div>
     </nav>
