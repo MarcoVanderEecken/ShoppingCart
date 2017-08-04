@@ -18,6 +18,21 @@
     //connect to database to fetch products.
     include("dbConn.php");
 
+	//container for the products:
+	echo "<div class='jumbotron'>";
+
+	//navbar sort.
+	echo "<nav id=\"myNavBar\" class=\"navbar navbar-default navbar-inverse navbar-fixed-tio\" role=\"navigation\">
+		<form method='post' action='#'>
+			<div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
+            	<ul class=\"nav navbar-nav\">
+                	<li><a href=\"productList.php\"> To Change</a></li>
+                </ul>
+            </div>
+		</form>
+	</nav>";
+
+
     //set up statement for: get product name, description, price and current stock
     $sql = "SELECT product.productID, productName, productDescription, productPrice, productStock, imageName, imagePath FROM product
           INNER JOIN productimage ON product.productID = productimage.productID ORDER BY product.productID;";
@@ -28,7 +43,9 @@
     //keep track of result number.
     $resultID = 0;
 
-    //container for the products:
+
+
+	//start of products
     echo "<div class='container'>
 ";
 
@@ -45,4 +62,5 @@
     }
 
     //end container for product items
-    echo "</div>";
+    echo "</div>"; //end of container
+    echo "</div>"; //end of jumbotron

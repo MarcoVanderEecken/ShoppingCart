@@ -46,9 +46,18 @@
         return $result;
     }
 
-    function append($string1, $string2){
+
+	/** Appends string to end of string
+	 * @param $string1
+	 * @param $string2
+	 *
+	 * @return string
+	 */
+	function append($string1, $string2){
         return $string1 . $string2;
     }
+
+
 
     function uploadImage($productID, $imageName, $imagePath){
         require("dbConn.php");
