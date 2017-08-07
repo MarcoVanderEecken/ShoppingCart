@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- student details left side -->
+                <div class="row"><h2><?php echo $result['fname'] . " " . $result['sname'] ?></h2></div>
+                <div class="row"><span><i><?php echo $result['name']?></i></span></div>
+                <div class="row"><span>Birth Year: <?php echo date('Y/m/d', strtotime($result['birth_year'])) ?> </span></div>
+
+            </div>
+            <div class="col-md-6">
+                <!-- record details right side -->
+                <div class="row"><span>THIS STUDENT HAS NOT ACHIEVED A RECORD.</span></div>
+                <!-- APPROVAL. TO BE ADDED LATER.
+                <?php
+                if(!isset($_SESSION)) session_start();
+
+                if(isset($_SESSION['loggedIn'])){ //only show if user logged in
+                    //Only moderator (level 1) and admin (level 2) can add items
+                    if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
+                    include('html/productApprove.html');
+                    }
+                }
+                ?>
+                -->
+            </div>
+
+        </div>
+    </div>
+</div>

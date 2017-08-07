@@ -5,7 +5,7 @@
     //get product details
     include("mainFunctions.php");
 
-    $results = getProduct($_GET['id']);
+    $results = getStudent($_GET['id']);
     $result = mysqli_fetch_assoc($results);
 
     $title = $result['productName'];
@@ -18,4 +18,4 @@
     $imgPath = 'images/products/';
 
     //body of product item
-    include('html/productItem.html');
+    include('html/studentItem.html');
