@@ -36,15 +36,15 @@
                         include('html/menuDevelopment.html');
                 ?>
                 <!-- / for development set-up. To remove after completion! -->
-                <li>
-                    <form action="" class="search-form">
-                        <div class="form-group has-feedback">
-                            <label for="search" class="sr-only">Search</label>
-                            <input type="text" class="form-control" name="search" id="search" placeholder="search">
-                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                        </div>
-                    </form>
-                </li>
+                <!--<li>-->
+                    <!--<form action="" class="search-form">-->
+                        <!--<div class="form-group has-feedback">-->
+                            <!--<label for="search" class="sr-only">Search</label>-->
+                            <!--<input type="text" class="form-control" name="search" id="search" placeholder="search">-->
+                            <!--<span class="glyphicon glyphicon-search form-control-feedback"></span>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                <!--</li>-->
             </ul>
             <ul class="nav navbar-right">
                 <a class="navbar-brand" href="productCartPage.php"> Cart <?php if(isset($_SESSION['userCart'])) echo "(".count($_SESSION['userCart']).")"; ?>

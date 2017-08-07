@@ -18,4 +18,18 @@ $sql =
             hash CHAR(60)
             )";
 
+if($conn->query($sql) === TRUE){
+	echo "table \"Birth Certificate\" created successfully";
+}else echo "Failed to create table \"Birth Certificate\"" . $conn->error;
+
+echo "<br>Starting value insertion <br>";
+
+
+//do value insertion.
+$sql = "INSERT INTO Birth_Certificate (username, type, path, hash)
+                    VALUES ('firststudent', 1, 'pdf-doc','123')"; //Note the hash will be generated according to username as key.
+if($conn->query($sql) === TRUE){
+	echo "<br>school dsk created";
+}else echo "<br>Failed to create dsk " . $conn->error;
+
 $conn->close();

@@ -23,3 +23,10 @@ if($conn->query($sql) === TRUE){
 echo "<br>Starting value insertion <br>";
 
 //do value insertion.
+$sql = "INSERT INTO School (abr, name)
+                    VALUES ('dsk', 'Deutsche Schule Kapstadt')"; //note use of '' for literal
+if($conn->query($sql) === TRUE){
+	echo "<br>school dsk created";
+}else echo "<br>Failed to create dsk " . $conn->error;
+
+$conn->close();

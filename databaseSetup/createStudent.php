@@ -18,3 +18,18 @@ $sql =
             sname TEXT,
             birth_year TIMESTAMP
             )";
+
+if($conn->query($sql) === TRUE){
+	echo "table \"Student\" created successfully";
+}else echo "Failed to create table \"Student\"" . $conn->error;
+
+echo "<br>Starting value insertion <br>";
+
+//do value insertion.
+$sql = "INSERT INTO Student (username, school, fname, sname, birth_year)
+                    VALUES ('firststudent', 'dsk', 'First', 'Student', NOW())"; //note use of '' for literal
+if($conn->query($sql) === TRUE){
+	echo "<br>school dsk created";
+}else echo "<br>Failed to create dsk " . $conn->error;
+
+$conn->close();
