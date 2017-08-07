@@ -25,7 +25,7 @@
 
                         //Only moderator (level 1) and admin (level 2) can add items
                         if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
-                             include('html/menuAddProduct.html');
+                             include('html/menuAddStudent.html');
                         }
 
                     }else include('html/loggedOut.html'); //else show if user not logged in

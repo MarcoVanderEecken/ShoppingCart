@@ -1,0 +1,39 @@
+<!-- body of add student -->
+<div class="container">
+    <div class="jumbotron">
+        <h2> Add a student: </h2>
+        <br>
+        <form method="Post" name="addProductForm" action="productAdd.php" enctype="multipart/form-data">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>Student First Name: </td>
+                    <td><input type="text" placeholder="Enter product name" name="productName" required></td>
+                </tr>
+                <tr>
+                    <td>Student Surname: </td>
+                    <td><input type="file" id="Enter product name" name="productImage" accept="image/*" required></td>
+                </tr>
+                <tr>
+                    <td>Product Description: </td>
+                    <td><textarea placeholder="Enter product description" name="productDescription" required></textarea></td>
+                </tr>
+
+                <tr>
+                    <td>Price: </td>
+                    <td><input type="number" placeholder="Enter price" name="productPrice" required min="0" value="0" step=".01"></td>
+                </tr>
+                <tr>
+                    <td>Stock: </td>
+                    <td><input type="number" placeholder="Enter quantity" name="productStock" required></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Product"></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<!-- end of add student body -->
