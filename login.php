@@ -18,7 +18,7 @@
     include('mainFunctions.php');
 
     if(isset($_SESSION['welcomeMessage'])){ //redirect to index page once user welcomed.
-        header("Location: index.php");
+        header("Location: index");
     }
 
     if(!isset($_SESSION)){ //in case session hasn't been started, e.g. user accessed page directly.
@@ -29,7 +29,7 @@
         echo "
             <div class='container'>
                 <div class='jumbotron'>
-                    <meta http-equiv=\"refresh\" content='3; url=index.php' property=';'>
+                    <meta http-equiv=\"refresh\" content='3; url=index' property=';'>
                     Welcome {$_SESSION['username']} (Level: {$_SESSION['loggedIn']}) <br>
                     You will be redirected in 3 seconds...
                 </div>

@@ -3,6 +3,7 @@
 	Student Item page, shows details of student in left pane, right hand pane is record.
  */
 //get student details
+require_once ("requiresLogin.php");
 include("mainFunctions.php");
 
 $results = getStudent($_GET['id']);

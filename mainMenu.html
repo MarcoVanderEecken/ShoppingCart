@@ -10,11 +10,11 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="index.php">ShoppingCart</a>
+                <a class="navbar-brand" href="index">ShoppingCart</a>
             </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
-                <li><a href="productList.php"> Shop</a></li>
+                <li><a href="studentList">Student List</a></li>
 
 
                 <?php
@@ -47,7 +47,7 @@
                 <!--</li>-->
             </ul>
             <ul class="nav navbar-right">
-                <a class="navbar-brand" href="productCartPage.php"> Cart <?php if(isset($_SESSION['userCart'])) echo "(".count($_SESSION['userCart']).")"; ?>
+                <a class="navbar-brand" href="productCartPage"> Cart <?php if(isset($_SESSION['userCart'])) echo "(".count($_SESSION['userCart']).")"; ?>
 
                 </a>
             </ul>
