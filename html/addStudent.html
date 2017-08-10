@@ -8,28 +8,27 @@
                 <tbody>
                 <tr>
                     <td>Student First Name: </td>
-                    <td><input type="text" placeholder="Enter product name" name="productName" required></td>
+                    <td><input type="text" placeholder="Enter product name" name="studentFName" required></td>
                 </tr>
                 <tr>
                     <td>Student Surname: </td>
-                    <td><input type="file" id="Enter product name" name="productImage" accept="image/*" required></td>
+                    <td><input type="text" name="studentSName" placeholder="studentSName" required></td>
                 </tr>
                 <tr>
-                    <td>Product Description: </td>
-                    <td><textarea placeholder="Enter product description" name="productDescription" required></textarea></td>
-                </tr>
-
-                <tr>
-                    <td>Price: </td>
-                    <td><input type="number" placeholder="Enter price" name="productPrice" required min="0" value="0" step=".01"></td>
+                    <td>Student Birth Certificate: </td>
+                    <td><input type="file" id="birthcert" name="birthcert" accept="application/pdf" required></td>
                 </tr>
                 <tr>
-                    <td>Stock: </td>
-                    <td><input type="number" placeholder="Enter quantity" name="productStock" required></td>
+                    <td>Student Birth date: <i>(Year-Month-Day)</i></td>
+                    <td><input type="date" name="birthDate" value="<?= date('Y-m-j') ?>" required/></td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Product"></td>
+                    <td>School: </td>
+                    <td><input type="text" placeholder="Enter school" name="productPrice" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Student"></td>
                 </tr>
                 </tbody>
             </table>

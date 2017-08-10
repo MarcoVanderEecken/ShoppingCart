@@ -1,0 +1,35 @@
+<!-- body of add student -->
+<div class="container">
+    <div class="jumbotron">
+        <h2> Add a record: </h2>
+        <br>
+        <form method="Post" name="addRecordForm" action="recordAdd.php" enctype="multipart/form-data">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>Student Username: </td>
+                    <td><input type="text" placeholder="student username" name="studentUsername" required></td>
+                </tr>
+                <tr>
+                    <td>Record date: </td>
+                    <td><input type="date" name="recordDate" value="<?= date('Y-m-j') ?>" required title="Record Date"></td>
+                </tr>
+
+                <tr>
+                    <td>Sport: </td>
+                    <td><input type="text" placeholder="Enter sport" name="sportType" required></td>
+                </tr>
+                <tr>
+                    <td>Record: </td>
+                    <td><input type="number" placeholder="Enter record" name="record" required></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Record"></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<!-- end of add student body -->
