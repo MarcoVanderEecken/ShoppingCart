@@ -11,20 +11,20 @@
     <div class="jumbotron">
         <h2> Add a student: </h2>
         <br>
-        <form method="Post" name="addProductForm" action="productAdd.php" enctype="multipart/form-data">
+        <form method="Post" name="addStudentForm" action="studentAdd.php" enctype="multipart/form-data">
             <table class="table">
                 <tbody>
                 <tr>
                     <td>Student First Name: </td>
-                    <td><input type="text" placeholder="Enter product name" name="studentFName" required></td>
+                    <td><input type="text" placeholder="Enter first name" name="studentFName" required></td>
                 </tr>
                 <tr>
                     <td>Student Surname: </td>
-                    <td><input type="text" name="studentSName" placeholder="studentSName" required></td>
+                    <td><input type="text" name="studentSName" placeholder="Enter surname" required></td>
                 </tr>
                 <tr>
                     <td>Student Birth Certificate: </td>
-                    <td><input type="file" id="birthcert" name="birthcert" accept="application/pdf" style="max-width: 80%;" required></td>
+                    <td><input type="file" id="birthcert" name="birth_cert" accept="application/pdf" style="max-width: 80%;" required></td>
                 </tr>
                 <tr>
                     <td>Student Birth date: <i>(Year-Month-Day)</i></td>
@@ -33,7 +33,7 @@
 
                 <tr>
                     <td>School: </td>
-                    <td><input type="text" placeholder="Enter school" name="productPrice" required></td>
+                    <td><input type="text" placeholder="Enter school" name="school" required></td>
                 </tr>
                 <tr>
                     <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Student"></td>
