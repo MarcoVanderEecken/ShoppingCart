@@ -20,7 +20,7 @@
                 </tr>
                 <tr>
                     <td>Record date: </td>
-                    <td><input type="date" name="recordDate" value="<?= date('Y-m-j') ?>" required title="Record Date"></td>
+                    <td><input type="date" name="recordDate" value="<?= htmlspecialchars(date('Y-m-j')) ?>" required title="Record Date"></td>
                 </tr>
 
                 <tr>

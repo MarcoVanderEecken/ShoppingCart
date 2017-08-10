@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <td>Student Birth date: <i>(Year-Month-Day)</i></td>
-                    <td><input type="date" id="birthDate" name="birthDate" value="<?= date('Y-m-j') ?>" required/></td>
+                    <td><input type="date" id="birthDate" name="birthDate" value="<?= htmlspecialchars(date('Y-m-j')) ?>" required/></td>
                 </tr>
 
                 <tr>
