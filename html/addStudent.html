@@ -1,5 +1,13 @@
 <!-- body of add student -->
 <div class="container">
+    <!--DatePicker -->
+    <script src="https://code.jquery.com/jquery-1.10.0.js"></script>
+    <script src="https://afarkas.github.io/webshim/js-webshim/minified/polyfiller.js"></script>
+    <script>
+
+        webshims.polyfill('forms forms-ext');
+    </script>
+    <!--/DatePicker-->
     <div class="jumbotron">
         <h2> Add a student: </h2>
         <br>
@@ -16,11 +24,11 @@
                 </tr>
                 <tr>
                     <td>Student Birth Certificate: </td>
-                    <td><input type="file" id="birthcert" name="birthcert" accept="application/pdf" required></td>
+                    <td><input type="file" id="birthcert" name="birthcert" accept="application/pdf" style="max-width: 80%;" required></td>
                 </tr>
                 <tr>
                     <td>Student Birth date: <i>(Year-Month-Day)</i></td>
-                    <td><input type="date" name="birthDate" value="<?= date('Y-m-j') ?>" required/></td>
+                    <td><input type="date" id="birthDate" name="birthDate" value="<?= date('Y-m-j') ?>" required/></td>
                 </tr>
 
                 <tr>
