@@ -15,7 +15,7 @@
 	if(isset($_GET['id'])){//if product ID has been selected.
 		echo "HELLO THE PRODUCT ID HAS BEEN SET.";
 		//redirect to productItem page
-		redirectPage("productItem.php?id={$_GET['id']}");
+		redirectPage("studentItem?id={$_GET['id']}");
 	}
 
 
