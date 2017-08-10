@@ -114,6 +114,13 @@
             $this->productPrice = $productPrice;
         }
 
+		public function __wakeup() {
+			// TODO: Implement __wakeup() method.
+		}
+
+		public function __sleep() {
+			// TODO: Implement __sleep() method.
+		}
 
 
     }

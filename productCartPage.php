@@ -5,6 +5,7 @@
  * Date: 7/27/2017
  * Time: 10:24 PM
  */
+require_once ("requiresLogin.php");
 require_once("productCart.php");
 if(!isset($_SESSION)){session_start();}
 
