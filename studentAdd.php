@@ -25,6 +25,10 @@ if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
 	exit();
 }
 
+if(empty($schoolList)){//list of all schools
+	$schoolList = getAllSchools();
+}
+
 //check if user has previously submitted a student
 if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POST['school'])
                                         && isset($_POST['birthDate'])){//product variables have been set
@@ -122,6 +126,7 @@ if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POS
 		}
 	}
 }//end of check if post input
+
 
 //body of add a product
 include("html/addStudent.html");

@@ -29,6 +29,17 @@ if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
  *  BELOW THIS NEEDS TO BE MODIFIED FOR ADDING RECORDS. ALSO NEED TO MAKE SELECT ARRAY LIST FOR STUDENT FIRST NAME, SURNAME AND SPORT
  */
 
+if(empty($sportsCats)){
+	//result list of all sports types
+	$sportsCats = getAllSports();
+}
+
+if(empty($studentList)){
+	//result list of all students
+	$studentList = getAllStudents();
+}
+
+
 //check if user has submitted product
 if(isset($_POST['productName']) && isset($_POST['productDescription']) && isset($_POST['productPrice'])
    && isset($_POST['productStock'])){//product variables have been set

@@ -3,9 +3,14 @@
     <!--DatePicker -->
     <script src="https://code.jquery.com/jquery-1.10.0.js"></script>
     <script src="https://afarkas.github.io/webshim/js-webshim/minified/polyfiller.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script>
 
         webshims.polyfill('forms forms-ext');
+        $(document).ready(function() {
+            $(".js-example-basic-single").select2();
+        });
     </script>
     <!--/DatePicker-->
     <div class="jumbotron">
@@ -16,7 +21,19 @@
                 <tbody>
                 <tr>
                     <td>Student Username: </td>
-                    <td><input type="text" placeholder="student username" name="studentUsername" required></td>
+                    <td>
+                        <!--<input type="text" placeholder="student username" name="studentUsername" list="students" required/>-->
+                        <!--<datalist id="students">-->
+                            <select name="studentUsername" class="js-example-basic-single" required>
+                                <?php
+                                    while($student = mysqli_fetch_assoc($studentList)){
+                                        echo "<option value ='" . $student['username'] . "'> " . $student['username'] . "</option>";
+                                    }
+                                ?>
+                            </select>
+                        <!--</datalist>-->
+                    </td>
+
                 </tr>
                 <tr>
                     <td>Record date: </td>
@@ -25,7 +42,18 @@
 
                 <tr>
                     <td>Sport: </td>
-                    <td><input type="text" placeholder="Enter sport" name="sportType" required></td>
+                    <td>
+                    <!--<input type="text" placeholder="Enter sport" name="sportType" list="sportType" required>-->
+                    <!--<datalist id="sportType">-->
+                        <select name="sportType" class="js-example-basic-single" required>
+                            <?php
+                                    while($sportCat = mysqli_fetch_assoc($sportsCats)){
+                                        echo "<option value ='" . $sportCat['id'] . "'> " . $sportCat['type'] . "</option>";
+                            }
+                            ?>
+                        </select>
+                    <!--</datalist>-->
+                    </td>
                 </tr>
                 <tr>
                     <td>Record: </td>

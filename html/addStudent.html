@@ -33,7 +33,15 @@
 
                 <tr>
                     <td>School: </td>
-                    <td><input type="text" placeholder="Enter school" name="school" required></td>
+                    <td>
+                        <select name="school" required>
+                            <?php
+                                while($school = mysqli_fetch_assoc($schoolList)){
+                                    echo "<option value ='" . $school['abr'] . "'> " . $school['name'] . "</option>";
+                                }
+                            ?>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Student"></td>

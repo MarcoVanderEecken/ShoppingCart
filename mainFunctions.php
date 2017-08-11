@@ -8,7 +8,7 @@
     };
 
     /** returns if number is 2 decimal point number
-     * @param $num Numeric Number to be checked
+     * @param $num Number Number to be checked
      * @return bool
      */
     function is_decimal($num){
@@ -53,7 +53,8 @@
     function getStudent($itemID){
         //set up statement for: get product name, description, price and current stock
         require("dbConn.php");
-        $sql = "SELECT username, school, school.name, fname, sname, birth_year FROM student INNER JOIN school ON student.school = school.abr WHERE username='{$itemID}';";
+        $sql = "SELECT username, school, school.name, fname, sname, birth_year 
+				FROM student INNER JOIN school ON student.school = school.abr WHERE username='{$itemID}';";
         //save query result
         $result = array();
         if (isset($conn)) {
@@ -63,8 +64,23 @@
         return $result;
     }
 
+    function getAllStudents(){
+	    //set up statement for: get product name, description, price and current stock
+	    require("dbConn.php");
+	    $sql = "SELECT username, school, school.name, fname, sname, birth_year 
+				FROM student INNER JOIN school ON student.school = school.abr
+				ORDER BY username;";
+	    //save query result
+	    $result = array();
+	    if (isset($conn)) {
+		    $result = $conn->query($sql);
+		    $conn->close();
+	    }
+	    return $result;
+    }
+
 	/** Gets product ID, name, description, price and stock from the database
-	 * @param $itemID Integer productID to get
+	 * @param $recID Integer productID to get
 	 * @return array productID (int), productName (VARCHAR255), productDescription (TEXT), productPrice (DECIMAL(6,2)), productStock (INT 11)
 	 */
 	function getRecordItem($recID){
@@ -89,6 +105,31 @@
 		$sql = "SELECT recordID, r.username, sport_id, record, sp.type, sp.unit 
 				FROM record r, sport sp, student st
 				WHERE r.username = st.username AND r.sport_id = sp.id AND st.username = '{$studentID}';";
+		$result = array();
+		if (isset($conn)) {
+			$result = $conn->query($sql);
+			$conn->close();
+		}
+		return $result;
+	}
+
+	function getAllSchools(){
+		require("dbConn.php");
+		//save query result
+		$sql = "SELECT abr, name FROM school ORDER BY name;";
+		$result = array();
+		if (isset($conn)) {
+			$result = $conn->query($sql);
+			$conn->close();
+		}
+		return $result;
+	}
+
+	function getAllSports(){
+		//set up statement for: get product name, description, price and current stock
+		require("dbConn.php");
+		$sql = "SELECT sport.id, sport.type FROM sport ORDER BY sport.type DESC;";
+		//save query result
 		$result = array();
 		if (isset($conn)) {
 			$result = $conn->query($sql);
