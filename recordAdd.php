@@ -14,16 +14,10 @@ require_once ("requiresLogin.php");
 include("mainFunctions.php");
 
 
-//Only moderator (level 1) and admin (level 2) can add items
-if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
-	//navigation header
-	$title = "Add Record";
-	include('html/baseHeader.html');
-	include('mainMenu.html');
-}else {
-	redirectPage( "index.php" );
-	exit();
-}
+$title = "Add Record";
+include('html/baseHeader.html');
+include('mainMenu.html');
+
 
 /**
  *  BELOW THIS NEEDS TO BE MODIFIED FOR ADDING RECORDS. ALSO NEED TO MAKE SELECT ARRAY LIST FOR STUDENT FIRST NAME, SURNAME AND SPORT

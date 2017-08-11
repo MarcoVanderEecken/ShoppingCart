@@ -26,12 +26,14 @@
     }
 
     function redirectUser(){
+	    include_once ('timerFunction.php');
+	    countDown(4);
         echo "
             <div class='container'>
                 <div class='jumbotron'>
-                    <meta http-equiv=\"refresh\" content='3; url=index' property=';'>
+                    <meta http-equiv=\"refresh\" content='5; url=index' property=';'>
                     Welcome {$_SESSION['username']} (Level: {$_SESSION['loggedIn']}) <br>
-                    You will be redirected in 3 seconds...
+                    You will be redirected in <span id='time'>04</span> seconds...
                 </div>
             </div>";
         $_SESSION['welcomeMessage'] = true;

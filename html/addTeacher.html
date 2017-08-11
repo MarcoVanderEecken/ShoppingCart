@@ -1,0 +1,30 @@
+<!-- body of add teacher -->
+<div class="container">
+    <div class="jumbotron">
+        <h2> Add a teacher: </h2>
+        <br>
+        <form method="Post" name="addTeacherForm" action="teacherAdd" enctype="multipart/form-data">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>Username: </td>
+                    <td><input type="text" name="username" value="<?php if(isset($_POST['username'])) echo $_POST['username'] ?>"
+                            placeholder="Enter first name" required></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" name="password" placeholder="Enter a password" required></td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="email" id="email" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>"
+                               placeholder="Enter email" required></td>
+                </tr>
+                    <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Teacher"></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<!-- end of add teacher body -->

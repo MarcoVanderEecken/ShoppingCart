@@ -22,9 +22,10 @@
                         //Only moderator (level 1) and admin (level 2) can add items
                         if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
                              include('html/menuAddStudent.html');
-                             include('html/menuRecordList.html');
+                             include('html/menuUser.html');
                         }
                         include('html/loggedIn.html');
+                        include('html/menuRecordList.html');
 
                     }else include('html/loggedOut.html'); //else show if user not logged in
                 ?>
@@ -36,9 +37,17 @@
                 <!-- / for development set-up. To remove after completion! -->
             </ul>
             <ul class="nav navbar-right">
-                <a class="navbar-brand" href="productCartPage"> Cart <?php if(isset($_SESSION['userCart'])) echo "(".count($_SESSION['userCart']).")"; ?>
+                <?php
+                    if(!isset($_SESSION)) session_start();
 
-                </a>
+                    if(isset($_SESSION['loggedIn'])){ //only show if user logged in
+                        echo '<a class="navbar-brand" href="productCartPage"> Cart';
+                        if(isset($_SESSION['userCart'])){
+                            echo " (".count($_SESSION['userCart']).")";
+                        }else echo " (0)";
+                        echo ' </a>';
+                    }
+                ?>
             </ul>
         </div>
         </div>
