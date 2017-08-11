@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ShoppingCart.iml" afterPath="$PROJECT_DIR$/.idea/ShoppingCart.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/b9cd9c55-753e-44f8-a94d-c3e36f7bb654.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/b9cd9c55-753e-44f8-a94d-c3e36f7bb654.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/addRecord.html" afterPath="$PROJECT_DIR$/html/addRecord.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/addStudent.html" afterPath="$PROJECT_DIR$/html/addStudent.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainFunctions.php" afterPath="$PROJECT_DIR$/mainFunctions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recordAdd.php" afterPath="$PROJECT_DIR$/recordAdd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentAdd.php" afterPath="$PROJECT_DIR$/studentAdd.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,28 +61,16 @@
     <select />
   </component>
   <component name="DockManager">
-    <window id="4">
+    <window id="7">
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="studentList.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/studentList.php">
+            <file leaf-file-name="addRecord.html" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/html/addRecord.html">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="336">
-                    <caret line="91" column="49" lean-forward="false" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="49" />
-                    <folding>
-                      <marker date="1502459402861" expanded="true" signature="634:675" ph="SELECT abr, school" />
-                      <marker date="1502459402861" expanded="true" signature="882:920" ph="..." />
-                      <marker date="1502459402861" expanded="true" signature="921:1171" ph="..." />
-                      <marker date="1502459402861" expanded="true" signature="943:1171" ph="..." />
-                      <marker date="1502459402861" expanded="true" signature="1008:1023" ph="..." />
-                      <marker date="1502459402861" expanded="true" signature="1024:1171" ph="..." />
-                      <marker date="1502459402861" expanded="true" signature="1045:1056" ph="..." />
-                      <marker date="1502459402861" expanded="true" signature="1113:1171" ph="..." />
-                      <marker date="1502459402861" expanded="true" signature="2452:2524" ph="SELECT usern... student" />
-                      <marker date="1502459402861" expanded="true" signature="2557:2665" ph="SELECT usern... student" />
-                      <marker date="1502459402861" expanded="true" signature="2703:2775" ph="SELECT usern... student" />
-                    </folding>
+                  <state relative-caret-position="697">
+                    <caret line="59" column="97" lean-forward="false" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
+                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -100,53 +85,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="studentAdd.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studentAdd.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="120" column="43" lean-forward="false" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
-                <marker date="1502464019964" expanded="true" signature="2229:2276" ph="SELECT usern... student" />
-                <marker date="1502464019964" expanded="true" signature="3618:3700" ph="INSERT INTO student... " />
-                <marker date="1502464019964" expanded="true" signature="4029:4103" ph="INSERT INTO birth_certificate... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="addStudent.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/addStudent.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="333">
-              <caret line="40" column="33" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="40" selection-end-column="33" />
+              <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recordAdd.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recordAdd.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recordAdd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="1030">
+              <caret line="80" column="57" lean-forward="false" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
               <folding>
-                <marker date="1502464292135" expanded="true" signature="1749:1846" ph="INSERT INTO product... " />
-                <marker date="1502464292135" expanded="true" signature="2101:2176" ph="SELECT produ... product" />
-                <marker date="1502464292135" expanded="true" signature="2784:2836" ph="DELETE FROM " />
-                <marker date="1502464292135" expanded="true" signature="3075:3127" ph="DELETE FROM " />
-                <marker date="1502464292135" expanded="true" signature="3440:3512" ph="INSERT INTO productImage... " />
+                <marker date="1502471410600" expanded="true" signature="1387:1434" ph="SELECT usern... student" />
+                <marker date="1502471410600" expanded="true" signature="1749:1794" ph="SELECT sport... sport" />
+                <marker date="1502471410600" expanded="true" signature="2385:2460" ph="INSERT INTO record... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addRecord.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/addRecord.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -154,26 +112,26 @@
       <file leaf-file-name="mainFunctions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainFunctions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="130" column="82" lean-forward="false" selection-start-line="130" selection-start-column="82" selection-end-line="130" selection-end-column="82" />
+            <state relative-caret-position="3247">
+              <caret line="191" column="45" lean-forward="false" selection-start-line="191" selection-start-column="45" selection-end-line="191" selection-end-column="45" />
               <folding>
-                <marker date="1502464751348" expanded="true" signature="1265:1372" ph="SELECT produ... product" />
-                <marker date="1502464751348" expanded="true" signature="2022:2178" ph="SELECT usern... student" />
-                <marker date="1502464751348" expanded="true" signature="2532:2661" ph="SELECT usern... student" />
-                <marker date="1502464751348" expanded="true" signature="2532:2683" ph="SELECT usern... student" />
-                <marker date="1502464751348" expanded="true" signature="3265:3284" ph="SELECT recor... record" />
-                <marker date="1502464751348" expanded="true" signature="3265:3457" ph="SELECT recor... record" />
-                <marker date="1502464751348" expanded="true" signature="3265:3459" ph="SELECT recor... record" />
-                <marker date="1502464751348" expanded="true" signature="3781:3908" ph="SELECT recor... record" />
-                <marker date="1502464751348" expanded="true" signature="3781:3962" ph="SELECT recor... record" />
-                <marker date="1502464751348" expanded="true" signature="3781:3976" ph="SELECT recor... record" />
-                <marker date="1502464751348" expanded="true" signature="3781:3978" ph="SELECT recor... record" />
-                <marker date="1502464751348" expanded="true" signature="4185:4192" ph="SELECT recor... record" />
-                <marker date="1502464751348" expanded="true" signature="4185:4213" ph="SELECT abr, school" />
-                <marker date="1502464751348" expanded="true" signature="4185:4227" ph="SELECT abr, school" />
-                <marker date="1502464751348" expanded="true" signature="4494:4532" ph="SELECT usern... student" />
-                <marker date="1502464751348" expanded="true" signature="4494:4557" ph="SELECT sport... sport" />
-                <marker date="1502464751348" expanded="true" signature="5002:5146" ph="INSERT INTO productImage... " />
+                <marker date="1502468469031" expanded="true" signature="1449:1556" ph="SELECT produ... product" />
+                <marker date="1502468469031" expanded="true" signature="2206:2362" ph="SELECT usern... student" />
+                <marker date="1502468469031" expanded="true" signature="2741:2870" ph="SELECT usern... student" />
+                <marker date="1502468469031" expanded="true" signature="2741:2892" ph="SELECT usern... student" />
+                <marker date="1502468469031" expanded="true" signature="3474:3493" ph="SELECT recor... record" />
+                <marker date="1502468469031" expanded="true" signature="3474:3666" ph="SELECT recor... record" />
+                <marker date="1502468469031" expanded="true" signature="3474:3668" ph="SELECT recor... record" />
+                <marker date="1502468469031" expanded="true" signature="4044:4171" ph="SELECT recor... record" />
+                <marker date="1502468469031" expanded="true" signature="4044:4225" ph="SELECT recor... record" />
+                <marker date="1502468469031" expanded="true" signature="4044:4239" ph="SELECT recor... record" />
+                <marker date="1502468469031" expanded="true" signature="4044:4241" ph="SELECT recor... record" />
+                <marker date="1502468469031" expanded="true" signature="4476:4483" ph="SELECT recor... record" />
+                <marker date="1502468469031" expanded="true" signature="4476:4504" ph="SELECT abr, school" />
+                <marker date="1502468469031" expanded="true" signature="4476:4518" ph="SELECT abr, school" />
+                <marker date="1502468469031" expanded="true" signature="4813:4851" ph="SELECT usern... student" />
+                <marker date="1502468469031" expanded="true" signature="4813:4876" ph="SELECT sport... sport" />
+                <marker date="1502468469031" expanded="true" signature="5393:5537" ph="INSERT INTO productImage... " />
               </folding>
             </state>
           </provider>
@@ -256,9 +214,9 @@
         <option value="$PROJECT_DIR$/html/recordListItem.html" />
         <option value="$PROJECT_DIR$/html/addStudent.html" />
         <option value="$PROJECT_DIR$/studentAdd.php" />
-        <option value="$PROJECT_DIR$/recordAdd.php" />
         <option value="$PROJECT_DIR$/mainFunctions.php" />
         <option value="$PROJECT_DIR$/html/addRecord.html" />
+        <option value="$PROJECT_DIR$/recordAdd.php" />
       </list>
     </option>
   </component>
@@ -537,14 +495,7 @@
       <workItem from="1502396147279" duration="21000" />
       <workItem from="1502435222670" duration="49000" />
       <workItem from="1502444519610" duration="392000" />
-      <workItem from="1502458061173" duration="7238000" />
-    </task>
-    <task id="LOCAL-00033" summary="Version 0.3.9 update.&#10;Menu system properly reflect if logged in or out. &#10;- Bug discovered: Double Login #1">
-      <created>1498945326505</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1498945326505</updated>
+      <workItem from="1502458061173" duration="11136000" />
     </task>
     <task id="LOCAL-00034" summary="Version 0.3.9 update.&#10;Menu system properly reflect if logged in or out. &#10;- Bug discovered: Double Login #1">
       <created>1498945369418</created>
@@ -882,11 +833,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502462998843</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Version 0.8.1 update&#10;- Added remember search option support&#10;- Added record item links, added list of records achieved by student&#10;- Added to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval">
+      <created>1502465374556</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1502465374556</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193293000" />
+    <option name="totallyTimeSpent" value="197191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,7 +859,7 @@
     <frame x="-8" y="-8" width="1552" height="840" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24396783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24396783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32687926" sideWeight="0.49677765" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.50322235" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.34115282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -943,7 +901,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24396783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4081921" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32706767" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.34115282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -994,7 +952,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version 0.4.1 update.&#10;- shop page now dynamically lists all items&#10;- Bug still at large: Double Login #1" />
     <MESSAGE value="Version 0.4.1.1 update.&#10;- Double login bug fixed" />
     <MESSAGE value="Version 0.4.2 update.&#10;- Product Item page, dynamically adjust according to ID&#10;- Product Shop now links to Product Item page&#10;&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
     <MESSAGE value="Version 0.4.3 update.&#10;- Currently adding image support to upload&#10;&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
@@ -1019,7 +976,8 @@
     <MESSAGE value="Version 0.7.7 update&#10;- modified input type css for max-width for phone screens&#10;- added record list and item and search function with option fo any&#10;- add record and add student HTML added.&#10;- Need to still verify input and add to db&#10;- Need to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
     <MESSAGE value="Version 0.7.9 update&#10;- student now added to db. Birth certificate also no / in hash file path&#10;- Need to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
     <MESSAGE value="Version 0.8 update&#10;- Added remember search option support&#10;- Added record item links, added list of records achieved by student&#10;- Moved Student List under Students and moved Log Out after normal menu options&#10;- Need to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.8 update&#10;- Added remember search option support&#10;- Added record item links, added list of records achieved by student&#10;- Moved Student List under Students and moved Log Out after normal menu options&#10;- Need to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
+    <MESSAGE value="Version 0.8.1 update&#10;- Added remember search option support&#10;- Added record item links, added list of records achieved by student&#10;- Added to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.8.1 update&#10;- Added remember search option support&#10;- Added record item links, added list of records achieved by student&#10;- Added to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1028,13 +986,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/addProduct.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/baseHeader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1298,13 +1249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/765ffcb9/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/shoppingcart.record">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1408,10 +1352,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/765ffcb9/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/shoppingcart.record">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studentList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="91" column="49" lean-forward="false" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="49" />
+        <state relative-caret-position="1632">
+          <caret line="96" column="45" lean-forward="true" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
           <folding>
             <marker date="1502459402861" expanded="true" signature="634:675" ph="SELECT abr, school" />
             <marker date="1502459402861" expanded="true" signature="882:920" ph="..." />
@@ -1428,10 +1379,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mainFunctions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3247">
+          <caret line="191" column="45" lean-forward="false" selection-start-line="191" selection-start-column="45" selection-end-line="191" selection-end-column="45" />
+          <folding>
+            <marker date="1502468469031" expanded="true" signature="1449:1556" ph="SELECT produ... product" />
+            <marker date="1502468469031" expanded="true" signature="2206:2362" ph="SELECT usern... student" />
+            <marker date="1502468469031" expanded="true" signature="2741:2870" ph="SELECT usern... student" />
+            <marker date="1502468469031" expanded="true" signature="2741:2892" ph="SELECT usern... student" />
+            <marker date="1502468469031" expanded="true" signature="3474:3493" ph="SELECT recor... record" />
+            <marker date="1502468469031" expanded="true" signature="3474:3666" ph="SELECT recor... record" />
+            <marker date="1502468469031" expanded="true" signature="3474:3668" ph="SELECT recor... record" />
+            <marker date="1502468469031" expanded="true" signature="4044:4171" ph="SELECT recor... record" />
+            <marker date="1502468469031" expanded="true" signature="4044:4225" ph="SELECT recor... record" />
+            <marker date="1502468469031" expanded="true" signature="4044:4239" ph="SELECT recor... record" />
+            <marker date="1502468469031" expanded="true" signature="4044:4241" ph="SELECT recor... record" />
+            <marker date="1502468469031" expanded="true" signature="4476:4483" ph="SELECT recor... record" />
+            <marker date="1502468469031" expanded="true" signature="4476:4504" ph="SELECT abr, school" />
+            <marker date="1502468469031" expanded="true" signature="4476:4518" ph="SELECT abr, school" />
+            <marker date="1502468469031" expanded="true" signature="4813:4851" ph="SELECT usern... student" />
+            <marker date="1502468469031" expanded="true" signature="4813:4876" ph="SELECT sport... sport" />
+            <marker date="1502468469031" expanded="true" signature="5393:5537" ph="INSERT INTO productImage... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbConn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/addStudent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studentAdd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="120" column="43" lean-forward="false" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
+        <state relative-caret-position="-551">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
             <marker date="1502464019964" expanded="true" signature="2229:2276" ph="SELECT usern... student" />
@@ -1441,59 +1434,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recordAdd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <marker date="1502464292135" expanded="true" signature="1749:1846" ph="INSERT INTO product... " />
-            <marker date="1502464292135" expanded="true" signature="2101:2176" ph="SELECT produ... product" />
-            <marker date="1502464292135" expanded="true" signature="2784:2836" ph="DELETE FROM " />
-            <marker date="1502464292135" expanded="true" signature="3075:3127" ph="DELETE FROM " />
-            <marker date="1502464292135" expanded="true" signature="3440:3512" ph="INSERT INTO productImage... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/addStudent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="40" column="33" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="40" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainFunctions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="130" column="82" lean-forward="false" selection-start-line="130" selection-start-column="82" selection-end-line="130" selection-end-column="82" />
-          <folding>
-            <marker date="1502464751348" expanded="true" signature="1265:1372" ph="SELECT produ... product" />
-            <marker date="1502464751348" expanded="true" signature="2022:2178" ph="SELECT usern... student" />
-            <marker date="1502464751348" expanded="true" signature="2532:2661" ph="SELECT usern... student" />
-            <marker date="1502464751348" expanded="true" signature="2532:2683" ph="SELECT usern... student" />
-            <marker date="1502464751348" expanded="true" signature="3265:3284" ph="SELECT recor... record" />
-            <marker date="1502464751348" expanded="true" signature="3265:3457" ph="SELECT recor... record" />
-            <marker date="1502464751348" expanded="true" signature="3265:3459" ph="SELECT recor... record" />
-            <marker date="1502464751348" expanded="true" signature="3781:3908" ph="SELECT recor... record" />
-            <marker date="1502464751348" expanded="true" signature="3781:3962" ph="SELECT recor... record" />
-            <marker date="1502464751348" expanded="true" signature="3781:3976" ph="SELECT recor... record" />
-            <marker date="1502464751348" expanded="true" signature="3781:3978" ph="SELECT recor... record" />
-            <marker date="1502464751348" expanded="true" signature="4185:4192" ph="SELECT recor... record" />
-            <marker date="1502464751348" expanded="true" signature="4185:4213" ph="SELECT abr, school" />
-            <marker date="1502464751348" expanded="true" signature="4185:4227" ph="SELECT abr, school" />
-            <marker date="1502464751348" expanded="true" signature="4494:4532" ph="SELECT usern... student" />
-            <marker date="1502464751348" expanded="true" signature="4494:4557" ph="SELECT sport... sport" />
-            <marker date="1502464751348" expanded="true" signature="5002:5146" ph="INSERT INTO productImage... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/addRecord.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        <state relative-caret-position="697">
+          <caret line="59" column="97" lean-forward="false" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recordAdd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1030">
+          <caret line="80" column="57" lean-forward="false" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
+          <folding>
+            <marker date="1502471410600" expanded="true" signature="1387:1434" ph="SELECT usern... student" />
+            <marker date="1502471410600" expanded="true" signature="1749:1794" ph="SELECT sport... sport" />
+            <marker date="1502471410600" expanded="true" signature="2385:2460" ph="INSERT INTO record... " />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -7,6 +7,7 @@
         echo "<script type='text/javascript'>alert('$alertMsg');</script>";
     };
 
+
     /** returns if number is 2 decimal point number
      * @param $num Number Number to be checked
      * @return bool
@@ -14,6 +15,18 @@
     function is_decimal($num){
         return is_numeric($num) && floor($num) !== $num;
     }
+
+
+	/**
+	 * @param $date
+	 *
+	 * @return bool
+	 */
+	function validateDate($date)
+	{
+		$d = DateTime::createFromFormat('Y-m-d', $date);
+		return $d && $d->format('Y-m-d') === $date;
+	}
 
     /** Refreshes the web page
      *
@@ -64,7 +77,10 @@
         return $result;
     }
 
-    function getAllStudents(){
+	/**
+	 * @return array
+	 */
+	function getAllStudents(){
 	    //set up statement for: get product name, description, price and current stock
 	    require("dbConn.php");
 	    $sql = "SELECT username, school, school.name, fname, sname, birth_year 
@@ -98,6 +114,11 @@
 		return $result;
 	}
 
+	/**
+	 * @param $studentID
+	 *
+	 * @return array
+	 */
 	function getRecordStudent($studentID){
 		//set up statement for: get product name, description, price and current stock
 		require("dbConn.php");
@@ -113,6 +134,9 @@
 		return $result;
 	}
 
+	/**
+	 * @return array
+	 */
 	function getAllSchools(){
 		require("dbConn.php");
 		//save query result
@@ -125,6 +149,9 @@
 		return $result;
 	}
 
+	/**
+	 * @return array
+	 */
 	function getAllSports(){
 		//set up statement for: get product name, description, price and current stock
 		require("dbConn.php");
@@ -150,8 +177,12 @@
     }
 
 
-
-    function uploadImage($productID, $imageName, $imagePath){
+	/**
+	 * @param $productID
+	 * @param $imageName
+	 * @param $imagePath
+	 */
+	function uploadImage($productID, $imageName, $imagePath){
         require("dbConn.php");
         $sql = "INSERT INTO productImage (productID, imageName, imagePath)
                                 VALUES ({$productID}, '{$imageName}', '{$imagePath}');"; //note use of '' for literal

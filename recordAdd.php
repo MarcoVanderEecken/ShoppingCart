@@ -41,90 +41,66 @@ if(empty($studentList)){
 
 
 //check if user has submitted product
-if(isset($_POST['productName']) && isset($_POST['productDescription']) && isset($_POST['productPrice'])
-   && isset($_POST['productStock'])){//product variables have been set
+do if(isset($_POST['studentUsername']) && isset($_POST['recordDate']) && isset($_POST['sportType'])
+   && isset($_POST['record'])){//product variables have been set
 
-	if(!empty($_POST['productName']) && !empty($_POST['productDescription']) && !empty($_POST['productPrice'])
-	   && !empty($_POST['productStock'])){//product variables are not empty
 
 		//CHECK IF VARIABLE TYPES ARE CORRECT
-		if(is_string($_POST['productName']) && is_string($_POST['productDescription']) && is_decimal($_POST['productPrice'])
-		   && is_numeric($_POST['productStock']) && $_POST['productStock'] >= 0){
+		if(is_string($_POST['studentUsername']) && validateDate($_POST['recordDate'])  && is_numeric($_POST['sportType'])
+		   && is_numeric($_POST['record'])){
 
-			if(!$image = @imagecreatefromgif($_POST['productImage'])){//check if image is valid
-				//create database connection
-				include('dbConn.php');
+			require ("dbConn.php");
 
-				//create prepared statement to add product
-				$sql = $conn->prepare("INSERT INTO product(productName, productDescription, productStock, productPrice) VALUES (?,?,?,?);");
+			//Check if the username is valid.
+			$sql = $conn->prepare("SELECT username FROM student WHERE username = ?;");
+			$username = htmlspecialchars($_POST['studentUsername']);
+			$sql->bind_param("s", $username);
+			$sql->execute();
 
-				//bind statement variables
-				$sql->bind_param("ssid",$_POST['productName'], $_POST['productDescription'], $_POST['productStock'], $_POST['productPrice']);
-				$sql->execute();
-				$sql->close();
-
-				//get product ID of saved file
-				$sql = "SELECT productID FROM product WHERE productName = '{$_POST['productName']}';";
-				$results = mysqli_fetch_assoc($conn->query($sql));
-				$productID = (int) $results['productID'];
-
-				$imgPath = 'images/products/';
-				$name = $_FILES["productImage"]["name"];
-				$temp = $_FILES["productImage"]["tmp_name"];
-				$type = $_FILES["productImage"]["type"];
-				$size = $_FILES["productImage"]["size"];
-				$error = $_FILES["productImage"]["error"];
-				$extension = pathinfo($name, PATHINFO_EXTENSION);
-
-				$imgName = $productID . "." . $extension;
-
-				//Checking file size and for any errors
-				if($error > 0){
-					//create prepared statement for deletion of product
-					$sql = "DELETE FROM product WHERE productID = '{$productID}';";
-
-					//bind statement variables for deletion of product
-					$conn->query($sql);
-					jsAlert("error uploading file! Code $error.");
-				}else if($size > 1000000){
-					//create prepared statement for deletion of product
-					$sql = "DELETE FROM product WHERE productID = '{$productID}';";
-
-					//bind statement variables for deletion of product
-					$conn->query($sql);
-					jsAlert("Image file size exceeds 2MB!");
-				}else{
-					move_uploaded_file($temp, "$imgPath$imgName");
-					jsAlert("Image uploaded successfully!");
-
-					//create prepared statement for image
-					$sql = $conn->prepare("INSERT INTO productImage(productID, imageName, imagePath) VALUES (?,?,?);");
-
-					//bind statement variables for image
-					$sql->bind_param("iss", $productID, $imgName, $imgPath);
-					$sql->execute();
-
-					//close prepared statement
-					$sql->close();
-
-				}
-				//close database connection
-				$conn->close();
-			}else{//not an image
-				jsAlert("Please upload a valid image");
-//                    var_dump($_FILES);
-//                    print_r($_POST);
+			if($sql->fetch() == 0){//username doesn't exist
+				jsAlert("The username does not exist");
+				break;
 			}
+
+			$sql->close();
+
+			//Check if sport type is valid.
+			$sql = $conn->prepare("SELECT sport.id FROM sport WHERE sport.id = ?;");
+			$sportID = htmlspecialchars($_POST['sportType']);
+			$sql->bind_param("i", $sportID);
+			$sql->execute();
+
+			if($sql-> fetch() == 0){//sport does not exist
+				jsAlert("The sport type does not exist");
+			}
+
+			$sql->close();
+
+			//check if the date is valid (not in the future)
+			if(strtotime($_POST['recordDate']) > time()){
+				jsAlert("Please select a non-future date");
+				break;
+			}
+
+			//mysql format for datetime
+			$recordDate = date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $_POST['recordDate'])));
+
+			//add the record to the database.
+			$sql = $conn->prepare("INSERT INTO record(username, sport_id, record, recordDate) VALUES (?,?,?,?);");
+			$sql->bind_param("siis", $username, $sportID, $_POST['record'], $recordDate);
+			echo $sql->error;
+			$sql->execute();
+
+			$sql->close();
+			$conn->close();
+
+			jsAlert("Successfully added record for " . $username);
+
 		}else{//failed scrubbing
-			jsAlert("The values entered were not of the correct type. Please use the website GUI to submit a new product.");
+			jsAlert("The values entered were not of the correct type. Please use the website GUI to submit a new record.");
 		}
-	}else{//end of check for product variables
-		if($_POST['productPrice'] == 0){
-			jsAlert("You cannot upload a product for free. Please enter a price greater than 0.");
-			//in case product is being given for free.
-		}
-	}
-}//end of check if post input
+
+}while (false);//end of check if post input
 
 //body of add a product
 include("html/addRecord.html");
