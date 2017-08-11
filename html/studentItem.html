@@ -10,7 +10,23 @@
             </div>
             <div class="col-md-6">
                 <!-- record details right side -->
-                <div class="row"><span>THIS STUDENT HAS NOT ACHIEVED A RECORD.</span></div>
+
+                <!-- no records -->
+                <?php if($record === NULL) echo '<div class="row"><span>THIS STUDENT HAS NOT ACHIEVED A RECORD.</span></div>'; ?>
+                <!-- does have records -->
+                <?php
+                    if($record != NULL){
+                        //echo first result
+                        echo '<div class="row"><span>Type:' . htmlspecialchars($record['type']) . ' &nbsp;Record: ' . htmlspecialchars($record['record']) . ' ' . htmlspecialchars($record['unit']) . ' </span></div>';
+
+                        while($record = mysqli_fetch_assoc($records)){
+                            echo '<div class="row"><span>Type:' . htmlspecialchars($record['type']) . ' &nbsp;Record: ' . htmlspecialchars($record['record']) . ' ' . htmlspecialchars($record['unit']) . ' </span></div>';
+
+                        }
+                    }
+                ?>
+
+
                 <!-- APPROVAL. TO BE ADDED LATER.
                 <?php
                 if(!isset($_SESSION)) session_start();

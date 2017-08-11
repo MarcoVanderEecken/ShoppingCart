@@ -35,10 +35,19 @@
 				<div class='row'>
 					<div class=\"form-group col-sm-12\" align='center' style='padding-top:1em'>
 					<label style='color:white'>School: </label>
-	                <select name='school'>";
+	                <select name='school'>
+						<option value='*' selected='selected'> Any</option>";
+
+	$schoolsList = array();
+	array_push($schoolsList, '*'); //add the any option
 
 	while($row = mysqli_fetch_assoc($results)){
-		echo "<option value='". htmlspecialchars(htmlspecialchars($row['abr'])) ."'>" . htmlspecialchars($row['abr']) . " - " . htmlspecialchars($row['name']) . "</option>";
+		if($row['abr'] == $_POST['school']){
+			echo "<option value='". htmlspecialchars(htmlspecialchars($row['abr'])) ."' selected='selected'>" . htmlspecialchars($row['abr']) . " - " . htmlspecialchars($row['name']) . "</option>";
+		}else {
+			echo "<option value='" . htmlspecialchars( htmlspecialchars( $row['abr'] ) ) . "'>" . htmlspecialchars( $row['abr'] ) . " - " . htmlspecialchars( $row['name'] ) . "</option>";
+		}
+		array_push($schoolsList, $row['abr']);
 	}
 
 	echo "</select>
@@ -56,8 +65,13 @@
 
 	$order = "school";
 	if(isset($_POST['school'])){
-		echo "SORT WAS SET AS : " . $_POST['school'];
-		$sql = "SELECT username, school, fname, sname, birth_year FROM student WHERE school = '{$_POST['school']}' ORDER BY {$order}";
+		if(in_array($_POST['school'], $schoolsList)){//make sure value exists in selected option.
+			if($_POST['school'] =='*'){
+				$sql = "SELECT username, school, fname, sname, birth_year FROM student ORDER BY {$order}";
+			}else{
+				$sql = "SELECT username, school, fname, sname, birth_year FROM student WHERE school = '{$_POST['school']}' ORDER BY {$order}";
+			}
+		}
 	}else{
 		$sql = "SELECT username, school, fname, sname, birth_year FROM student ORDER BY {$order}";
 	}

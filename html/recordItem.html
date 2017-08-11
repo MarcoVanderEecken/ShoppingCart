@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- student details left side -->
+                <div class="row"><h2><?php echo $result['username'] ?></h2></div>
+                <div class="row"><h3>Sport Category:</h3></div>
+                <div class="row"><span><?php echo htmlspecialchars($result['type']) ?></span></div>
+                <div class="row"><span>Record:</span></div>
+                <div class="row"><span><?php echo htmlspecialchars($result['record']) ?> <?php echo htmlspecialchars($result['unit']); if($result['record'] != '1')  echo htmlspecialchars('s');?></span></div>
+
+            </div>
+        </div>
+    </div>
+</div>

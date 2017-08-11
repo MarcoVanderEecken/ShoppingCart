@@ -19,5 +19,11 @@ include('mainMenu.html');
 
 if(!isset($_SESSION)) session_start(); //start session in case user directly navigated to this page.
 
+//check if the student has achieved any records.
+$records = getRecordStudent($_GET['id']);
+$record = mysqli_fetch_assoc($records);
+
+
+
 //body of student item
 include('html/studentItem.html');

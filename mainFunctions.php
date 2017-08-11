@@ -67,18 +67,16 @@
 	 * @param $itemID Integer productID to get
 	 * @return array productID (int), productName (VARCHAR255), productDescription (TEXT), productPrice (DECIMAL(6,2)), productStock (INT 11)
 	 */
-	function getRecordItem($itemID){
+	function getRecordItem($recID){
 		//set up statement for: get product name, description, price and current stock
 		require("dbConn.php");
-		$sql = "SELECT recordID, username, sport_id, record, sport.type, sport.unit 
-				FROM record INNER JOIN sport ON record.sport_id = sport.id
-				WHERE recordID=?;";
+		$sql = "SELECT r.recordID, r.username, sport_id, record, sp.type, sp.unit 
+				FROM record r, sport sp, student st
+				WHERE r.username = st.username AND r.sport_id = sp.id AND r.recordID = '{$recID}';";
 		//save query result
 		$result = array();
 		if (isset($conn)) {
-			$stmt = $conn->prepare($sql);
-			$stmt->bind_param('i', $itemID);
-			$result = $stmt->get_result();
+			$result =$conn->query($sql);
 			$conn->close();
 		}
 		return $result;
@@ -88,17 +86,13 @@
 		//set up statement for: get product name, description, price and current stock
 		require("dbConn.php");
 		//save query result
+		$sql = "SELECT recordID, r.username, sport_id, record, sp.type, sp.unit 
+				FROM record r, sport sp, student st
+				WHERE r.username = st.username AND r.sport_id = sp.id AND st.username = '{$studentID}';";
 		$result = array();
 		if (isset($conn)) {
-			$sql = $conn->prepare("SELECT recordID, username, sport_id, record, sport.type, sport.unit 
-				FROM record 
-				INNER JOIN sport ON record.sport_id = sport.id
-				INNER JOIN student ON record.username = student.username
-				WHERE username=?;");
-			$sql->bind_param("s",$studentID);
-			$sql->execute();
-			$result = $sql->get_result();
-			$sql->close();
+			$result = $conn->query($sql);
+			$conn->close();
 		}
 		return $result;
 	}

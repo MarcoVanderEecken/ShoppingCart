@@ -14,20 +14,17 @@
             </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
-                <li><a href="studentList">Student List</a></li>
-
 
                 <?php
                     if(!isset($_SESSION)) session_start();
 
                     if(isset($_SESSION['loggedIn'])){ //only show if user logged in
-                        include('html/loggedIn.html');
-
                         //Only moderator (level 1) and admin (level 2) can add items
                         if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
                              include('html/menuAddStudent.html');
                              include('html/menuRecordList.html');
                         }
+                        include('html/loggedIn.html');
 
                     }else include('html/loggedOut.html'); //else show if user not logged in
                 ?>
@@ -37,15 +34,6 @@
                         include('html/menuDevelopment.html');
                 ?>
                 <!-- / for development set-up. To remove after completion! -->
-                <!--<li>-->
-                    <!--<form action="" class="search-form">-->
-                        <!--<div class="form-group has-feedback">-->
-                            <!--<label for="search" class="sr-only">Search</label>-->
-                            <!--<input type="text" class="form-control" name="search" id="search" placeholder="search">-->
-                            <!--<span class="glyphicon glyphicon-search form-control-feedback"></span>-->
-                        <!--</div>-->
-                    <!--</form>-->
-                <!--</li>-->
             </ul>
             <ul class="nav navbar-right">
                 <a class="navbar-brand" href="productCartPage"> Cart <?php if(isset($_SESSION['userCart'])) echo "(".count($_SESSION['userCart']).")"; ?>

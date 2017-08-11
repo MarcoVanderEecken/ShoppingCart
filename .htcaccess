@@ -1,4 +1,5 @@
 RewriteEngine On
+#remove extension from file names.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 RewriteRule ^([^\.]+)$ $1.html [NC,L]

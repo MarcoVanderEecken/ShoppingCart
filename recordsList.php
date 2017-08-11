@@ -35,13 +35,18 @@
 					<div class=\"form-group col-sm-12\" align='center' style='padding-top:1em'>
 					<label style='color:white'>Sport: </label>
 	                <select name='sport'>
-	                <option value='*' default> Any </option>";
+	                <option value='*' selected='selected'> Any </option>";
 
 	$sportTypes = array();
 	array_push($sportTypes, '*'); //add the any option
 
 	while($row = mysqli_fetch_assoc($results)){
-		echo "<option value='". htmlspecialchars(htmlspecialchars($row['type'])) ."'>" . htmlspecialchars($row['type']) . "</option>";
+		if($row['type'] == $_POST['sport']){
+
+			echo "<option value='" . htmlspecialchars( htmlspecialchars( $row['type'] ) ) . "' selected='selected'>" . htmlspecialchars( $row['type'] ) . "</option>";
+		}else{
+			echo "<option value='". htmlspecialchars(htmlspecialchars($row['type'])) ."'>" . htmlspecialchars($row['type']) . "</option>";
+		}
 		array_push($sportTypes, $row['type']);
 	}
 
@@ -56,13 +61,13 @@
 	if(isset($_POST['sport'])){//search option used
 		if(in_array($_POST['sport'], $sportTypes)){//make sure no injection, only allowed options.
 			if($_POST['sport'] == '*'){//the any option. Mysqli does not like * options.
-				$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year 
+				$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID 
 					FROM record 
 					LEFT JOIN sport ON record.sport_id = sport.id 
 					LEFT JOIN student ON record.username = student.username
 					ORDER BY {$order}";
 			}else {
-				$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year 
+				$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID 
 				FROM record 
 				LEFT JOIN sport ON record.sport_id = sport.id 
 				LEFT JOIN student ON record.username = student.username
@@ -70,7 +75,7 @@
 			}
 		}
 	}else{//first time
-		$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year 
+		$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID 
 					FROM record 
 					LEFT JOIN sport ON record.sport_id = sport.id 
 					LEFT JOIN student ON record.username = student.username
