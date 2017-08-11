@@ -5,12 +5,25 @@ include('../dbConn.php');
 
 //create product table, NEED TO CHANGE TO ADD IMAGE LOCATION LATER.
 $sql =
-	"CREATE TABLE Record(
-			recordID INT(11) PRIMARY KEY AUTO_INCREMENT,
-            username VARCHAR(50), FOREIGN KEY (username) REFERENCES student(username),
-            sport_id INT, FOREIGN KEY (sport_id) REFERENCES sport(id),
-            record VARCHAR(50)
-            )";
+		"create table record
+	(
+		recordID int auto_increment
+			primary key,
+		username varchar(50) null,
+		sport_id int null,
+		record varchar(50) null,
+		approved tinyint(1) default '0' null,
+		recordDate datetime default CURRENT_TIMESTAMP not null
+	)
+	;
+	
+	create index sport_id
+		on record (sport_id)
+	;
+	
+	create index username
+		on record (username)
+	;";
 
 if($conn->query($sql) === TRUE){
 	echo "table \"Record\" created successfully";

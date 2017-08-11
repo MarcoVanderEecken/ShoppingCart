@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/b9cd9c55-753e-44f8-a94d-c3e36f7bb654.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/b9cd9c55-753e-44f8-a94d-c3e36f7bb654.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/addRecord.html" afterPath="$PROJECT_DIR$/html/addRecord.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainFunctions.php" afterPath="$PROJECT_DIR$/mainFunctions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recordAdd.php" afterPath="$PROJECT_DIR$/recordAdd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databaseSetup/createRecordtable.php" afterPath="$PROJECT_DIR$/databaseSetup/createRecordtable.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,15 +92,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recordAdd.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="recordAdd.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recordAdd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1030">
-              <caret line="80" column="57" lean-forward="false" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
+            <state relative-caret-position="299">
+              <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
               <folding>
                 <marker date="1502471410600" expanded="true" signature="1387:1434" ph="SELECT usern... student" />
                 <marker date="1502471410600" expanded="true" signature="1749:1794" ph="SELECT sport... sport" />
                 <marker date="1502471410600" expanded="true" signature="2385:2460" ph="INSERT INTO record... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console_1.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/console_1.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createRecordtable.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/databaseSetup/createRecordtable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+              <folding>
+                <marker date="1502471542153" expanded="true" signature="141:386" ph="create table... record" />
+                <marker date="1502471542153" expanded="true" signature="141:491" ph="CREATE TABLE... Record" />
+                <marker date="1502471542153" expanded="true" signature="393:437" ph="create index... sport_id" />
+                <marker date="1502471542153" expanded="true" signature="444:488" ph="create index... username" />
+                <marker date="1502471542153" expanded="true" signature="696:800" ph="INSERT INTO Record... " />
               </folding>
             </state>
           </provider>
@@ -193,7 +216,6 @@
         <option value="$PROJECT_DIR$/html/productCartPage.html" />
         <option value="$PROJECT_DIR$/functionPDFUpload.php" />
         <option value="$PROJECT_DIR$/productCart.php" />
-        <option value="$PROJECT_DIR$/databaseSetup/createRecordtable.php" />
         <option value="$PROJECT_DIR$/databaseSetup/studentSetup.php" />
         <option value="$PROJECT_DIR$/databaseSetup/allDBSetup.php" />
         <option value="$PROJECT_DIR$/html/menuDevelopment.html" />
@@ -217,6 +239,7 @@
         <option value="$PROJECT_DIR$/mainFunctions.php" />
         <option value="$PROJECT_DIR$/html/addRecord.html" />
         <option value="$PROJECT_DIR$/recordAdd.php" />
+        <option value="$PROJECT_DIR$/databaseSetup/createRecordtable.php" />
       </list>
     </option>
   </component>
@@ -495,14 +518,7 @@
       <workItem from="1502396147279" duration="21000" />
       <workItem from="1502435222670" duration="49000" />
       <workItem from="1502444519610" duration="392000" />
-      <workItem from="1502458061173" duration="11136000" />
-    </task>
-    <task id="LOCAL-00034" summary="Version 0.3.9 update.&#10;Menu system properly reflect if logged in or out. &#10;- Bug discovered: Double Login #1">
-      <created>1498945369418</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1498945369418</updated>
+      <workItem from="1502458061173" duration="11272000" />
     </task>
     <task id="LOCAL-00035" summary="Version 0.3.9 update.&#10;Menu system properly reflect if logged in or out. &#10;- Bug discovered: Double Login #1">
       <created>1498945424601</created>
@@ -840,11 +856,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502465374556</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Version 0.8.3 update&#10;- Added ability to add records&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval">
+      <created>1502471476038</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1502471476038</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197191000" />
+    <option name="totallyTimeSpent" value="197327000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -859,9 +882,9 @@
     <frame x="-8" y="-8" width="1552" height="840" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24396783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24396783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32687926" sideWeight="0.49677765" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.50322235" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670453" sideWeight="0.50322235" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.34115282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.49677765" order="7" side_tool="false" content_ui="tabs" x="2400" y="793" width="2000" height="282" />
@@ -952,7 +975,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version 0.4.1.1 update.&#10;- Double login bug fixed" />
     <MESSAGE value="Version 0.4.2 update.&#10;- Product Item page, dynamically adjust according to ID&#10;- Product Shop now links to Product Item page&#10;&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
     <MESSAGE value="Version 0.4.3 update.&#10;- Currently adding image support to upload&#10;&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
     <MESSAGE value="Version 0.4.4 update.&#10;- product image support.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
@@ -977,7 +999,8 @@
     <MESSAGE value="Version 0.7.9 update&#10;- student now added to db. Birth certificate also no / in hash file path&#10;- Need to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
     <MESSAGE value="Version 0.8 update&#10;- Added remember search option support&#10;- Added record item links, added list of records achieved by student&#10;- Moved Student List under Students and moved Log Out after normal menu options&#10;- Need to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
     <MESSAGE value="Version 0.8.1 update&#10;- Added remember search option support&#10;- Added record item links, added list of records achieved by student&#10;- Added to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.8.1 update&#10;- Added remember search option support&#10;- Added record item links, added list of records achieved by student&#10;- Added to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
+    <MESSAGE value="Version 0.8.3 update&#10;- Added ability to add records&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.8.3 update&#10;- Added ability to add records&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -986,13 +1009,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/baseHeader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/loggedOut.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -1084,17 +1100,6 @@
           <folding>
             <marker date="1502377709685" expanded="true" signature="140:298" ph="CREATE TABLE... Sport" />
             <marker date="1502377709685" expanded="true" signature="501:588" ph="INSERT INTO Sport... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/databaseSetup/createRecordtable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="24" selection-end-column="70" />
-          <folding>
-            <marker date="1502377473056" expanded="true" signature="140:411" ph="CREATE TABLE... Record" />
-            <marker date="1502377473056" expanded="true" signature="616:720" ph="INSERT INTO Record... " />
           </folding>
         </state>
       </provider>
@@ -1444,12 +1449,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recordAdd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1030">
-          <caret line="80" column="57" lean-forward="false" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
+        <state relative-caret-position="299">
+          <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
           <folding>
             <marker date="1502471410600" expanded="true" signature="1387:1434" ph="SELECT usern... student" />
             <marker date="1502471410600" expanded="true" signature="1749:1794" ph="SELECT sport... sport" />
             <marker date="1502471410600" expanded="true" signature="2385:2460" ph="INSERT INTO record... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSetup/createRecordtable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <marker date="1502471542153" expanded="true" signature="141:386" ph="create table... record" />
+            <marker date="1502471542153" expanded="true" signature="141:491" ph="CREATE TABLE... Record" />
+            <marker date="1502471542153" expanded="true" signature="393:437" ph="create index... sport_id" />
+            <marker date="1502471542153" expanded="true" signature="444:488" ph="create index... username" />
+            <marker date="1502471542153" expanded="true" signature="696:800" ph="INSERT INTO Record... " />
           </folding>
         </state>
       </provider>
