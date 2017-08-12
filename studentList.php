@@ -19,14 +19,17 @@
 	}
 
 
-	//connect to database to fetch products.
+	//connect to database to fetch schools.
 	include("dbConn.php");
 
 	//get schools.
 	$sql = "SELECT abr, name FROM school ORDER BY abr;";
 	$results = $conn->query($sql);
 
-	//container for the products:
+	//container for all.
+	echo "<div class='container'>";
+
+	//container for the nav:
 	echo "<div class='jumbotron'>";
 
 	//form sort.
@@ -101,3 +104,4 @@
 	//end container for product items
 	echo "</div>"; //end of container
 	echo "</div>"; //end of jumbotron
+	echo "</div>"; //end of main container

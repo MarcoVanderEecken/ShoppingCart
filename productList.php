@@ -1,5 +1,5 @@
 <?php
-    $title = "Shop";
+    $title = "Product List";
     include('html/baseHeader.html');
     include('mainMenu.html');
     require_once("productCart.php");
@@ -24,6 +24,7 @@
 	$results = $conn->query($sql);
 
 	//container for the products:
+	echo "<div class='container'>";
 	echo "<div class='jumbotron'>";
 
 	//form sort.
@@ -84,3 +85,4 @@
     //end container for product items
     echo "</div>"; //end of container
     echo "</div>"; //end of jumbotron
+	echo "<div class='container'>";//end of main container

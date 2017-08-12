@@ -24,8 +24,8 @@
                              include('html/menuAddStudent.html');
                              include('html/menuUser.html');
                         }
-                        include('html/loggedIn.html');
                         include('html/menuRecordList.html');
+                        include('html/loggedIn.html');
 
                     }else include('html/loggedOut.html'); //else show if user not logged in
                 ?>
@@ -35,8 +35,13 @@
                         include('html/menuDevelopment.html');
                 ?>
                 <!-- / for development set-up. To remove after completion! -->
+                <?php
+                    include_once('html/menuHelp.html');
+                ?>
+
             </ul>
             <ul class="nav navbar-right">
+
                 <?php
                     if(!isset($_SESSION)) session_start();
 

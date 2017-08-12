@@ -1,4 +1,9 @@
 <?php
+
+/** Countdown timer, use id of time.
+ * Based on: https://stackoverflow.com/questions/20618355/the-simplest-possible-javascript-countdown-timer
+ * @param $time integer in seconds
+ */
 function countDown($time) {
 	?>
 	<script type="text/javascript">

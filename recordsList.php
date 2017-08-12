@@ -25,6 +25,9 @@
 	$sql = "SELECT sport.type FROM sport ORDER BY sport.type;";
 	$results = $conn->query($sql);
 
+	//container for all.
+	echo "<div class='container'>";
+
 	//container for the products:
 	echo "<div class='jumbotron'>";
 
@@ -107,3 +110,4 @@
 	//end container for product items
 	echo "</div>"; //end of container
 	echo "</div>"; //end of jumbotron
+	echo "</div>"; //end of main container
