@@ -4,7 +4,7 @@
  */
 //get student details
 require_once ("requiresLogin.php");
-include("mainFunctions.php");
+include( "functionMain.php" );
 
 $results = getStudent($_GET['id']);
 $result = mysqli_fetch_assoc($results);

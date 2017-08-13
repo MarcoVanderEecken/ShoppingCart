@@ -4,7 +4,7 @@ Student Item page, shows details of student in left pane, right hand pane is rec
  */
 //get student details
 require_once ("requiresLogin.php");
-include("mainFunctions.php");
+include( "functionMain.php" );
 
 $results = getRecordItem($_GET['id']);
 $result = mysqli_fetch_assoc($results);

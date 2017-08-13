@@ -6,7 +6,7 @@
     if(!isset($_SESSION)) session_start(); //start session in case user directly navigated to this page.
     $_SESSION['start'] = "Session started successfully";
 
-    include("mainFunctions.php");
+    include( "functionMain.php" );
 
 
     if(isset($_GET['id'])){//if product ID has been selected.

@@ -11,7 +11,7 @@
 //in case session hasn't been started, e.g. user accessed page directly.
 require_once ("requiresLogin.php");
 
-include("mainFunctions.php");
+include( "functionMain.php" );
 
 
 //Only moderator (level 1) and admin (level 2) can add student
@@ -61,7 +61,7 @@ if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POS
 				$birthDate = date('Y-m-d' , strtotime( $_POST['birthDate']));
 
 				//hash and username check
-				require_once ("dbConn.php");
+				require("dbConn.php");
 				//first check if student with desired username exists (namely fname+sname+birth_year)
 				$sql = $conn->prepare("SELECT username FROM student WHERE username = ?;");
 				$username =  str_replace(' ', '', $_POST['studentFName'] . $_POST['studentSName'] . strtok($birthDate. '-'));

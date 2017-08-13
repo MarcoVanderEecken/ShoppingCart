@@ -15,7 +15,7 @@
     include('mainMenu.html');
 
     //javascript alert
-    include('mainFunctions.php');
+    include( 'functionMain.php' );
 
     if(isset($_SESSION['welcomeMessage'])){ //redirect to index page once user welcomed.
         header("Location: index");
@@ -40,7 +40,9 @@
     }
 
     if(!isset($_SESSION['loggedIn'])){ //don't show the login page if logged in.
-        include("html/login.html");
+//        include("html/login.html");
+	    include_once ("html/homePage.html");
+	    include_once ("html/indexFooter.html");
     }else{//Welcome user
         redirectUser();
     }

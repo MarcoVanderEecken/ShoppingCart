@@ -14,7 +14,7 @@
     include("html/registrationForm.html");
 
     //javascript error message
-    include('mainFunctions.php');
+    include( 'functionMain.php' );
 
     function createUser($username , $password, $hash){
 

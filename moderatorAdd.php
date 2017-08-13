@@ -11,7 +11,7 @@
 //in case session hasn't been started, e.g. user accessed page directly.
 require_once ("requiresLogin.php");
 
-include("mainFunctions.php");
+include( "functionMain.php" );
 
 
 //Only admin (level 2) can add moderator

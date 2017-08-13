@@ -3,7 +3,7 @@
  *  STILL NEED CHECK IN CASE PRODUCT ID IS INVALID.
  */
     //get product details
-    include("mainFunctions.php");
+    include( "functionMain.php" );
 
     $results = getStudent($_GET['id']);
     $result = mysqli_fetch_assoc($results);

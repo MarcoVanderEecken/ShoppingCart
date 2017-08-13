@@ -1,5 +1,5 @@
     <!-- start of footer -->
-    <footer class="modal-footer" style="background-color:rgba(238,238,238,0.35)">
+    <footer class="modal-footer navbar-fixed-bottom" id='solids'>
         <div class="container">
             <p class="text-muted" style="text-align:center"> This is a footer placeholder </p>
         </div>
@@ -20,4 +20,16 @@
                 e.preventDefault();
             });
         });
+
+        $( ".dropdown-submenu" ).click(function(event) {
+            // stop bootstrap.js to hide the parents
+            event.stopPropagation();
+            // hide the open children
+            $( this ).find(".dropdown-submenu").removeClass('open');
+            // add 'open' class to all parents with class 'dropdown-submenu'
+            $( this ).parents(".dropdown-submenu").addClass('open');
+            // this is also open (or was)
+            $( this ).toggleClass('open');
+        });
+
     </script>

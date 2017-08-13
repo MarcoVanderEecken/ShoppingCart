@@ -1,5 +1,9 @@
 <?php
 
+	/*
+	 * TODO: FIX BUG. If one were to follow the link in pagination, the search is lost. Best solution: change search to GET instead.
+	 */
+
 	require_once("requiresLogin.php");
 
 	$title = "Records";
@@ -8,7 +12,9 @@
 	if(!isset($_SESSION)) session_start(); //start session in case user directly navigated to this page.
 	$_SESSION['start'] = "Session started successfully";
 
-	include("mainFunctions.php");
+	$maxResPage = 6; //how many results should be displayed per page.
+
+	include( "functionMain.php" );
 
 
 	if(isset($_GET['id'])){//if product ID has been selected.
@@ -85,6 +91,28 @@
 					ORDER BY {$order}";
 	}
 
+	//if page has been set, limit max number of records. (6 per page)
+
+	//check that current page exists
+	if(isset($_GET['page'])){
+		$currentPage = $_GET['page'];
+	}else $currentPage = 1;
+
+	//check if page is actually a non-decimal number
+	if(!is_numeric($currentPage) || is_float($currentPage)){
+		$currentPage = 1;
+	}
+
+	//get amount fo student list products
+	$numResults = mysqli_num_rows($conn->query($sql));
+
+	//calculate offset
+	$offset = floor($currentPage * $maxResPage - $maxResPage);
+
+	//add the limit
+	$sql = $sql . " LIMIT " . $maxResPage . " OFFSET " . $offset;
+
+
 	//save query results
 	$results = $conn->query($sql);
 
@@ -110,6 +138,32 @@
 	//end container for product items
 	echo "</div>"; //end of row
 	echo "</div>"; //end of container
+
+
+	/*
+	 *  START OF PAGINATION
+	 */
+	echo "<div class='container' style='align-content: center'>
+			<div class='pagination'>
+			";
+
+
+	$numRows = floor($numResults / $maxResPage); //get number of default large - rows
+	if($numResults % $maxResPage != 0) $numRows++; //in case it's an extra non-full page.
+	$rowCount = 0;
+	do { //run at least once so that there is always a page counter.
+		$rowCount++;
+		if($currentPage == $rowCount){
+			echo "<a class='active' href='?page=" . $rowCount . "';> " . $rowCount . "</a>";
+		}else {
+			echo "<a href='?page=" . $rowCount . "'> " . $rowCount . "</a>";
+		}
+		$numRows--;
+	}while($numRows > 0);
+	echo "
+		</div> <!-- end of pagination -->
+		</div><!-- end of pag. container -->";
+
 	echo "</div>"; //end of jumbotron
 	echo "</div>"; //end of main container.
 
