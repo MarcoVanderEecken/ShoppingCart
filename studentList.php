@@ -102,6 +102,10 @@
 	}
 
 	//end container for product items
+	echo "</div>"; //end of row
 	echo "</div>"; //end of container
 	echo "</div>"; //end of jumbotron
-	echo "</div>"; //end of main container
+	echo "</div>"; //end of main container.
+
+	//add footer
+	include_once ("html/indexFooter.html");

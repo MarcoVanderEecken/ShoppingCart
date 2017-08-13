@@ -1,3 +1,7 @@
+/*
+    Search function.
+ */
+
 .search-form .form-group {
     float: right !important;
     transition: all 0.35s, border-radius 0s;
@@ -50,3 +54,91 @@
     font-size: 14px;
 }
 
+/*
+    Side menu
+ */
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+/*
+    Carousel options:
+
+ */
+
+.carousel{
+    margin: auto;
+    min-height: 70%;
+}
+
+.carousel-inner > .item {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0 0 0%;
+}
+
+.carousel-inner > .item > img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+.carousel-caption {
+    position: absolute;
+    width:100%;
+    margin-left: -20%; /* make caption take up full width */
+    max-height: 40%;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 40%;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    background: #222222;
+    border: 3px solid #ffffff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.itemFill {
+    height: 100%;
+}
+
+.carousel-login{
+    position: absolute;
+    top: 40%;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    left: 8%;
+    width: 85%;
+    /*z-index: 99999;*/
+    background: rgba(0, 0, 0, 0.7500);
+    color: white;
+    align-content: center;
+}
+
+.carousel-login input{
+    background: black;
+}

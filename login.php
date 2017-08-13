@@ -33,7 +33,7 @@
                 <div class='jumbotron'>
                     <meta http-equiv=\"refresh\" content='5; url=index' property=';'>
                     Welcome {$_SESSION['username']} (Level: {$_SESSION['loggedIn']}) <br>
-                    You will be redirected in <span id='time'>04</span> seconds...
+                    You will be redirected in <span id='time'>05</span> seconds...
                 </div>
             </div>";
         $_SESSION['welcomeMessage'] = true;
