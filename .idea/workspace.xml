@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/addSchool.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/schoolAdd.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/schoolList.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/html/menuUser.html" afterPath="$PROJECT_DIR$/html/menuManagement.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/shopcart.css" afterPath="$PROJECT_DIR$/css/shopcart.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help.php" afterPath="$PROJECT_DIR$/help.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainMenu.html" afterPath="$PROJECT_DIR$/mainMenu.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schoolAdd.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="schoolAdd.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/schoolAdd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+            <state relative-caret-position="323">
+              <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
               <folding>
                 <element signature="e#6#27#0#PHP" expanded="true" />
                 <marker date="1502636885713" expanded="true" signature="989:1027" ph="SELECT usern... student" />
@@ -99,6 +95,16 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="help.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/help.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,8 +128,8 @@
       <file leaf-file-name="mainMenu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainMenu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+            <state relative-caret-position="187">
+              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -235,7 +241,6 @@
         <option value="$PROJECT_DIR$/timerFunction.php" />
         <option value="$PROJECT_DIR$/productCartPage.php" />
         <option value="$PROJECT_DIR$/productList.php" />
-        <option value="$PROJECT_DIR$/help.php" />
         <option value="$PROJECT_DIR$/html/help.html" />
         <option value="$PROJECT_DIR$/about.php" />
         <option value="$PROJECT_DIR$/html/about.html" />
@@ -256,9 +261,10 @@
         <option value="$PROJECT_DIR$/css/shopcart.css" />
         <option value="$PROJECT_DIR$/schoolList.php" />
         <option value="$PROJECT_DIR$/html/menuManagement.html" />
-        <option value="$PROJECT_DIR$/mainMenu.html" />
         <option value="$PROJECT_DIR$/schoolAdd.php" />
         <option value="$PROJECT_DIR$/html/addSchool.html" />
+        <option value="$PROJECT_DIR$/mainMenu.html" />
+        <option value="$PROJECT_DIR$/help.php" />
       </list>
     </option>
   </component>
@@ -546,14 +552,7 @@
       <workItem from="1502458061173" duration="17442000" />
       <workItem from="1502562895018" duration="3914000" />
       <workItem from="1502569197711" duration="87000" />
-      <workItem from="1502614418369" duration="20215000" />
-    </task>
-    <task id="LOCAL-00042" summary="Version 0.4 update.&#10;- adding product table with dummy values&#10;- adding shop page&#10;- adding option to add product&#10;- Bug still at large: Double Login #1">
-      <created>1499115005866</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1499115005866</updated>
+      <workItem from="1502614418369" duration="20417000" />
     </task>
     <task id="LOCAL-00043" summary="Version 0.4.1 update.&#10;- shop page now dynamically lists all items&#10;- Bug still at large: Double Login #1">
       <created>1499120973347</created>
@@ -891,11 +890,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502635610209</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Version 0.8.5 update&#10;- add schools&#10;- Need to still add log support&#10;- Need to still add approval&#10;- Need to populate help and about">
+      <created>1502637110345</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1502637110345</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227713000" />
+    <option name="totallyTimeSpent" value="227915000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1003,7 +1009,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version 0.4.5 update.&#10;- product image support.&#10;- fixed bug of 0 value item. Will alert error.&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID" />
     <MESSAGE value="Version 0.4.5.1 update.&#10;Added to do list" />
     <MESSAGE value="Version 0.5 update.&#10;Added LoginLevel table&#10;Now there are 3 user levels, normal, moderatotr and admin&#10;Only moderator and admin can add products" />
     <MESSAGE value="Version 0.5.1 update.&#10;- Bugfix: productList?id=# will redirect to correct productItem page.&#10;- add product will only allow user to access if they have sufficient privileges&#10;- updated To Do list" />
@@ -1028,7 +1033,8 @@
     <MESSAGE value="Version 0.8.3.2 update&#10;- Added about and help page&#10;- Added add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval&#10;- Need to populate help and about" />
     <MESSAGE value="Version 0.8.4 update&#10;- Added home page&#10;- Need to still add log support&#10;- Need to still add approval&#10;- Need to populate help and about" />
     <MESSAGE value="Version 0.8.4.1 update&#10;- Pagination &#10;- Need to still add log support&#10;- Need to still add approval&#10;- Need to still add option to add schools&#10;- Need to populate help and about" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.8.4.1 update&#10;- Pagination &#10;- Need to still add log support&#10;- Need to still add approval&#10;- Need to still add option to add schools&#10;- Need to populate help and about" />
+    <MESSAGE value="Version 0.8.5 update&#10;- add schools&#10;- Need to still add log support&#10;- Need to still add approval&#10;- Need to populate help and about" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.8.5 update&#10;- add schools&#10;- Need to still add log support&#10;- Need to still add approval&#10;- Need to populate help and about" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1158,14 +1164,6 @@
             <marker date="1502626926321" expanded="true" signature="1985:2093" ph="SELECT usern... student" />
             <marker date="1502626926321" expanded="true" signature="2122:2194" ph="SELECT usern... student" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/help.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1436,14 +1434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/schoolList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1501,14 +1491,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/schoolAdd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+        <state relative-caret-position="323">
+          <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
           <folding>
             <element signature="e#6#27#0#PHP" expanded="true" />
             <marker date="1502636885713" expanded="true" signature="989:1027" ph="SELECT usern... student" />
             <marker date="1502636885713" expanded="true" signature="1394:1430" ph="SELECT name school" />
             <marker date="1502636885713" expanded="true" signature="1799:1841" ph="INSERT INTO login... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

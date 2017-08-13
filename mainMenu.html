@@ -19,12 +19,12 @@
                     if(!isset($_SESSION)) session_start();
 
                     if(isset($_SESSION['loggedIn'])){ //only show if user logged in
+                        include('html/menuRecordList.html');
                         //Only moderator (level 1) and admin (level 2) can add items
                         if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
                              include('html/menuAddStudent.html');
                              include('html/menuManagement.html');
                         }
-                        include('html/menuRecordList.html');
                         include('html/loggedIn.html');
 
                     }//else include('html/loggedOut.html'); //else show if user not logged in
