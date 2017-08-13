@@ -1,0 +1,26 @@
+<!-- body of add school -->
+<div class="container">
+    <div class="jumbotron">
+        <h2> Add a school: </h2>
+        <br>
+        <form method="Post" name="addSchoolForm" action="schoolAdd" enctype="multipart/form-data">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>School: </td>
+                    <td><input type="text" name="school" value="<?php if(isset($_POST['school'])) ?>"
+                            placeholder="Enter school name" required></td>
+                </tr>
+                <tr>
+                    <td>Abbreviation: </td>
+                    <td><input type="text" name="abbr" value="<?php if(isset($_POST['abbr'])) ?>"
+                        placeholder="Enter abbreviation" required></td>
+                </tr>
+                    <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add School"></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<!-- end of add school -->
