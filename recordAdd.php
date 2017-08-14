@@ -19,10 +19,6 @@ include('html/baseHeader.html');
 include('mainMenu.html');
 
 
-/**
- *  BELOW THIS NEEDS TO BE MODIFIED FOR ADDING RECORDS. ALSO NEED TO MAKE SELECT ARRAY LIST FOR STUDENT FIRST NAME, SURNAME AND SPORT
- */
-
 if(empty($sportsCats)){
 	//result list of all sports types
 	$sportsCats = getAllSports();

@@ -12,7 +12,7 @@ $sql =
 		username varchar(50) null,
 		sport_id int null,
 		record varchar(50) null,
-		approved tinyint(1) default '0' null,
+		approved INT REFERENCES recordStatus(status) default '1' null,
 		recordDate datetime default CURRENT_TIMESTAMP not null
 	)
 	;
@@ -23,7 +23,11 @@ $sql =
 	
 	create index username
 		on record (username)
-	;";
+	;
+	
+	ALTER TABLE record
+	ADD CONSTRAINT approval_constraint
+	FOREIGN KEY (approved) REFERENCES recordstatus (status);";
 
 if($conn->query($sql) === TRUE){
 	echo "table \"Record\" created successfully";

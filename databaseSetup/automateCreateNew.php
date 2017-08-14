@@ -6,6 +6,7 @@
 include_once ('createDB.php');
 include_once ('createLoginLevel.php');
 include_once ('createLoginTable.php');
+include_once ('createItem_type.php');
 include_once ('createBirthCertificate.php');
 include_once ('createSchoolTable.php');
 include_once ('createStudent.php');
