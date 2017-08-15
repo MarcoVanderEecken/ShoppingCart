@@ -1,8 +1,4 @@
 <?php
-/*
- * TODO: FIX BUG. If one were to follow the link in pagination, the search is lost. Best solution: change search to GET instead.
- */
-
 
 	require_once("requiresLogin.php");
 
@@ -41,7 +37,7 @@
 
 	//form sort.
 	echo "
-			<form class='navbar-form navbar navbar-inverse' method='post' action='#' style='width:70%; margin: auto auto 1em auto;'>
+			<form class='navbar-form navbar navbar-inverse' method='get' action='#' style='width:70%; margin: auto auto 1em auto;'>
 				<div class='row'>
 					<div class=\"form-group col-sm-12\" align='center' style='padding-top:1em'>
 					<label style='color:white'>School: </label>
@@ -52,7 +48,7 @@
 	array_push($schoolsList, '*'); //add the any option
 
 	while($row = mysqli_fetch_assoc($results)){
-		if($row['abr'] == $_POST['school']){
+		if($row['abr'] == $_GET['school']){
 			echo "<option value='". htmlspecialchars(htmlspecialchars($row['abr'])) ."' selected='selected'>" . htmlspecialchars($row['abr']) . " - " . htmlspecialchars($row['name']) . "</option>";
 		}else {
 			echo "<option value='" . htmlspecialchars( htmlspecialchars( $row['abr'] ) ) . "'>" . htmlspecialchars( $row['abr'] ) . " - " . htmlspecialchars( $row['name'] ) . "</option>";
@@ -73,12 +69,12 @@
 	//          INNER JOIN productimage ON product.productID = productimage.productID ORDER BY product.productID;";
 
 	$order = "school";
-	if(isset($_POST['school'])){
-		if(in_array($_POST['school'], $schoolsList)){//make sure value exists in selected option.
-			if($_POST['school'] =='*'){
+	if(isset($_GET['school'])){
+		if(in_array($_GET['school'], $schoolsList)){//make sure value exists in selected option.
+			if($_GET['school'] =='*'){
 				$sql = "SELECT username, school, fname, sname, birth_year FROM student ORDER BY {$order}";
 			}else{
-				$sql = "SELECT username, school, fname, sname, birth_year FROM student WHERE school = '{$_POST['school']}' ORDER BY {$order}";
+				$sql = "SELECT username, school, fname, sname, birth_year FROM student WHERE school = '{$_GET['school']}' ORDER BY {$order}";
 			}
 		}
 	}else{
@@ -144,6 +140,10 @@
 		<div class='pagination'>
 		";
 
+	//Need to check if variable set before so we don't clear get.
+	if(isset($_GET['school'])){
+		$prefix = "?school=" . $_GET['school'] . "&page=";
+	}else $prefix = '?page=';
 
 	$numRows = floor($numResults / $maxResPage); //get number of default large - rows
 	if($numResults % $maxResPage != 0) $numRows++; //in case it's an extra non-full page.
@@ -151,9 +151,9 @@
 	do { //run at least once so that there is always a page counter.
 		$rowCount++;
 		if($currentPage == $rowCount){
-			echo "<a class='active' href='?page=" . $rowCount . "';> " . $rowCount . "</a>";
+			echo "<a class='active' href='" . $prefix . $rowCount . "';> " . $rowCount . "</a>";
 		}else {
-			echo "<a href='?page=" . $rowCount . "'> " . $rowCount . "</a>";
+			echo "<a href='" . $prefix . $rowCount . "'> " . $rowCount . "</a>";
 		}
 		$numRows--;
 	}while($numRows > 0);

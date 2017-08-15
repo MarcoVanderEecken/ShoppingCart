@@ -3,5 +3,8 @@
         <li><a href="teacherAdd"> Add Teacher</a></li>
         <?php if($_SESSION['loggedIn'] == 2){ echo '<li><a href="moderatorAdd"> Add Moderator</a></li>'; }?>
         <?php if($_SESSION['loggedIn'] == 2){ echo '<li><a href="schoolAdd"> Add School</a></li>'; }?>
+        <?php if($_SESSION['loggedIn'] == 2){ echo '<li><a href="sportAdd"> Add Sport</a></li>'; }?>
+        <li class="divider"></li>
+        <li><a href="schoolList"> School List</a></li>
     </ul>
 </li>

@@ -1,0 +1,26 @@
+<!-- body of add sport -->
+<div class="container">
+    <div class="jumbotron">
+        <h2> Add a sport: </h2>
+        <br>
+        <form method="Post" name="addSchoolForm" action="sportAdd" enctype="multipart/form-data">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>Sport Type: </td>
+                    <td><input type="text" name="sportType" value="<?php if(isset($_POST['sportType'])) echo  htmlspecialchars($_POST['sportType']); ?>"
+                               placeholder="E.g. 80m Sprint" required></td>
+                </tr>
+                <tr>
+                    <td>Unit: </td>
+                    <td><input type="text" name="unit" value="<?php if(isset($_POST['unit']))  echo  htmlspecialchars($_POST['unit']); ?>"
+                               placeholder="Enter unit (e.g. meters)" required></td>
+                </tr>
+                <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Sport"></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<!-- end of add sport -->

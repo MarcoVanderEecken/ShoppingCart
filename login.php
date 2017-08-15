@@ -40,7 +40,6 @@
     }
 
     if(!isset($_SESSION['loggedIn'])){ //don't show the login page if logged in.
-//        include("html/login.html");
 	    include_once ("html/homePage.html");
 	    include_once ("html/indexFooter.html");
     }else{//Welcome user
@@ -59,11 +58,13 @@
                         $_SESSION['username'] = $_POST['username'];
                         $_SESSION['loggedIn'] = $row[1];
                         if (isset($_POST['remember'])) {
-                            setcookie('username', $_POST['username'], time() + 60 * 60 * 24);
+                        	if($_POST['remember'] === TRUE)
+                                setcookie('username', $_POST['username'], time() + strtotime("+7 days"));
+                        	else unset($_COOKIE['username']);
                         }else unset($_COOKIE['username']);
                         refreshPage();
                     } else { //incorrect password
-                        jsAlert("Incorrect password, please try again. ");
+                        jsAlert("Incorrect password or username please try again. ");
                     }
                 } catch (Exception $e) {
                     jsAlert("Username not found {$e}");

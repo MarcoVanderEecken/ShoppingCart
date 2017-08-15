@@ -46,11 +46,7 @@
                     if(!isset($_SESSION)) session_start();
 
                     if(isset($_SESSION['loggedIn'])){ //only show if user logged in
-                        echo '<a class="navbar-brand" href="productCartPage"> Cart';
-                        if(isset($_SESSION['userCart'])){
-                            echo " (".count($_SESSION['userCart']).")";
-                        }else echo " (0)";
-                        echo ' </a>';
+                        echo '<a class="navbar-brand" href="recordLogPage"> Record Log </a>';
                     }
                 ?>
             </ul>

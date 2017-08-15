@@ -21,7 +21,7 @@ if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
 	include('html/baseHeader.html');
 	include('mainMenu.html');
 }else {
-	redirectPage( "index.php" );
+	redirectPage( "index" );
 	exit();
 }
 
@@ -37,7 +37,7 @@ if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POS
 
 		//CHECK IF VARIABLE TYPES ARE CORRECT
 		if(is_string($_POST['studentFName']) && is_string($_POST['studentSName']) && is_string($_POST['school'])){
-			if ( $_FILES['birth_cert']['error'] !== UPLOAD_ERR_OK ) { //check if pdf file failed to upload
+			if ($_FILES['birth_cert']['error'] !== UPLOAD_ERR_OK ) { //check if pdf file failed to upload
 				die( "File upload error: " . $_FILES['birth_cert']['error'] ); //fail to upload
 			}
 			//check if file is actually a pdf
@@ -45,7 +45,7 @@ if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POS
 			$mime  = finfo_file( $finfo, $_FILES['birth_cert']['tmp_name'] ); //tmp_name is temporary name on server
 
 
-			if ( $mime == 'application/pdf' ) {
+			if ( $mime == 'application/pdf') {
 				$basePath = $_SERVER['DOCUMENT_ROOT'] . '/ShoppingCart/Birth-Cert/';
 				//append something unique like e.g. day to path for keeping file in.
 				$extPath = date( 'Y-m-d' );
@@ -77,6 +77,7 @@ if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POS
 				$sql->close();
 				//set username to checked username if not null.
 				if(isset($checkedUsername)) $username = $checkedUsername;
+
 				$hash = password_hash($username, PASSWORD_DEFAULT);
 				while(strpos($hash, '/')){//do not allow / in hash so no path issues.
 					$hash = password_hash($username, PASSWORD_DEFAULT);
@@ -118,7 +119,7 @@ if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POS
 				//close prepared statement
 				$sql->close();
 				$conn->close();
-				jsAlert("Student Succesfully added.");
+				jsAlert("Student succesfully added.");
 
 			} else {
 				die( jsAlert("file type not permitted. (" . $mime . ")" ));

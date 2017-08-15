@@ -1,9 +1,5 @@
 <?php
 
-	/*
-	 * TODO: FIX BUG. If one were to follow the link in pagination, the search is lost. Best solution: change search to GET instead.
-	 */
-
 	require_once("requiresLogin.php");
 
 	$title = "Records";
@@ -39,7 +35,7 @@
 
 	//form sort.
 	echo "
-			<form class='navbar-form navbar navbar-inverse' method='post' action='#' style='width:70%; margin: auto auto 1em auto;'>
+			<form class='navbar-form navbar navbar-inverse' method='get' action='#' style='width:70%; margin: auto auto 1em auto;'>
 				<div class='row'>
 					<div class=\"form-group col-sm-12\" align='center' style='padding-top:1em'>
 					<label style='color:white'>Sport: </label>
@@ -50,7 +46,7 @@
 	array_push($sportTypes, '*'); //add the any option
 
 	while($row = mysqli_fetch_assoc($results)){
-		if($row['type'] == $_POST['sport']){
+		if($row['type'] == $_GET['sport']){
 
 			echo "<option value='" . htmlspecialchars( htmlspecialchars( $row['type'] ) ) . "' selected='selected'>" . htmlspecialchars( $row['type'] ) . "</option>";
 		}else{
@@ -67,9 +63,9 @@
 
 
 	$order = "sport.type";
-	if(isset($_POST['sport'])){//search option used
-		if(in_array($_POST['sport'], $sportTypes)){//make sure no injection, only allowed options.
-			if($_POST['sport'] == '*'){//the any option. Mysqli does not like * options.
+	if(isset($_GET['sport'])){//search option used
+		if(in_array($_GET['sport'], $sportTypes)){//make sure no injection, only allowed options.
+			if($_GET['sport'] == '*'){//the any option. Mysqli does not like * options.
 				$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID 
 					FROM record 
 					LEFT JOIN sport ON record.sport_id = sport.id 
@@ -80,7 +76,7 @@
 				FROM record 
 				LEFT JOIN sport ON record.sport_id = sport.id 
 				LEFT JOIN student ON record.username = student.username
-				WHERE sport.type = '{$_POST['sport']}' ORDER BY {$order}";
+				WHERE sport.type = '{$_GET['sport']}' ORDER BY {$order}";
 			}
 		}
 	}else{//first time
@@ -147,6 +143,11 @@
 			<div class='pagination'>
 			";
 
+	//Need to check if variable set before so we don't clear get.
+	if(isset($_GET['sport'])){
+		$prefix = "?sport=" . $_GET['sport'] . "&page=";
+	}else $prefix = '?page=';
+
 
 	$numRows = floor($numResults / $maxResPage); //get number of default large - rows
 	if($numResults % $maxResPage != 0) $numRows++; //in case it's an extra non-full page.
@@ -154,9 +155,9 @@
 	do { //run at least once so that there is always a page counter.
 		$rowCount++;
 		if($currentPage == $rowCount){
-			echo "<a class='active' href='?page=" . $rowCount . "';> " . $rowCount . "</a>";
+			echo "<a class='active' href='" . $prefix . $rowCount . "';> " . $rowCount . "</a>";
 		}else {
-			echo "<a href='?page=" . $rowCount . "'> " . $rowCount . "</a>";
+			echo "<a href='" . $prefix . $rowCount . "'> " . $rowCount . "</a>";
 		}
 		$numRows--;
 	}while($numRows > 0);

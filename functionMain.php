@@ -102,7 +102,7 @@
 	function getRecordItem($recID){
 		//set up statement for: get product name, description, price and current stock
 		require("dbConn.php");
-		$sql = "SELECT r.recordID, r.username, sport_id, record, sp.type, sp.unit 
+		$sql = "SELECT r.recordID, r.username, r.recordDate, r.approved, sport_id, record, sp.type, sp.unit 
 				FROM record r, sport sp, student st
 				WHERE r.username = st.username AND r.sport_id = sp.id AND r.recordID = '{$recID}';";
 		//save query result
@@ -161,6 +161,31 @@
 		if (isset($conn)) {
 			$result = $conn->query($sql);
 			$conn->close();
+		}
+		return $result;
+	}
+
+
+	/**
+	 *
+	 */
+	function getAllRecordStatus(){
+		require("dbConn.php");
+		$sql = "SELECT status FROM recordstatus ORDER BY status DESC;";
+		//save query result
+		$result = array();
+		if (isset($conn)) {
+			$result = $conn->query($sql);
+			$conn->close();
+		}
+		return $result;
+	}
+
+	function getAllRecordStatusID(){
+		$data = getAllRecordStatus();
+		$result = array();
+		while($row = mysqli_fetch_row($data)){
+			array_push($result, $row[0]);
 		}
 		return $result;
 	}

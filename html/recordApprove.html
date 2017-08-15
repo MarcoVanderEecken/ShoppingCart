@@ -1,0 +1,17 @@
+<div class="row">
+    <span>
+        <form method="post" action="recordLogPage">
+            <input type="hidden" name="recordID" value="<?=$result['recordID']?>">
+            <input type="hidden" name="username" value="<?=$result['username']?>">
+            <input type="hidden" name="sport_id" value="<?=$result['sport_id']?>">
+            <input type="hidden" name="sport_type" value="<?=$result['type']?>">
+            <input type="hidden" name="record" value="<?=$result['record']?>">
+            <input type="hidden" name="recordDate" value="<?=$result['recordDate']?>">
+            <input type="hidden" name="addRecord" value="TRUE">
+
+            <button name="approved" value="2"> Approve </button>
+            <button name="approved" value="-1"> Decline </button>
+
+        </form>
+    </span>
+</div>

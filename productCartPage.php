@@ -9,17 +9,7 @@
 	require_once("productCart.php");
 	if(!isset($_SESSION)){session_start();}
 
-	//if(isset($_SESSION['loggedIn'])){ //only show if user logged in
-	//    //Only moderator (level 1) and admin (level 2) can view cart
-	//    if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
-	//        //navigation header
-	//        $title = "Add Product";
-	//        include('html/baseHeader.html');
-	//        include('mainMenu.html');
-	//    }
-	//}else {
-	//    redirectPage("index.php");
-	//}
+
 
 	//check if there is a cart
 	if(!isset($_SESSION['userCart'])) $_SESSION['userCart'] = array();
@@ -41,7 +31,7 @@
 
 	include_once('html/productCartPage.html');
 	//add objects.
-	foreach ($_SESSION['userCart'] as $key => $value){
+	foreach ($_SESSION['recordLog'] as $key => $value){
 	    echo "<tr>";
 	    echo "<td> {$value->getProductID()}</td>";
 	    echo "<td> {$value->getProductName()}</td>";
