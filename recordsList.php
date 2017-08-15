@@ -47,10 +47,9 @@
 
 	while($row = mysqli_fetch_assoc($results)){
 		if($row['type'] == $_GET['sport']){
-
-			echo "<option value='" . htmlspecialchars( htmlspecialchars( $row['type'] ) ) . "' selected='selected'>" . htmlspecialchars( $row['type'] ) . "</option>";
+			echo "<option value='" . htmlspecialchars( $row['type'] ) . "' selected='selected'>" . htmlspecialchars( $row['type'] ) . "</option>";
 		}else{
-			echo "<option value='". htmlspecialchars(htmlspecialchars($row['type'])) ."'>" . htmlspecialchars($row['type']) . "</option>";
+			echo "<option value='". htmlspecialchars($row['type']) ."'>" . htmlspecialchars($row['type']) . "</option>";
 		}
 		array_push($sportTypes, $row['type']);
 	}
@@ -146,6 +145,7 @@
 	//Need to check if variable set before so we don't clear get.
 	if(isset($_GET['sport'])){
 		$prefix = "?sport=" . $_GET['sport'] . "&page=";
+
 	}else $prefix = '?page=';
 
 

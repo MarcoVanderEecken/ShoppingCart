@@ -39,7 +39,7 @@
 
 		// The PDF source is in original.pdf
 		try{
-			readfile( $path . $hash );
+			readfile( $path . $hash ); // TODO: Embed this in page
 		}catch(Exception $e){
 			redirectToIndex();
 		}

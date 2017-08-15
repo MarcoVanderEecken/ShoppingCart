@@ -1,43 +1,10 @@
 
-To Do:
+TODO:
+- menu bar red if admin logged ($_SESSION['loggedIn'] ==2) --> required vanity
+- htmlspecialchar on all echo variables --> ~3 marks
+- help page population (scrollnav (nav on left side adjusts)) --> 3+2 marks (including content)
+- List pages, search by school, sort by name second/third option --> ~2 marks
+- open pdf, in student item, birth year href to birth certificate document --> 3 marks
 
-Moderator:
-- can remove products
-- can edit products
-- product approval page
-
-Admin
-- admin only allowed to access admin files
-- able to edit site editor details / add and remove them as well
-
-Shop:
-- Image format uniform, make description always 3 lines with it ending in ...
-- sorting option
-- max number of results per page
-
-Add product:
-- constraints on image:
-    > data size (2MB?)
-    > pixel size (500x500) -> force it or max?
-- level of product
-    > 0 not approved, only moderator and admin can see
-    > 1 approved, all can view
-- revamp for sports day entries
-- need table for type of sport
-
-Add sport type table:
-- admin can add more sport types
-- in add product, user can select option in drop-down for sport type.
-
-Add User:
-- change registration page to only be accessed by admin/mod.
-- admin must have further option between customer and moderator. For mod: auto populate normal user
-
-User Interface:
-- Need a name and logo
-
-
-Add schools table associated with product table
-
-
-123 Keagan.
+- about page little add --> vanity
+- (if time permits css of add record select 2 css to other inputs) --> vanity

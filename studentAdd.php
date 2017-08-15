@@ -64,7 +64,7 @@ if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POS
 				require("dbConn.php");
 				//first check if student with desired username exists (namely fname+sname+birth_year)
 				$sql = $conn->prepare("SELECT username FROM student WHERE username = ?;");
-				$username =  str_replace(' ', '', $_POST['studentFName'] . $_POST['studentSName'] . strtok($birthDate. '-'));
+				$username =  str_replace(' ', '', $_POST['studentFName'] . $_POST['studentSName'] . strtok($birthDate, '-'));
 				$sql->bind_param("s", $username);
 				$sql->execute();
 				$i = 1;
@@ -72,6 +72,7 @@ if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POS
 				while($sql->fetch() != 0){//while username already taken
 					$checkedUsername = $username . $i;
 					$sql->bind_param("s", $checkedUsername); //updated check.
+					$sql->execute();
 					$i++;
 				}
 				$sql->close();

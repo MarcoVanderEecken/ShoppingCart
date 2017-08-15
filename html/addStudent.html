@@ -37,7 +37,7 @@
                         <select name="school" required>
                             <?php
                                 while($school = mysqli_fetch_assoc($schoolList)){
-                                    echo "<option value ='" . $school['abr'] . "'> " . $school['name'] . "</option>";
+                                    echo "<option value ='" . htmlspecialchars($school['abr']) . "'> " . htmlspecialchars($school['name']) . "</option>";
                                 }
                             ?>
                         </select>
