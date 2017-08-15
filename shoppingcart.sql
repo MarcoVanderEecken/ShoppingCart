@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 14, 2017 at 02:44 PM
+-- Generation Time: Aug 15, 2017 at 04:33 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.1.7
 
@@ -194,16 +194,18 @@ CREATE TABLE `record` (
 --
 
 INSERT INTO `record` (`recordID`, `username`, `sport_id`, `record`, `approved`, `recordDate`) VALUES
-(1, 'firststudent', 1, '10', 1, '2017-08-11 19:05:38'),
-(2, 'secondstudent', 1, '8', 1, '2017-08-11 19:05:38'),
-(3, 'firststudent', 2, '190', 1, '2017-08-11 19:05:38'),
-(4, 'secondstudent', 2, '201', 1, '2017-08-11 19:05:38'),
-(5, 'MarcoVanderEecken', 2, '330', 1, '2017-08-11 19:05:38'),
-(6, 'MarcoVanderEecken', 1, '2000', 1, '2017-08-11 19:05:38'),
-(7, 'MarcoVanderEecken', 1, '2', 1, '2017-08-11 19:05:38'),
-(8, 'firststudent', 1, '12', 1, '2017-08-11 19:05:38'),
-(9, 'firststudent', 1, '2', 1, '2017-08-11 00:00:00'),
-(10, 'firststudent', 1, '10', 1, '2017-08-13 14:06:08');
+(1, 'firststudent', 1, '10', 2, '2017-08-11 19:05:38'),
+(2, 'secondstudent', 1, '8', 2, '2017-08-11 19:05:38'),
+(3, 'firststudent', 2, '190', 2, '2017-08-11 19:05:38'),
+(4, 'secondstudent', 2, '201', 2, '2017-08-11 19:05:38'),
+(5, 'MarcoVanderEecken', 2, '330', 2, '2017-08-11 19:05:38'),
+(6, 'MarcoVanderEecken', 1, '2000', 2, '2017-08-11 19:05:38'),
+(7, 'MarcoVanderEecken', 1, '2', 2, '2017-08-11 19:05:38'),
+(8, 'firststudent', 1, '12', 2, '2017-08-11 19:05:38'),
+(9, 'firststudent', 1, '2', 2, '2017-08-11 00:00:00'),
+(10, 'firststudent', 1, '10', 2, '2017-08-13 14:06:08'),
+(11, 'KeaganWiltshire', 3, '200', 2, '2017-08-14 00:00:00'),
+(12, 'StefanoMontanari', 3, '12', 2, '2017-08-14 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -223,7 +225,7 @@ CREATE TABLE `recordstatus` (
 INSERT INTO `recordstatus` (`status`, `description`) VALUES
 (1, 'Waiting for approval'),
 (2, 'Approved'),
-(3, 'Declined');
+(-1, 'Declined');
 
 -- --------------------------------------------------------
 
@@ -241,9 +243,14 @@ CREATE TABLE `school` (
 --
 
 INSERT INTO `school` (`abr`, `name`) VALUES
-('dsk', 'Deutsche Schule Kapstadt'),
-('mhs', 'Milnerton High School'),
-('123', '123');
+('DSK', 'Deutsche Schule Kapstadt'),
+('MHS', 'Milnerton High School'),
+('TVHS', 'Table View High School'),
+('AISCT', 'American International School of Cape Town'),
+('St. CS', 'St. Cyprian\'s School'),
+('St. GGS', 'St. George\'s Grammar School'),
+('CTHS', 'Cape Town High School'),
+('HJvR', 'HoÃ«rskool Jan van Riebeeck');
 
 -- --------------------------------------------------------
 
@@ -263,7 +270,8 @@ CREATE TABLE `sport` (
 
 INSERT INTO `sport` (`id`, `type`, `unit`) VALUES
 (1, '80m Sprint', 'second'),
-(2, '1000m Long Distance', 'second');
+(2, '1000m Long Distance', 'second'),
+(3, 'Long Jump', 'meters');
 
 -- --------------------------------------------------------
 
@@ -403,7 +411,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `record`
 --
 ALTER TABLE `record`
-  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `recordstatus`
 --
@@ -413,7 +421,7 @@ ALTER TABLE `recordstatus`
 -- AUTO_INCREMENT for table `sport`
 --
 ALTER TABLE `sport`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `type`
 --

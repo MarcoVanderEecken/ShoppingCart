@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/addSport.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/recordApprove.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/recordLogPage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/schoolListItem.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recordLog.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recordLogItem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recordLogPage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentBirthcertificate.php" />
+    <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="Version 0.9 update&#10;- log support added&#10;- approval support added&#10;- Need to populate help and about&#10;- add support for birth certificate pdf viewing">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/shopcart.css" afterPath="$PROJECT_DIR$/css/shopcart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functionMain.php" afterPath="$PROJECT_DIR$/functionMain.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/help.html" afterPath="$PROJECT_DIR$/html/help.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/menuManagement.html" afterPath="$PROJECT_DIR$/html/menuManagement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/recordItem.html" afterPath="$PROJECT_DIR$/html/recordItem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainMenu.html" afterPath="$PROJECT_DIR$/mainMenu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productCartPage.php" afterPath="$PROJECT_DIR$/productCartPage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recordsList.php" afterPath="$PROJECT_DIR$/recordsList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/schoolList.php" afterPath="$PROJECT_DIR$/schoolList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentAdd.php" afterPath="$PROJECT_DIR$/studentAdd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentList.php" afterPath="$PROJECT_DIR$/studentList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingcart.sql" afterPath="$PROJECT_DIR$/shoppingcart.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,8 +61,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            <state relative-caret-position="374">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -484,14 +464,7 @@
       <workItem from="1502614418369" duration="21106000" />
       <workItem from="1502718847965" duration="19787000" />
       <workItem from="1502776590143" duration="1305000" />
-      <workItem from="1502813869130" duration="770000" />
-    </task>
-    <task id="LOCAL-00046" summary="Version 0.4.2 update.&#10;- Product Item page, dynamically adjust according to ID&#10;- Product Shop now links to Product Item page&#10;&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID">
-      <created>1499162830876</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1499162830876</updated>
+      <workItem from="1502813869130" duration="967000" />
     </task>
     <task id="LOCAL-00047" summary="Version 0.4.3 update.&#10;- Currently adding image support to upload&#10;&#10;- NOTE TO ADD CHECK FOR INVALID PRODUCT ID">
       <created>1499167389074</created>
@@ -829,11 +802,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502739327360</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Version 0.9 update&#10;- log support added&#10;- approval support added&#10;- Need to populate help and about&#10;- add support for birth certificate pdf viewing">
+      <created>1502814652991</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1502814652992</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250466000" />
+    <option name="totallyTimeSpent" value="250663000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1276,13 +1256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htcaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/addStudent.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1421,10 +1394,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.htcaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="374">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
