@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Temporary
- * Date: 7/3/2017
- * Time: 10:30 PM
+ * Page to add moderator. A moderator is a loginlevel 2 account and can only be added by admin (level 3)
  */
 
 //This file is for the admin to create a product
@@ -46,7 +43,7 @@ do if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['em
 			//username check
 			require ("dbConn.php");
 			//first check if a user with desired username already exists
-			$sql = $conn->prepare("SELECT username FROM student WHERE username = ?;");
+			$sql = $conn->prepare("SELECT username FROM login WHERE username = ?;");
 			$username = htmlspecialchars($_POST['username']);
 			$sql->bind_param("s", $username);
 			$sql->execute();
@@ -65,18 +62,18 @@ do if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['em
 			$sql->bind_param("sss", $username, $password, $email);
 			if($sql->execute() == TRUE){}
 			else {
-				jsAlert( "Failed to add teacher: " . $sql->error );
+				jsAlert( "Failed to add moderator: " . $sql->error );
 				break;
 			}
 
 			$sql->close();
 			$conn->close();
-			jsAlert("Teacher Successfully added.");
+			jsAlert("Moderator Successfully added.");
 		}
 	}
 } while(false);//end of check if post input
 
 
 //body of add a product
-include("html/addTeacher.html");
+include("html/addModerator.html");
 include("html/indexFooter.html");
