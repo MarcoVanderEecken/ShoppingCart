@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/moderatorAdd.php" afterPath="$PROJECT_DIR$/moderatorAdd.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -520,14 +519,7 @@
       <workItem from="1502776590143" duration="1305000" />
       <workItem from="1502813869130" duration="6596000" />
       <workItem from="1502865529525" duration="56000" />
-      <workItem from="1502995827688" duration="129000" />
-    </task>
-    <task id="LOCAL-00051" summary="Version 0.5 update.&#10;Added LoginLevel table&#10;Now there are 3 user levels, normal, moderatotr and admin&#10;Only moderator and admin can add products">
-      <created>1500065599392</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1500065599392</updated>
+      <workItem from="1502995827688" duration="139000" />
     </task>
     <task id="LOCAL-00052" summary="Version 0.5 update.&#10;Added LoginLevel table&#10;Now there are 3 user levels, normal, moderatotr and admin&#10;Only moderator and admin can add products">
       <created>1500066757610</created>
@@ -865,11 +857,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502820341464</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Version 0.9 update&#10;- log support added&#10;- approval support added&#10;- Need to populate help and about&#10;- add support for birth certificate pdf viewing">
+      <created>1502995965432</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1502995965432</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256477000" />
+    <option name="totallyTimeSpent" value="256487000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
