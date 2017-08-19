@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/shopcart.css" afterPath="$PROJECT_DIR$/css/shopcart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/baseHeader.html" afterPath="$PROJECT_DIR$/html/baseHeader.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainMenu.html" afterPath="$PROJECT_DIR$/mainMenu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/moderatorAdd.php" afterPath="$PROJECT_DIR$/moderatorAdd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recordsList.php" afterPath="$PROJECT_DIR$/recordsList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentList.php" afterPath="$PROJECT_DIR$/studentList.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/toDo.txt" afterPath="$PROJECT_DIR$/toDo.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,11 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="toDo.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="toDo.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/toDo.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="34">
+              <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -90,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shopcart.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shopcart.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/shopcart.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+            <state relative-caret-position="401">
+              <caret line="122" column="36" lean-forward="true" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -263,13 +257,13 @@
         <option value="$PROJECT_DIR$/html/recordListItem.html" />
         <option value="$PROJECT_DIR$/recordLog.php" />
         <option value="$PROJECT_DIR$/studentBirthcertificate.php" />
-        <option value="$PROJECT_DIR$/toDo.txt" />
         <option value="$PROJECT_DIR$/html/baseHeader.html" />
         <option value="$PROJECT_DIR$/moderatorAdd.php" />
         <option value="$PROJECT_DIR$/mainMenu.html" />
         <option value="$PROJECT_DIR$/recordsList.php" />
         <option value="$PROJECT_DIR$/studentList.php" />
         <option value="$PROJECT_DIR$/css/shopcart.css" />
+        <option value="$PROJECT_DIR$/toDo.txt" />
       </list>
     </option>
   </component>
@@ -560,14 +554,7 @@
       <workItem from="1503051751687" duration="4000" />
       <workItem from="1503083495455" duration="47000" />
       <workItem from="1503084184558" duration="357000" />
-      <workItem from="1503129253010" duration="2307000" />
-    </task>
-    <task id="LOCAL-00053" summary="Version 0.5.1 update.&#10;- Bugfix: productList?id=# will redirect to correct productItem page.&#10;- add product will only allow user to access if they have sufficient privileges&#10;- updated To Do list">
-      <created>1500284555164</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1500284555164</updated>
+      <workItem from="1503129253010" duration="2330000" />
     </task>
     <task id="LOCAL-00054" summary="Version 0.5.1 update.&#10;- Bugfix: productList?id=# will redirect to correct productItem page.&#10;- add product will only allow user to access if they have sufficient privileges&#10;- updated To Do list">
       <created>1500302680053</created>
@@ -905,11 +892,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502995970352</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Version 0.9 update&#10;- log support added&#10;- approval support added&#10;- Need to populate help and about&#10;- add support for birth certificate pdf viewing">
+      <created>1503131813328</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1503131813328</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262133000" />
+    <option name="totallyTimeSpent" value="262156000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1402,14 +1396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/toDo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/baseHeader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1493,8 +1479,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/shopcart.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+        <state relative-caret-position="401">
+          <caret line="122" column="36" lean-forward="true" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toDo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding />
         </state>
       </provider>
