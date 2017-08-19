@@ -38,4 +38,14 @@
             });
         });
 
+        var div, li, ul;
+        li = element.wrap('<li/>').parent()[0];
+        ul = $(li).wrap('<ul/>').parent()[0];
+        div = $(ul).wrap('<div/>').parent()[0];
+        element.addClass('select2-input select2-default');
+        $(li).addClass('select2-search-field');
+        $(ul).addClass('select2-choices');
+        $(div).addClass('select2-container select2-container-multi');
+
+        $(div).css('display', 'block');
     </script>

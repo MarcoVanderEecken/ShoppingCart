@@ -130,3 +130,15 @@
 .useradmin{
      background-color: #320a13;
 }
+
+.recordInput{
+    width: 165px;
+
+}
+
+.form-rounded {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
+}
