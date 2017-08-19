@@ -7,7 +7,7 @@
 
 	$title = "Students";
 
-	$maxResPage = 6; //how many results should be displayed per page.
+
 
 	if(!isset($_SESSION)) session_start(); //start session in case user directly navigated to this page.
 	$_SESSION['start'] = "Session started successfully";
@@ -24,22 +24,31 @@
 		//File type to be served:
 		header( 'Content-type: application/pdf' );
 
-		// It will be called username.pdf
-		header( 'Content-Disposition: attachment; filename="' . $_GET['username'] . '.pdf"' );
 
 		//get the path and hash from the birth certificate table
-		require ('dbConn.php');
-		$sql = $conn->prepare("SELECT path, hash FROM birth_certificate WHERE username = ?");
-		$sql->bind_param('s', $_GET['username']);
+		require( 'dbConn.php' );
+		$sql = $conn->prepare( "SELECT path, hash FROM birth_certificate WHERE username = ?" );
+		$sql->bind_param( 's', $_GET['username'] );
 		$sql->execute();
 
-		$row = $sql->fetch();
-		$path = $row[0];
-		$hash = $row[1];
+		$rows = $sql->get_result();
+
+		while ( $row = $rows->fetch_assoc() ) {
+			$path = $row['path'];
+			$hash = $row['hash'];
+		}
+
+		if($path == NULL){ //if the file does not exist
+			header('Location: index');
+		}
+
+		 //It will be called username.pdf
+		header( 'Content-Disposition: attachment; filename="' . $_GET['username'] . '.pdf"' );
+
 
 		// The PDF source is in original.pdf
 		try{
-			readfile( $path . $hash ); // TODO: Embed this in page
+			readfile( $path . "/" . $hash ); // TODO: Embed this in page
 		}catch(Exception $e){
 			redirectToIndex();
 		}

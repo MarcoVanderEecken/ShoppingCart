@@ -6,7 +6,7 @@
                 <div class="row"><h2><?php echo $result['fname'] . " " . $result['sname'] ?></h2></div>
                 <div class="row"><span><i><?php echo $result['name']?></i></span></div>
                 <div class="row"><span>Birth Year: <?php echo date('Y/m/d', strtotime($result['birth_year'])) ?> </span></div>
-                <div class="row">&nbsp;</div>
+                <div class="row"><span><a href="studentBirthcertificate?username=<?= htmlspecialchars($_GET['id']) ?>">Birth Certificate</a></span></div>
 
             </div>
             <div class="col-md-6 table-responsive" style="padding: 1%">

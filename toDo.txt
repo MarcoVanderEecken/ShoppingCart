@@ -1,6 +1,7 @@
 
 TODO:
 //- 091 menu bar red if admin logged ($_SESSION['loggedIn'] ==2) --> required vanity
+//- 0911 student profile -> records table
 - 092 htmlspecialchar on all echo variables --> ~3 marks
 - 093 help page population (scrollspy (nav on left side adjusts)) --> 3+2 marks (including content)
 - 094 List pages, search by school, sort by name second/third option --> ~2 marks
