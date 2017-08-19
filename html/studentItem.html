@@ -34,7 +34,7 @@
                                 <?= htmlspecialchars($record['type']) ?>
                             </td>
                             <td>
-                                <?= htmlspecialchars($record['record']) ?>  <?= htmlspecialchars($record['unit']) ?>
+                                <?= htmlspecialchars($record['record']) ?>  <?php if($record['record'] != '1') echo htmlspecialchars($record['unit']) . 's'; else echo htmlspecialchars($record['unit']) ?>
                             </td>
                         </tr>
 
@@ -51,7 +51,7 @@
                                         <?= htmlspecialchars($record['type']) ?>
                                     </td>
                                     <td>
-                                        <?= htmlspecialchars($record['record']) ?>  <?= htmlspecialchars($record['unit']) ?>
+                                        <?= htmlspecialchars($record['record']) ?>  <?php if($record['record'] != '1') echo htmlspecialchars($record['unit']) . 's'; else echo htmlspecialchars($record['unit']) ?>
                                     </td>
                                 </tr>
 

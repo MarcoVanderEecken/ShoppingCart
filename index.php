@@ -6,9 +6,7 @@
  * Time: 4:27 PM
  */
 
-// TODO: Add being able to access pdf file.
-
-    $title = "Home Page";
+    $title = htmlspecialchars("Home Page");
     include('html/baseHeader.html');
     include('mainMenu.html');
     include( 'functionMain.php' );

@@ -49,17 +49,20 @@
     if(isset($_POST['username']) && isset($_POST['password']) ){ //username and password given
 
             include("dbConn.php");
-            $sql = "SELECT password, level FROM login WHERE username = '{$_POST['username']}';";
+            $sql = $conn->prepare("SELECT password, level FROM login WHERE username = ?");
             try {
-                $result = $conn->query($sql);
-                $row = mysqli_fetch_row($result);
+            	$username = htmlspecialchars($_POST['username']);
+            	$sql->bind_param('s', $username);
+            	$sql->execute();
+                $result = $sql->get_result();
+                $row = $result->fetch_assoc();
                 try {
-                    if (password_verify($_POST['password'], $row[0])) {//password is correct
-                        $_SESSION['username'] = $_POST['username'];
-                        $_SESSION['loggedIn'] = $row[1];
+                    if (password_verify($_POST['password'], $row['password'])) {//password is correct
+                        $_SESSION['username'] = $username;
+                        $_SESSION['loggedIn'] = $row['level'];
                         if (isset($_POST['remember'])) {
                         	if($_POST['remember'] === TRUE)
-                                setcookie('username', $_POST['username'], time() + strtotime("+7 days"));
+                                setcookie('username', $username, time() + strtotime("+7 days"));
                         	else unset($_COOKIE['username']);
                         }else unset($_COOKIE['username']);
                         refreshPage();

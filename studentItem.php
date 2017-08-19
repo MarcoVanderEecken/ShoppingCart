@@ -10,7 +10,7 @@ $results = getStudent($_GET['id']);
 $result = mysqli_fetch_assoc($results);
 
 if(empty($result)){//in case invalid get.
-	redirectPage("productList.php");
+	redirectPage("studentList.php");
 }
 
 $title = $result['fname'] . " " . $result['sname'];

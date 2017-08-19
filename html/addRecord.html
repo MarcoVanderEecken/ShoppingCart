@@ -27,7 +27,7 @@
                             <select name="studentUsername" class="js-example-basic-single" required>
                                 <?php
                                     while($student = mysqli_fetch_assoc($studentList)){
-                                        echo "<option value ='" . $student['username'] . "'> " . $student['username'] . "</option>";
+                                        echo "<option value ='" . htmlspecialchars($student['username']) . "'> " . htmlspecialchars($student['username']) . "</option>";
                                     }
                                 ?>
                             </select>
@@ -48,7 +48,7 @@
                         <select name="sportType" class="js-example-basic-single" required>
                             <?php
                                     while($sportCat = mysqli_fetch_assoc($sportsCats)){
-                                        echo "<option value ='" . $sportCat['id'] . "'> " . $sportCat['type'] . "</option>";
+                                        echo "<option value ='" . htmlspecialchars($sportCat['id']) . "'> " . htmlspecialchars($sportCat['type']) . "</option>";
                             }
                             ?>
                         </select>

@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-sm-4" style="padding-top:2%;">
                             Username: <input type="text" placeholder="Enter username" name="username"  required
-                                             value="<?php if (isset($_COOKIE['username'])) echo $_COOKIE['username'];  ?>" > &nbsp;
+                                             value="<?php if (isset($_COOKIE['username'])) echo htmlspecialchars($_COOKIE['username']);  ?>" > &nbsp;
                         </div>
                         <div class="col-sm-4" style="padding-top:2%;">
                                 Password : <input type="password" placeholder="Enter password" name="password" required> &nbsp;
