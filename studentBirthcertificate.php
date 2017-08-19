@@ -42,8 +42,8 @@
 			header('Location: index');
 		}
 
-		 //It will be called username.pdf
-		header( 'Content-Disposition: attachment; filename="' . $_GET['username'] . '.pdf"' );
+		 //It will be called username.pdf //inline embeds in page, use attachment for download
+		header( 'Content-Disposition: inline; filename="' . $_GET['username'] . '.pdf"' );
 
 
 		// The PDF source is in original.pdf

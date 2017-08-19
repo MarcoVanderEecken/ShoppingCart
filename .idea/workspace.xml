@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/studentItem.html" afterPath="$PROJECT_DIR$/html/studentItem.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentBirthcertificate.php" afterPath="$PROJECT_DIR$/studentBirthcertificate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/toDo.txt" afterPath="$PROJECT_DIR$/toDo.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,11 +63,11 @@
       <file leaf-file-name="studentBirthcertificate.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studentBirthcertificate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="40" column="55" lean-forward="false" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+            <state relative-caret-position="180">
+              <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
               <folding>
-                <marker date="1503138929352" expanded="true" signature="606:665" ph="SELECT path,... birth_certificate" />
-                <marker date="1503138929352" expanded="true" signature="619:664" ph="SELECT path,... birth_certificate" />
+                <marker date="1503139049863" expanded="true" signature="606:665" ph="SELECT path,... birth_certificate" />
+                <marker date="1503139049863" expanded="true" signature="619:664" ph="SELECT path,... birth_certificate" />
               </folding>
             </state>
           </provider>
@@ -541,14 +539,7 @@
       <workItem from="1503051751687" duration="4000" />
       <workItem from="1503083495455" duration="47000" />
       <workItem from="1503084184558" duration="357000" />
-      <workItem from="1503129253010" duration="8459000" />
-    </task>
-    <task id="LOCAL-00056" summary="Version 0.5.2 update.&#10;- Image max size 1MB">
-      <created>1500474396874</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1500474396875</updated>
+      <workItem from="1503129253010" duration="8605000" />
     </task>
     <task id="LOCAL-00057" summary="Version 0.5.2 update.&#10;- Image max size 1MB">
       <created>1500475368001</created>
@@ -886,11 +877,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503134091865</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Version 0.9.2 update&#10;- added birth certificate support">
+      <created>1503138953654</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1503138953655</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268285000" />
+    <option name="totallyTimeSpent" value="268431000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -998,7 +996,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version 0.5.2 update.&#10;- Image max size 1MB" />
     <MESSAGE value="Version 0.5.3 update.&#10;- Item list div is now defined in EM, it will create a scroll pane if over 4 lines.&#10;- Image height defined in em" />
     <MESSAGE value="Version 0.6.1 update.&#10;- Product Cart" />
     <MESSAGE value="Version 0.6.2 update.&#10;- Product Cart implemented" />
@@ -1023,7 +1020,8 @@
     <MESSAGE value="Version 0.9 update&#10;- log support added&#10;- approval support added&#10;- Need to populate help and about" />
     <MESSAGE value="Version 0.9 update&#10;- log support added&#10;- approval support added&#10;- Need to populate help and about&#10;- add support for birth certificate pdf viewing" />
     <MESSAGE value="Version 0.9.1 update&#10;- added admin red color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.9.1 update&#10;- added admin red color" />
+    <MESSAGE value="Version 0.9.2 update&#10;- added birth certificate support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.9.2 update&#10;- added birth certificate support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1481,11 +1479,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studentBirthcertificate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="40" column="55" lean-forward="false" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+        <state relative-caret-position="180">
+          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
           <folding>
-            <marker date="1503138929352" expanded="true" signature="606:665" ph="SELECT path,... birth_certificate" />
-            <marker date="1503138929352" expanded="true" signature="619:664" ph="SELECT path,... birth_certificate" />
+            <marker date="1503139049863" expanded="true" signature="606:665" ph="SELECT path,... birth_certificate" />
+            <marker date="1503139049863" expanded="true" signature="619:664" ph="SELECT path,... birth_certificate" />
           </folding>
         </state>
       </provider>
