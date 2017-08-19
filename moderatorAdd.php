@@ -19,6 +19,7 @@ if($_SESSION['loggedIn'] == 2){
 	include('mainMenu.html');
 }else {
 	redirectPage( "index.php" );
+
 	exit();
 }
 

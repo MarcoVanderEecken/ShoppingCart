@@ -35,9 +35,13 @@
 	//container for the nav:
 	echo "<div class='jumbotron'>";
 
+	//if admin be useradmin class
+	if($_SESSION['loggedIn'] == 2) $isUserAdmin = 'useradmin';
+	else $isUserAdmin = '';
+
 	//form sort.
 	echo "
-			<form class='navbar-form navbar navbar-inverse' method='get' action='#' style='width:70%; margin: auto auto 1em auto;'>
+			<form class='navbar-form navbar navbar-inverse ". htmlspecialchars($isUserAdmin). "' method='get' action='#' style='width:70%; margin: auto auto 1em auto;'>
 				<div class='row'>
 					<div class=\"form-group col-sm-12\" align='center' style='padding-top:1em'>
 					<label style='color:white'>School: </label>

@@ -1,6 +1,7 @@
 
     <!-- this menu is only to be used on the main page due to folder location -->
-    <nav id="myNavBar" class="navbar navbar-default navbar-inverse navbar-fixed-tio" role="navigation">
+    <nav id="myNavBar" class="navbar navbar-default navbar-inverse navbar-fixed-tio
+        <?php if(isset($_SESSION['loggedIn'])){ if($_SESSION['loggedIn'] == 2) echo htmlspecialchars('useradmin');} ?> "role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
