@@ -27,3 +27,4 @@ $record = mysqli_fetch_assoc($records);
 
 //body of student item
 include('html/studentItem.html');
+include('html/indexFooter.html');
