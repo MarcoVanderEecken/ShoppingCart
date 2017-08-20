@@ -16,6 +16,7 @@
                         <th>Record ID:</th>
                         <th>Type:</th>
                         <th>Record:</th>
+                        <th>Status:</th>
                     </tr>
                 <!-- no records -->
                 <?php if($record === NULL) echo '<tr>
@@ -36,6 +37,9 @@
                             <td>
                                 <?= htmlspecialchars($record['record']) ?>  <?php if($record['record'] != '1') echo htmlspecialchars($record['unit']) . 's'; else echo htmlspecialchars($record['unit']) ?>
                             </td>
+                            <td>
+                                <?= htmlspecialchars($record['description']) ?>
+                            </td>
                         </tr>
 
                         <?php
@@ -53,10 +57,14 @@
                                     <td>
                                         <?= htmlspecialchars($record['record']) ?>  <?php if($record['record'] != '1') echo htmlspecialchars($record['unit']) . 's'; else echo htmlspecialchars($record['unit']) ?>
                                     </td>
+                                    <td>
+                                        <?= htmlspecialchars($record['description']) ?>
+                                    </td>
                                 </tr>
 
                             <?php
                         }
+
                     }
                 ?>
                 </table>

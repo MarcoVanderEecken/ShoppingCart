@@ -1,7 +1,7 @@
     <!-- start of footer -->
     <footer class="modal-footer navbar-fixed-bottom" id='solids'>
         <div class="container">
-            <p class="text-muted" style="text-align:center"> This is a footer placeholder </p>
+            <p class="text-muted" style="text-align:center"> Sports Day - A creation of <a href="about.php">the Group</a></p>
         </div>
 
     </footer>
@@ -13,6 +13,7 @@
     <!-- /scripts -->
 
     <script>
+        <!-- //breadcrumbs
         $(document).ready(function(){
             $('.dropdown-submenu a.test').on("click", function(e){
                 $(this).next('ul').toggle();
@@ -21,6 +22,7 @@
             });
         });
 
+         //drop-down menu on the right side for set-up
         $( ".dropdown-submenu" ).click(function(event) {
             // stop bootstrap.js to hide the parents
             event.stopPropagation();
@@ -32,12 +34,14 @@
             $( this ).toggleClass('open');
         });
 
+        //makes table rows clickable.
         jQuery(document).ready(function($) {
             $(".clickable-row").click(function() {
                 window.location = $(this).data("href");
             });
         });
 
+        //adds select 2 styling to list items
         var div, li, ul;
         li = element.wrap('<li/>').parent()[0];
         ul = $(li).wrap('<ul/>').parent()[0];
@@ -48,4 +52,5 @@
         $(div).addClass('select2-container select2-container-multi');
 
         $(div).css('display', 'block');
+        -->
     </script>

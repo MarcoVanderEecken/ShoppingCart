@@ -123,9 +123,10 @@
 		//set up statement for: get product name, description, price and current stock
 		require("dbConn.php");
 		//save query result
-		$sql = "SELECT recordID, r.username, sport_id, record, sp.type, sp.unit 
-				FROM record r, sport sp, student st
-				WHERE r.username = st.username AND r.sport_id = sp.id AND st.username = '{$studentID}';";
+		$sql = "SELECT recordID, r.username, rs.description, sport_id, record, sp.type, sp.unit 
+				FROM record r, sport sp, student st, recordstatus rs
+				WHERE r.username = st.username AND r.approved = rs.status AND r.sport_id = sp.id AND st.username = '{$studentID}'
+				ORDER BY sport_id ASC;";
 		$result = array();
 		if (isset($conn)) {
 			$result = $conn->query($sql);

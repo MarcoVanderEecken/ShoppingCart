@@ -20,6 +20,7 @@
 		redirectPage("login");
 		exit();
 	}
+
     include('html/indexBody.html');
     include('html/indexFooter.html');
 
