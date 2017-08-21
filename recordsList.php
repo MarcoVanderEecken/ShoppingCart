@@ -103,25 +103,25 @@
 					ORDER BY {$order}";
                 } elseif($_GET['sport'] == '*') {
                     $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
-				FROM record 
-				LEFT JOIN sport ON record.sport_id = sport.id 
-				LEFT JOIN student ON record.username = student.username
-				LEFT JOIN school ON student.school = school.abr
-				WHERE school.abr = '{$_GET['school']}' ORDER BY school.name";
+					FROM record 
+					LEFT JOIN sport ON record.sport_id = sport.id 
+					LEFT JOIN student ON record.username = student.username
+					LEFT JOIN school ON student.school = school.abr
+					WHERE school.abr = '{$_GET['school']}' ORDER BY school.name";
                 } elseif($_GET['school'] == '*') {
                     $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
-				FROM record 
-				LEFT JOIN sport ON record.sport_id = sport.id 
-				LEFT JOIN student ON record.username = student.username
-				LEFT JOIN school ON student.school = school.abr
-				WHERE sport.type = '{$_GET['sport']}' ORDER BY {$order}";
+					FROM record 
+					LEFT JOIN sport ON record.sport_id = sport.id 
+					LEFT JOIN student ON record.username = student.username
+					LEFT JOIN school ON student.school = school.abr
+					WHERE sport.type = '{$_GET['sport']}' ORDER BY {$order}";
                 }else {
                     $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
-				FROM record 
-				LEFT JOIN sport ON record.sport_id = sport.id 
-				LEFT JOIN student ON record.username = student.username
-				LEFT JOIN school ON student.school = school.abr
-				WHERE sport.type = '{$_GET['sport']}' AND school.abr = '{$_GET['school']}' ORDER BY {$order}";
+					FROM record 
+					LEFT JOIN sport ON record.sport_id = sport.id 
+					LEFT JOIN student ON record.username = student.username
+					LEFT JOIN school ON student.school = school.abr
+					WHERE sport.type = '{$_GET['sport']}' AND school.abr = '{$_GET['school']}' ORDER BY {$order}";
                 }
             }
         }
