@@ -3,16 +3,25 @@
             <div class="jumbotron">
                 <h3> Welcome to the home page.</h3>
 
-                confirming session started: <?php echo $_SESSION['start']; ?>
+                <!--confirming session started: <?php echo $_SESSION['start']; ?>-->
 
-                <br> Checking if user logged in:
-                <?php
-                    if(isset($_SESSION['username'])){
-                        echo htmlspecialchars($_SESSION['username']) . " is logged in.";
-                    }else{
-                        echo "no user logged in.";
-                    }
-                ?>
+                <!--<br> Checking if user logged in:-->
+                <!--<?php-->
+                    <!--if(isset($_SESSION['username'])){-->
+                        <!--echo htmlspecialchars($_SESSION['username']) . " is logged in.";-->
+                    <!--}else{-->
+                        <!--echo "no user logged in.";-->
+                    <!--}-->
+                <!--?>-->
+
+                If you are having trouble using the program, please use the <a href="help">help function</a> on the navigation bar.<br>
+                If you wish to know more about the Sports Day project, please select <a href="help">the help > about page </a> on the navigation bar.
+
+                <br>
+                <br>
+                <i> The idea is that this page is customized to suit the school that uses this system. Things like maybe adding
+                messages left by the admin. </i>
+
             </div>
         </div>
         <!-- body and html ends in indexFooter -->
