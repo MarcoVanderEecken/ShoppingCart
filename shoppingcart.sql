@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 15, 2017 at 04:33 PM
+-- Generation Time: Aug 21, 2017 at 03:04 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.1.7
 
@@ -43,7 +43,8 @@ INSERT INTO `birth_certificate` (`username`, `type`, `path`, `hash`) VALUES
 ('KeaganWiltshire', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-10', '$2y$10$Iw2QFaVc0PYeogk/eJL4fO5mlFmAxCCPh.JgFHVtPhSYNCUKliDxK.pdf'),
 ('StefanoMontanari', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-10', '$2y$10$JSCfjlqgjg0H0bwmqK0OEOPbx2UfFox9PLpNSyaUddUJZ9.DN0sWa.pdf'),
 ('StefanoMontanari1', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-10', '$2y$10$zyjZfK2NuD3xjMtfB4hU5.5OtiFUzVbWt4YFI8gNEPYUi8ZpSHq22.pdf'),
-('StudentNumber7', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-13', '$2y$10$fl2rLIV7WxQVor8ncM7M7.VXXi8W4MwrOWDXUZRGsCUUV5i.kEiC6.pdf');
+('StudentNumber7', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-13', '$2y$10$fl2rLIV7WxQVor8ncM7M7.VXXi8W4MwrOWDXUZRGsCUUV5i.kEiC6.pdf'),
+('KeaganWiltshire2017', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-15', '$2y$10$e52OrB6zkwLPXAROj6UpAObrnPXeTbUJJv8eK2fx37dMEcTURUqzS.pdf');
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,8 @@ INSERT INTO `login` (`username`, `password`, `email`, `regdate`, `level`) VALUES
 ('user4', '$2y$10$ehZXKDNSWRn0i7JD2zgV3Od05rfdfF8TcmW.Vru7p9RKt8Or0uZ/q', 'user4@shoppingcart.com', '2017-07-14 20:28:25', 0),
 ('admin', '$2y$10$NybgdsWeqqjTBWMwRDAHbuxBJGWjhXHJslyCAdMnaHSmr.ugGDdPi', 'admin@shoppingcart.com', '2017-07-14 20:28:25', 2),
 ('bestTeacher', '$2y$10$/7L3lS.M22Ut.FaD80G1ouqQUnHjyifm8LnqKYL/O0BLq06j73CcW', 'best@teacher.com', '2017-08-11 18:06:49', 0),
-('bestTeachers', '$2y$10$gC6LwQtRiQpUPvPabSQ.j.Le.tNafPeVdHN2.RLl1/oWOzY/Ye4LO', 'best@teacher.com', '2017-08-11 18:08:36', 0);
+('bestTeachers', '$2y$10$gC6LwQtRiQpUPvPabSQ.j.Le.tNafPeVdHN2.RLl1/oWOzY/Ye4LO', 'best@teacher.com', '2017-08-11 18:08:36', 0),
+('anotherMod', '$2y$10$KhGGRlh0N.2YYNMN9SfJxeLdgfEdO9wkMDaXM.nbBDrD87b.yVP/O', 'anotherMod@sportsday.com', '2017-08-19 11:31:47', 0);
 
 -- --------------------------------------------------------
 
@@ -203,9 +205,11 @@ INSERT INTO `record` (`recordID`, `username`, `sport_id`, `record`, `approved`, 
 (7, 'MarcoVanderEecken', 1, '2', 2, '2017-08-11 19:05:38'),
 (8, 'firststudent', 1, '12', 2, '2017-08-11 19:05:38'),
 (9, 'firststudent', 1, '2', 2, '2017-08-11 00:00:00'),
-(10, 'firststudent', 1, '10', 2, '2017-08-13 14:06:08'),
+(10, 'firststudent', 1, '10', -1, '2017-08-13 14:06:08'),
 (11, 'KeaganWiltshire', 3, '200', 2, '2017-08-14 00:00:00'),
-(12, 'StefanoMontanari', 3, '12', 2, '2017-08-14 00:00:00');
+(12, 'StefanoMontanari', 3, '12', 2, '2017-08-14 00:00:00'),
+(13, 'KeaganWiltshire2017', 1, '3200', 2, '2017-08-14 00:00:00'),
+(14, 'firststudent', 3, '23123213', 2, '2017-08-15 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -271,7 +275,7 @@ CREATE TABLE `sport` (
 INSERT INTO `sport` (`id`, `type`, `unit`) VALUES
 (1, '80m Sprint', 'second'),
 (2, '1000m Long Distance', 'second'),
-(3, 'Long Jump', 'meters');
+(3, 'Long Jump', 'meter');
 
 -- --------------------------------------------------------
 
@@ -298,7 +302,8 @@ INSERT INTO `student` (`username`, `school`, `fname`, `sname`, `birth_year`) VAL
 ('KeaganWiltshire', 'mhs', 'Keagan', 'Wiltshire', '2001-10-22 22:00:00'),
 ('StefanoMontanari', 'mhs', 'Stefano', 'Montanari', '2017-06-09 22:00:00'),
 ('StefanoMontanari1', 'mhs', 'Stefano', 'Montanari', '2017-06-09 22:00:00'),
-('StudentNumber7', 'mhs', 'Student', 'Number 7', '2015-12-28 22:00:00');
+('StudentNumber7', 'mhs', 'Student', 'Number 7', '2015-12-28 22:00:00'),
+('KeaganWiltshire2017', 'MHS', 'Keagan', 'Wiltshire', '2017-08-13 22:00:00');
 
 -- --------------------------------------------------------
 
@@ -411,7 +416,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `record`
 --
 ALTER TABLE `record`
-  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `recordstatus`
 --
