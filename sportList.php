@@ -27,6 +27,8 @@
 	$sql = "SELECT sport.type FROM sport ORDER BY sport.type;";
 	$results = $conn->query($sql);
 
+	//TODO: two lines above, second result set using schools.
+
 	//container for all.
 	echo "<div class='container'>";
 
@@ -55,7 +57,9 @@
 		array_push($sportTypes, $row['type']);
 	}
 
+					//TODO: ADD THE search.
 	echo "</select>
+					
 		                <button type='submit' class='btn-primary'>Search</button>
 		                </div>
 		            </div>
@@ -76,7 +80,7 @@
 					FROM record 
 					LEFT JOIN sport ON record.sport_id = sport.id 
 					LEFT JOIN student ON record.username = student.username
-					WHERE sport.type = '{$_GET['sport']}' ORDER BY {$order}";
+					WHERE sport.type = '{$_GET['sport']}'ORDER BY {$order}";
 			}
 		}
 	}else{//first time
