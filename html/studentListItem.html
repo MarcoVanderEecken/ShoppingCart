@@ -4,7 +4,7 @@
             <?php echo "<a href='studentItem?id={$result['username']}'" . ">" .  $result['fname'] . " " .  $result['sname'] ?> <?php echo "</a>" ?>
         </div>
         <div class="panel-body">
-            <div style="overflow-y:auto; height: 4em;"> School: <?php echo $result['name'] ?></div>
+            <div style="overflow-y:auto; height: 4em;"> School: <?php echo $result['school.name'] ?></div>
             <?php echo "<a href='studentItem?id={$result['username']}'" ?>>Take me to the student <?php echo '</a>' ?>
         </div>
         <div class="panel-footer">
