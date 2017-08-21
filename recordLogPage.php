@@ -61,7 +61,7 @@
 		echo "<td> {$value->getUsername()}</td>";
 		echo "<td> {$value->getSportType()}</td>";
 		echo "<td> <a href='recordItem?id={$value->getRecordID()}'> {$value->getRecord()} </a></td>";
-		echo "<td> {$value->getApproved()}</td>";
+		echo "<td> {$value->getApprovedDesc()}</td>";
 		echo "<td> {$value->getRecordDate()}</td>";
 		echo "</tr>";
 	}

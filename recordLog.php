@@ -5,7 +5,7 @@
  */
 
 class RecordLog {
-	private $recordID, $username, $sport_id, $sport_type, $record, $approved, $recordDate; //record
+	private $recordID, $username, $sport_id, $sport_type, $record, $approved, $recordDate, $approvedDesc; //record
 	private $loginID; //who is logged in.
 	private $recordChange; //when the user changed the record (timestamp)
 
@@ -31,6 +31,7 @@ class RecordLog {
 		$this->recordDate   = $recordDate;
 		$this->loginID      = $loginID;
 		$this->nowRecordChange();
+		$this->setApprovedDesc($this->approved);
 	}
 
 	public function serialize(){
@@ -192,6 +193,23 @@ class RecordLog {
 	private function nowRecordChange() {
 		$this->recordChange = date('m/d/Y h:i:s a', time());
 	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getApprovedDesc() {
+		return $this->approvedDesc;
+	}
+
+	/**
+	 * @param mixed $approvedDesc
+	 */
+	public function setApprovedDesc( $approved ) {
+		if($approved > 0) $this->approvedDesc = "Approved";
+		else if($approved < 0) $this->approvedDesc = "Declined";
+		else $this->approvedDesc = "Awaiting moderation";
+	}
+
 
 
 }
