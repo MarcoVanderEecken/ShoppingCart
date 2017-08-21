@@ -1,0 +1,6 @@
+Welcome to Sports Day, an application to track school sports record.
+
+To get started, please install WAMP and then create a database with the name of shoppingcart.
+Once the database has been set up, please import the shoppingcart.sql file which is located under /databaseSetup/shoppingcart.sql
+
+The default created username and password for the admin is admin/admin.

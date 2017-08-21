@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/video/Viewing all students.mp4" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Getting Started.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databaseSetup/runSQL.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databaseSetup/shoppingcart.sql" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoppingcart.sql" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/helpPage.css" afterPath="$PROJECT_DIR$/css/helpPage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/help.html" afterPath="$PROJECT_DIR$/html/help.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/menuDevelopment.html" afterPath="$PROJECT_DIR$/html/menuDevelopment.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,84 +42,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="functionMain.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functionMain.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="105" column="51" lean-forward="false" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
-              <folding>
-                <marker date="1503335168862" expanded="true" signature="1449:1556" ph="SELECT produ... product" />
-                <marker date="1503335168862" expanded="true" signature="2206:2362" ph="SELECT usern... student" />
-                <marker date="1503335168862" expanded="true" signature="2741:2892" ph="SELECT usern... student" />
-                <marker date="1503335168862" expanded="true" signature="3474:3712" ph="SELECT r.rec... record" />
-                <marker date="1503335168862" expanded="true" signature="4090:4345" ph="SELECT recor... record" />
-                <marker date="1503335168862" expanded="true" signature="4090:4371" ph="SELECT recor... record" />
-                <marker date="1503335168862" expanded="true" signature="4608:4650" ph="SELECT abr, school" />
-                <marker date="1503335168862" expanded="true" signature="4945:5008" ph="SELECT sport... sport" />
-                <marker date="1503335168862" expanded="true" signature="5237:5289" ph="SELECT statu... recordstatus" />
-                <marker date="1503335168862" expanded="true" signature="5993:6137" ph="INSERT INTO productImage... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".htcaccess" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.htcaccess">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recordApprove.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/recordApprove.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="toDo.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toDo.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexBody.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/indexBody.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="record" pinned="false" current-in-tab="false">
-        <entry file="das://table:/765ffcb9/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/shoppingcart.record">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="help.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="help.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/help.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="116" column="54" lean-forward="false" selection-start-line="116" selection-start-column="54" selection-end-line="116" selection-end-column="54" />
+            <state relative-caret-position="340">
+              <caret line="107" column="69" lean-forward="false" selection-start-line="107" selection-start-column="69" selection-end-line="107" selection-end-column="69" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="runSQL.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseSetup/runSQL.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseSetup/createDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menuDevelopment.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/menuDevelopment.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Getting Started.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Getting Started.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="71" lean-forward="false" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbConnStart.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbConnStart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dummyValuesLogin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseSetup/dummyValuesLogin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1500064364433" expanded="true" signature="295:441" ph="INSERT INTO login... " />
+                <marker date="1500064364433" expanded="true" signature="673:823" ph="INSERT INTO login... " />
+                <marker date="1500064364433" expanded="true" signature="1054:1204" ph="INSERT INTO login... " />
+                <marker date="1500064364433" expanded="true" signature="1435:1585" ph="INSERT INTO login... " />
+                <marker date="1500064364433" expanded="true" signature="1816:1970" ph="INSERT INTO login... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createSchoolTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseSetup/createSchoolTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="25" />
+              <folding>
+                <marker date="1502116787540" expanded="true" signature="211:315" ph="CREATE TABLE... School" />
+                <marker date="1502116787540" expanded="true" signature="536:629" ph="INSERT INTO School... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,16 +146,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
               <caret line="130" column="31" lean-forward="true" selection-start-line="130" selection-start-column="31" selection-end-line="130" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recordItem.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/recordItem.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -185,9 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/databaseSetup/automateCreateOld.php" />
-        <option value="$PROJECT_DIR$/functionPagenation.php" />
-        <option value="$PROJECT_DIR$/schoolAdd.php" />
         <option value="$PROJECT_DIR$/help.php" />
         <option value="$PROJECT_DIR$/databaseSetup/automateCreateNew.php" />
         <option value="$PROJECT_DIR$/databaseSetup/createRecordStatusTable.php" />
@@ -220,7 +216,6 @@
         <option value="$PROJECT_DIR$/html/recordListItem.html" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/studentItem.php" />
-        <option value="$PROJECT_DIR$/html/menuDevelopment.html" />
         <option value="$PROJECT_DIR$/html/indexFooter.html" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/html/recordLogPage.html" />
@@ -236,6 +231,10 @@
         <option value="$PROJECT_DIR$/html/indexBody.html" />
         <option value="$PROJECT_DIR$/css/helpPage.css" />
         <option value="$PROJECT_DIR$/html/help.html" />
+        <option value="$PROJECT_DIR$/databaseSetup/shoppingcart.sql" />
+        <option value="$PROJECT_DIR$/databaseSetup/runSQL.php" />
+        <option value="$PROJECT_DIR$/html/menuDevelopment.html" />
+        <option value="$PROJECT_DIR$/Getting Started.txt" />
       </list>
     </option>
   </component>
@@ -360,7 +359,12 @@
             <path>
               <item name="ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
               <item name="ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="video" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="databaseSetup" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -370,7 +374,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/css/bootstrap.css" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Videos" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -654,28 +658,7 @@
       <workItem from="1503129253010" duration="14842000" />
       <workItem from="1503252159432" duration="1468000" />
       <workItem from="1503308315824" duration="103000" />
-      <workItem from="1503314889368" duration="11547000" />
-    </task>
-    <task id="LOCAL-00072" summary="Version 0.7.3 update&#10;- added htcacces file, redirects to php version of page">
-      <created>1502128138118</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1502128138118</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Version 0.7.4 update&#10;- add student added. Still needs to be modified to allow pdf upload.">
-      <created>1502131763160</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1502131763161</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Version 0.7.4 update&#10;- add student added. Still needs to be modified to allow pdf upload.">
-      <created>1502132174311</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1502132174312</updated>
+      <workItem from="1503314889368" duration="13473000" />
     </task>
     <task id="LOCAL-00075" summary="Version 0.7.5 update&#10;- added function for pdf upload. Function needs modification as it is based on the IT Department site.&#10;- need to modify student upload still&#10;- need to modify search funtion on student list">
       <created>1502370109946</created>
@@ -999,11 +982,32 @@
       <option name="project" value="LOCAL" />
       <updated>1503336968464</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Version 0.9.7 update &#10;- help has been completed.&#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records">
+      <created>1503338146732</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1503338146732</updated>
+    </task>
+    <task id="LOCAL-00122" summary="Version 0.9.7 update &#10;- help has been completed.&#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records">
+      <created>1503338158552</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1503338158552</updated>
+    </task>
+    <task id="LOCAL-00123" summary="Version 0.9.7 update &#10;- help has been completed.&#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records">
+      <created>1503338171571</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1503338171571</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287786000" />
+    <option name="totallyTimeSpent" value="289712000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1111,7 +1115,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version 0.7.3 update&#10;- added htcacces file, redirects to php version of page" />
     <MESSAGE value="Version 0.7.4 update&#10;- add student added. Still needs to be modified to allow pdf upload." />
     <MESSAGE value="Version 0.7.5 update&#10;- added function for pdf upload. Function needs modification as it is based on the IT Department site.&#10;- need to modify student upload still&#10;- need to modify search funtion on student list" />
     <MESSAGE value="Version 0.7.6 update&#10;- added record list and item and search function with option fo any&#10;- still need to fix up add student&#10;- need to have option to add record" />
@@ -1136,7 +1139,8 @@
     <MESSAGE value="Version 0.9.5 update &#10;-added school search in records" />
     <MESSAGE value="Version 0.9.6 update &#10;- cleaned up record item&#10;- added school search in records" />
     <MESSAGE value="Version 0.9.6 update &#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.9.6 update &#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records" />
+    <MESSAGE value="Version 0.9.7 update &#10;- help has been completed.&#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.9.7 update &#10;- help has been completed.&#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1145,49 +1149,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/homePage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/loggedIn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/loggedOut.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="134" lean-forward="false" selection-start-line="9" selection-start-column="134" selection-end-line="9" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/menuAddProduct.html" />
-    <entry file="file://$PROJECT_DIR$/html/menuAddStudent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/menuHelp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/menuManagement.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1244,13 +1205,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/productCart.php" />
     <entry file="file://$PROJECT_DIR$/productAdd.php" />
-    <entry file="file://$PROJECT_DIR$/html/menuDevelopment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/home/home_background_1.JPG">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1555,8 +1509,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/help.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="116" column="54" lean-forward="false" selection-start-line="116" selection-start-column="54" selection-end-line="116" selection-end-column="54" />
+        <state relative-caret-position="340">
+          <caret line="107" column="69" lean-forward="false" selection-start-line="107" selection-start-column="69" selection-end-line="107" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSetup/dummyValuesLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500064364433" expanded="true" signature="295:441" ph="INSERT INTO login... " />
+            <marker date="1500064364433" expanded="true" signature="673:823" ph="INSERT INTO login... " />
+            <marker date="1500064364433" expanded="true" signature="1054:1204" ph="INSERT INTO login... " />
+            <marker date="1500064364433" expanded="true" signature="1435:1585" ph="INSERT INTO login... " />
+            <marker date="1500064364433" expanded="true" signature="1816:1970" ph="INSERT INTO login... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSetup/createSchoolTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <marker date="1502116787540" expanded="true" signature="211:315" ph="CREATE TABLE... School" />
+            <marker date="1502116787540" expanded="true" signature="536:629" ph="INSERT INTO School... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbConnStart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSetup/createDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSetup/shoppingcart.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSetup/runSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/menuDevelopment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Getting Started.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="71" lean-forward="false" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
           <folding />
         </state>
       </provider>

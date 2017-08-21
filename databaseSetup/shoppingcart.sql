@@ -3,11 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2017 at 03:04 PM
+-- Generation Time: Aug 21, 2017 at 06:22 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.1.7
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +18,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `shoppingcart`
 --
+CREATE DATABASE IF NOT EXISTS `shoppingcart` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE shoppingcart;
 
 -- --------------------------------------------------------
 
@@ -26,12 +27,14 @@ SET time_zone = "+00:00";
 -- Table structure for table `birth_certificate`
 --
 
-CREATE TABLE `birth_certificate` (
+DROP TABLE IF EXISTS `birth_certificate`;
+CREATE TABLE IF NOT EXISTS `birth_certificate` (
   `username` varchar(50) NOT NULL,
   `type` int(11) DEFAULT NULL,
   `path` text,
-  `hash` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `hash` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`username`)
+) ;
 
 --
 -- Dumping data for table `birth_certificate`
@@ -44,7 +47,8 @@ INSERT INTO `birth_certificate` (`username`, `type`, `path`, `hash`) VALUES
 ('StefanoMontanari', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-10', '$2y$10$JSCfjlqgjg0H0bwmqK0OEOPbx2UfFox9PLpNSyaUddUJZ9.DN0sWa.pdf'),
 ('StefanoMontanari1', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-10', '$2y$10$zyjZfK2NuD3xjMtfB4hU5.5OtiFUzVbWt4YFI8gNEPYUi8ZpSHq22.pdf'),
 ('StudentNumber7', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-13', '$2y$10$fl2rLIV7WxQVor8ncM7M7.VXXi8W4MwrOWDXUZRGsCUUV5i.kEiC6.pdf'),
-('KeaganWiltshire2017', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-15', '$2y$10$e52OrB6zkwLPXAROj6UpAObrnPXeTbUJJv8eK2fx37dMEcTURUqzS.pdf');
+('KeaganWiltshire2017', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-15', '$2y$10$e52OrB6zkwLPXAROj6UpAObrnPXeTbUJJv8eK2fx37dMEcTURUqzS.pdf'),
+('KyleWalker1994', 1, 'C:/wamp64/www/ShoppingCart/Birth-Cert/2017-08-21', '$2y$10$BBjI0i69EJ5d7hWBPlEHLeQwMNgyu46l8rGR0Znqs7yX8wOvjB16i.pdf');
 
 -- --------------------------------------------------------
 
@@ -52,10 +56,12 @@ INSERT INTO `birth_certificate` (`username`, `type`, `path`, `hash`) VALUES
 -- Table structure for table `item_type`
 --
 
-CREATE TABLE `item_type` (
-  `item_type` int(11) NOT NULL,
-  `item_extension` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `item_type`;
+CREATE TABLE IF NOT EXISTS `item_type` (
+  `item_type` int(11) NOT NULL AUTO_INCREMENT,
+  `item_extension` varchar(255) NOT NULL,
+  PRIMARY KEY (`item_type`)
+) ;
 
 --
 -- Dumping data for table `item_type`
@@ -70,13 +76,16 @@ INSERT INTO `item_type` (`item_type`, `item_extension`) VALUES
 -- Table structure for table `login`
 --
 
-CREATE TABLE `login` (
+DROP TABLE IF EXISTS `login`;
+CREATE TABLE IF NOT EXISTS `login` (
   `username` varchar(50) NOT NULL,
   `password` char(60) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `regdate` timestamp NULL DEFAULT NULL,
-  `level` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `level` int(11) DEFAULT NULL,
+  PRIMARY KEY (`username`),
+  KEY `level` (`level`)
+) ;
 
 --
 -- Dumping data for table `login`
@@ -90,7 +99,9 @@ INSERT INTO `login` (`username`, `password`, `email`, `regdate`, `level`) VALUES
 ('admin', '$2y$10$NybgdsWeqqjTBWMwRDAHbuxBJGWjhXHJslyCAdMnaHSmr.ugGDdPi', 'admin@shoppingcart.com', '2017-07-14 20:28:25', 2),
 ('bestTeacher', '$2y$10$/7L3lS.M22Ut.FaD80G1ouqQUnHjyifm8LnqKYL/O0BLq06j73CcW', 'best@teacher.com', '2017-08-11 18:06:49', 0),
 ('bestTeachers', '$2y$10$gC6LwQtRiQpUPvPabSQ.j.Le.tNafPeVdHN2.RLl1/oWOzY/Ye4LO', 'best@teacher.com', '2017-08-11 18:08:36', 0),
-('anotherMod', '$2y$10$KhGGRlh0N.2YYNMN9SfJxeLdgfEdO9wkMDaXM.nbBDrD87b.yVP/O', 'anotherMod@sportsday.com', '2017-08-19 11:31:47', 0);
+('anotherMod', '$2y$10$KhGGRlh0N.2YYNMN9SfJxeLdgfEdO9wkMDaXM.nbBDrD87b.yVP/O', 'anotherMod@sportsday.com', '2017-08-19 11:31:47', 0),
+('ATeacher', '$2y$10$ake/5kn6vouQbkcm7sMUDudbPcq4Q61/yR1kCq7OI16QrbL.46qoW', 'ateacher@sportsday.com', '2017-08-21 17:25:58', 0),
+('aModerator', '$2y$10$Xl7a9VLLJs1EQChl5tWzHOU5K1FJw/xARD2s5HsjVKhPlKTzj30ya', 'aModerator@sportsday.com', '2017-08-21 17:26:44', 0);
 
 -- --------------------------------------------------------
 
@@ -98,10 +109,11 @@ INSERT INTO `login` (`username`, `password`, `email`, `regdate`, `level`) VALUES
 -- Table structure for table `loginlevel`
 --
 
-CREATE TABLE `loginlevel` (
+DROP TABLE IF EXISTS `loginlevel`;
+CREATE TABLE IF NOT EXISTS `loginlevel` (
   `level` int(11) DEFAULT NULL,
   `description` varchar(50) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ;
 
 --
 -- Dumping data for table `loginlevel`
@@ -124,13 +136,15 @@ INSERT INTO `loginlevel` (`level`, `description`) VALUES
 -- Table structure for table `product`
 --
 
-CREATE TABLE `product` (
-  `productID` int(11) NOT NULL,
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE IF NOT EXISTS `product` (
+  `productID` int(11) NOT NULL AUTO_INCREMENT,
   `productName` varchar(255) NOT NULL,
   `productDescription` text,
   `productStock` int(11) DEFAULT NULL,
-  `productPrice` decimal(6,2) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `productPrice` decimal(6,2) DEFAULT NULL,
+  PRIMARY KEY (`productID`)
+) ;
 
 --
 -- Dumping data for table `product`
@@ -155,11 +169,13 @@ INSERT INTO `product` (`productID`, `productName`, `productDescription`, `produc
 -- Table structure for table `productimage`
 --
 
-CREATE TABLE `productimage` (
+DROP TABLE IF EXISTS `productimage`;
+CREATE TABLE IF NOT EXISTS `productimage` (
   `productID` int(11) NOT NULL,
   `imageName` varchar(255) NOT NULL,
-  `imagePath` text
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `imagePath` text,
+  PRIMARY KEY (`productID`)
+) ;
 
 --
 -- Dumping data for table `productimage`
@@ -182,14 +198,19 @@ INSERT INTO `productimage` (`productID`, `imageName`, `imagePath`) VALUES
 -- Table structure for table `record`
 --
 
-CREATE TABLE `record` (
-  `recordID` int(11) NOT NULL,
+DROP TABLE IF EXISTS `record`;
+CREATE TABLE IF NOT EXISTS `record` (
+  `recordID` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) DEFAULT NULL,
   `sport_id` int(11) DEFAULT NULL,
   `record` varchar(50) DEFAULT NULL,
   `approved` int(11) DEFAULT '0',
-  `recordDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `recordDate` datetime NOT NULL,
+  PRIMARY KEY (`recordID`),
+  KEY `username` (`username`),
+  KEY `sport_id` (`sport_id`),
+  KEY `approval_constraint` (`approved`)
+) ;
 
 --
 -- Dumping data for table `record`
@@ -205,11 +226,12 @@ INSERT INTO `record` (`recordID`, `username`, `sport_id`, `record`, `approved`, 
 (7, 'MarcoVanderEecken', 1, '2', 2, '2017-08-11 19:05:38'),
 (8, 'firststudent', 1, '12', 2, '2017-08-11 19:05:38'),
 (9, 'firststudent', 1, '2', 2, '2017-08-11 00:00:00'),
-(10, 'firststudent', 1, '10', -1, '2017-08-13 14:06:08'),
+(10, 'firststudent', 1, '10', 2, '2017-08-13 14:06:08'),
 (11, 'KeaganWiltshire', 3, '200', 2, '2017-08-14 00:00:00'),
 (12, 'StefanoMontanari', 3, '12', 2, '2017-08-14 00:00:00'),
 (13, 'KeaganWiltshire2017', 1, '3200', 2, '2017-08-14 00:00:00'),
-(14, 'firststudent', 3, '23123213', 2, '2017-08-15 00:00:00');
+(14, 'firststudent', 3, '23123213', 2, '2017-08-15 00:00:00'),
+(15, 'firststudent', 1, '10', 2, '2017-07-01 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -217,10 +239,12 @@ INSERT INTO `record` (`recordID`, `username`, `sport_id`, `record`, `approved`, 
 -- Table structure for table `recordstatus`
 --
 
-CREATE TABLE `recordstatus` (
-  `status` int(11) NOT NULL,
-  `description` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `recordstatus`;
+CREATE TABLE IF NOT EXISTS `recordstatus` (
+  `status` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`status`)
+) ;
 
 --
 -- Dumping data for table `recordstatus`
@@ -237,10 +261,12 @@ INSERT INTO `recordstatus` (`status`, `description`) VALUES
 -- Table structure for table `school`
 --
 
-CREATE TABLE `school` (
+DROP TABLE IF EXISTS `school`;
+CREATE TABLE IF NOT EXISTS `school` (
   `abr` varchar(10) NOT NULL,
-  `name` varchar(50) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`abr`)
+) ;
 
 --
 -- Dumping data for table `school`
@@ -254,7 +280,8 @@ INSERT INTO `school` (`abr`, `name`) VALUES
 ('St. CS', 'St. Cyprian\'s School'),
 ('St. GGS', 'St. George\'s Grammar School'),
 ('CTHS', 'Cape Town High School'),
-('HJvR', 'HoÃ«rskool Jan van Riebeeck');
+('HJvR', 'HoÃ«rskool Jan van Riebeeck'),
+('ts', 'The School');
 
 -- --------------------------------------------------------
 
@@ -262,11 +289,13 @@ INSERT INTO `school` (`abr`, `name`) VALUES
 -- Table structure for table `sport`
 --
 
-CREATE TABLE `sport` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `sport`;
+CREATE TABLE IF NOT EXISTS `sport` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) NOT NULL,
-  `unit` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `unit` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ;
 
 --
 -- Dumping data for table `sport`
@@ -275,7 +304,8 @@ CREATE TABLE `sport` (
 INSERT INTO `sport` (`id`, `type`, `unit`) VALUES
 (1, '80m Sprint', 'second'),
 (2, '1000m Long Distance', 'second'),
-(3, 'Long Jump', 'meter');
+(3, 'Long Jump', 'meter'),
+(4, 'High Jump', 'meter');
 
 -- --------------------------------------------------------
 
@@ -283,13 +313,15 @@ INSERT INTO `sport` (`id`, `type`, `unit`) VALUES
 -- Table structure for table `student`
 --
 
-CREATE TABLE `student` (
+DROP TABLE IF EXISTS `student`;
+CREATE TABLE IF NOT EXISTS `student` (
   `username` varchar(50) NOT NULL,
   `school` varchar(10) DEFAULT NULL,
   `fname` text,
   `sname` text,
-  `birth_year` timestamp NULL DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `birth_year` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`username`)
+) ;
 
 --
 -- Dumping data for table `student`
@@ -303,7 +335,8 @@ INSERT INTO `student` (`username`, `school`, `fname`, `sname`, `birth_year`) VAL
 ('StefanoMontanari', 'mhs', 'Stefano', 'Montanari', '2017-06-09 22:00:00'),
 ('StefanoMontanari1', 'mhs', 'Stefano', 'Montanari', '2017-06-09 22:00:00'),
 ('StudentNumber7', 'mhs', 'Student', 'Number 7', '2015-12-28 22:00:00'),
-('KeaganWiltshire2017', 'MHS', 'Keagan', 'Wiltshire', '2017-08-13 22:00:00');
+('KeaganWiltshire2017', 'MHS', 'Keagan', 'Wiltshire', '2017-08-13 22:00:00'),
+('KyleWalker1994', 'HJvR', 'Kyle', 'Walker', '1994-03-15 22:00:00');
 
 -- --------------------------------------------------------
 
@@ -311,10 +344,13 @@ INSERT INTO `student` (`username`, `school`, `fname`, `sname`, `birth_year`) VAL
 -- Table structure for table `type`
 --
 
-CREATE TABLE `type` (
-  `id` int(11) NOT NULL,
-  `description` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `type`;
+CREATE TABLE IF NOT EXISTS `type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `description` (`description`)
+) ;
 
 --
 -- Dumping data for table `type`
@@ -323,115 +359,6 @@ CREATE TABLE `type` (
 INSERT INTO `type` (`id`, `description`) VALUES
 (1, 'application/pdf');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `birth_certificate`
---
-ALTER TABLE `birth_certificate`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `item_type`
---
-ALTER TABLE `item_type`
-  ADD PRIMARY KEY (`item_type`);
-
---
--- Indexes for table `login`
---
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`username`),
-  ADD KEY `level` (`level`);
-
---
--- Indexes for table `product`
---
-ALTER TABLE `product`
-  ADD PRIMARY KEY (`productID`);
-
---
--- Indexes for table `productimage`
---
-ALTER TABLE `productimage`
-  ADD PRIMARY KEY (`productID`);
-
---
--- Indexes for table `record`
---
-ALTER TABLE `record`
-  ADD PRIMARY KEY (`recordID`),
-  ADD KEY `username` (`username`),
-  ADD KEY `sport_id` (`sport_id`),
-  ADD KEY `approval_constraint` (`approved`);
-
---
--- Indexes for table `recordstatus`
---
-ALTER TABLE `recordstatus`
-  ADD PRIMARY KEY (`status`);
-
---
--- Indexes for table `school`
---
-ALTER TABLE `school`
-  ADD PRIMARY KEY (`abr`);
-
---
--- Indexes for table `sport`
---
-ALTER TABLE `sport`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `student`
---
-ALTER TABLE `student`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `type`
---
-ALTER TABLE `type`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `description` (`description`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `item_type`
---
-ALTER TABLE `item_type`
-  MODIFY `item_type` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `product`
---
-ALTER TABLE `product`
-  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
---
--- AUTO_INCREMENT for table `record`
---
-ALTER TABLE `record`
-  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
---
--- AUTO_INCREMENT for table `recordstatus`
---
-ALTER TABLE `recordstatus`
-  MODIFY `status` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `sport`
---
-ALTER TABLE `sport`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `type`
---
-ALTER TABLE `type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
