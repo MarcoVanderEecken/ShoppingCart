@@ -37,7 +37,7 @@ class RecordLog {
 	public function serialize(){
 		return serialize([
 			$this->recordID,
-			$this->usernamem,
+			$this->username,
 			$this->sport_id,
 			$this->sport_type,
 			$this->record,
@@ -202,7 +202,9 @@ class RecordLog {
 	}
 
 	/**
-	 * @param mixed $approvedDesc
+	 * @param $approved
+	 *
+	 * @internal param mixed $approvedDesc
 	 */
 	public function setApprovedDesc( $approved ) {
 		if($approved > 0) $this->approvedDesc = "Approved";
