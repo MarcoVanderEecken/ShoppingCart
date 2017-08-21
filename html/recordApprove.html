@@ -1,0 +1,28 @@
+<div class="row">
+
+    <?php
+        //if record item has already been approved
+        if($result['approved'] == 2) echo "result has been approved";
+        elseif($result['approved'] < 0) echo "result has been declined";
+        else {
+            ?>
+            <span>
+                <form method="post" action="recordLogPage">
+                    <input type="hidden" name="recordID" value="<?= htmlspecialchars($result['recordID'])?>">
+                    <input type="hidden" name="username" value="<?= htmlspecialchars($result['username'])?>">
+                    <input type="hidden" name="sport_id" value="<?= htmlspecialchars($result['sport_id'])?>">
+                    <input type="hidden" name="sport_type" value="<?= htmlspecialchars($result['type'])?>">
+                    <input type="hidden" name="record" value="<?= htmlspecialchars($result['record'])?>">
+                    <input type="hidden" name="recordDate" value="<?= htmlspecialchars($result['recordDate'])?>">
+                    <input type="hidden" name="addRecord" value="TRUE">
+
+                    <button name="approved" value="2"> Approve </button>
+                    <button name="approved" value="-1"> Decline </button>
+
+                </form>
+            </span>
+            <?php
+        }
+    ?>
+
+</div>

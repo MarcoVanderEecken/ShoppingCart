@@ -1,7 +1,7 @@
     <!-- start of footer -->
-    <footer class="modal-footer" style="background-color:rgba(238,238,238,0.35)">
+    <footer class="modal-footer navbar-fixed-bottom" id='solids'>
         <div class="container">
-            <p class="text-muted" style="text-align:center"> This is a footer placeholder </p>
+            <p class="text-muted" style="text-align:center"> Sports Day - A creation of <a href="about.php">the Group</a></p>
         </div>
 
     </footer>
@@ -11,3 +11,46 @@
     <script src="../js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- /scripts -->
+
+    <script>
+        <!-- //breadcrumbs
+        $(document).ready(function(){
+            $('.dropdown-submenu a.test').on("click", function(e){
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+
+         //drop-down menu on the right side for set-up
+        $( ".dropdown-submenu" ).click(function(event) {
+            // stop bootstrap.js to hide the parents
+            event.stopPropagation();
+            // hide the open children
+            $( this ).find(".dropdown-submenu").removeClass('open');
+            // add 'open' class to all parents with class 'dropdown-submenu'
+            $( this ).parents(".dropdown-submenu").addClass('open');
+            // this is also open (or was)
+            $( this ).toggleClass('open');
+        });
+
+        //makes table rows clickable.
+        jQuery(document).ready(function($) {
+            $(".clickable-row").click(function() {
+                window.location = $(this).data("href");
+            });
+        });
+
+        //adds select 2 styling to list items
+        var div, li, ul;
+        li = element.wrap('<li/>').parent()[0];
+        ul = $(li).wrap('<ul/>').parent()[0];
+        div = $(ul).wrap('<div/>').parent()[0];
+        element.addClass('select2-input select2-default');
+        $(li).addClass('select2-search-field');
+        $(ul).addClass('select2-choices');
+        $(div).addClass('select2-container select2-container-multi');
+
+        $(div).css('display', 'block');
+        -->
+    </script>

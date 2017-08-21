@@ -1,0 +1,71 @@
+<!-- body of add student -->
+<div class="container">
+    <!--DatePicker -->
+    <script src="https://code.jquery.com/jquery-1.10.0.js"></script>
+    <script src="https://afarkas.github.io/webshim/js-webshim/minified/polyfiller.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script>
+
+        webshims.polyfill('forms forms-ext');
+        $(document).ready(function() {
+            $(".js-example-basic-single").select2();
+        });
+    </script>
+    <!--/DatePicker-->
+    <div class="jumbotron">
+        <h2> Add a record: </h2>
+        <br>
+        <form method="Post" name="addRecordForm" action="recordAdd.php" enctype="multipart/form-data">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>Student Username: </td>
+                    <td>
+                        <!--<input type="text" placeholder="student username" name="studentUsername" list="students" required/>-->
+                        <!--<datalist id="students">-->
+                            <select name="studentUsername" class="js-example-basic-single" required>
+                                <?php
+                                    while($student = mysqli_fetch_assoc($studentList)){
+                                        echo "<option value ='" . htmlspecialchars($student['username']) . "'> " . htmlspecialchars($student['username']) . "</option>";
+                                    }
+                                ?>
+                            </select>
+                        <!--</datalist>-->
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Record date: </td>
+                    <td><input type="date" name="recordDate" class="recordInput" value="<?= htmlspecialchars(date('Y-m-j')) ?>" required title="Record Date"></td>
+                </tr>
+
+                <tr>
+                    <td>Sport: </td>
+                    <td>
+                    <!--<input type="text" placeholder="Enter sport" name="sportType" list="sportType" required>-->
+                    <!--<datalist id="sportType">-->
+                        <select name="sportType" class="js-example-basic-single" required>
+                            <?php
+                                    while($sportCat = mysqli_fetch_assoc($sportsCats)){
+                                        echo "<option value ='" . htmlspecialchars($sportCat['id']) . "'> " . htmlspecialchars($sportCat['type']) . "</option>";
+                            }
+                            ?>
+                        </select>
+                    <!--</datalist>-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Record: </td>
+                    <td><input type="number" class="recordInput select2" placeholder="Enter record" name="record" step=".01" required></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Record"></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<!-- end of add student body -->

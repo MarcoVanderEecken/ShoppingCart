@@ -1,0 +1,16 @@
+<div class="col-sm-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <?php echo "<a href='recordItem?id={$result['recordID']}'" . ">" .  htmlspecialchars($result['fname']) . " " .  htmlspecialchars($result['sname']) ?> <?php echo "</a>" ?>
+        </div>
+        <div class="panel-body">
+            <div style="overflow-y:auto; height: 4em;"> School: <?= htmlspecialchars($result['school']) ?></div>
+            <div style="overflow-y:auto; height: 4em;"> Sport: <?= htmlspecialchars($result['type']) ?></div>
+            <div style="overflow-y:auto; height: 4em;"> Record: <?= htmlspecialchars($result['record']) ?> <?php if($result['record'] != '1') echo htmlspecialchars($result['unit']) . 's'; else echo htmlspecialchars($result['unit']) ?></div>
+            <?php echo "<a href='recordItem?id={$result['recordID']}'" ?>>Take me to the record <?php echo '</a>' ?>
+        </div>
+        <div class="panel-footer">
+            Birth Year: <?php echo date('Y/m/d', strtotime($result['birth_year'])) ?>
+        </div>
+    </div>
+</div>

@@ -1,35 +1,50 @@
 <!-- body of add student -->
 <div class="container">
+    <!--DatePicker -->
+    <script src="https://code.jquery.com/jquery-1.10.0.js"></script>
+    <script src="https://afarkas.github.io/webshim/js-webshim/minified/polyfiller.js"></script>
+    <script>
+
+        webshims.polyfill('forms forms-ext');
+    </script>
+    <!--/DatePicker-->
     <div class="jumbotron">
         <h2> Add a student: </h2>
         <br>
-        <form method="Post" name="addProductForm" action="productAdd.php" enctype="multipart/form-data">
+        <form method="Post" name="addStudentForm" action="studentAdd.php" enctype="multipart/form-data">
             <table class="table">
                 <tbody>
                 <tr>
                     <td>Student First Name: </td>
-                    <td><input type="text" placeholder="Enter product name" name="productName" required></td>
+                    <td><input type="text" placeholder="Enter first name" name="studentFName" required></td>
                 </tr>
                 <tr>
                     <td>Student Surname: </td>
-                    <td><input type="file" id="Enter product name" name="productImage" accept="image/*" required></td>
+                    <td><input type="text" name="studentSName" placeholder="Enter surname" required></td>
                 </tr>
                 <tr>
-                    <td>Product Description: </td>
-                    <td><textarea placeholder="Enter product description" name="productDescription" required></textarea></td>
-                </tr>
-
-                <tr>
-                    <td>Price: </td>
-                    <td><input type="number" placeholder="Enter price" name="productPrice" required min="0" value="0" step=".01"></td>
+                    <td>Student Birth Certificate: </td>
+                    <td><input type="file" id="birthcert" name="birth_cert" accept="application/pdf" style="max-width: 80%;" required></td>
                 </tr>
                 <tr>
-                    <td>Stock: </td>
-                    <td><input type="number" placeholder="Enter quantity" name="productStock" required></td>
+                    <td>Student Birth date: <i>(Year-Month-Day)</i></td>
+                    <td><input type="date" id="birthDate" name="birthDate" value="<?= htmlspecialchars(date('Y-m-j')) ?>" required/></td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Product"></td>
+                    <td>School: </td>
+                    <td>
+                        <select name="school" required>
+                            <?php
+                                while($school = mysqli_fetch_assoc($schoolList)){
+                                    echo "<option value ='" . htmlspecialchars($school['abr']) . "'> " . htmlspecialchars($school['name']) . "</option>";
+                                }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:35%;"><input type="submit" value="Add Student"></td>
                 </tr>
                 </tbody>
             </table>

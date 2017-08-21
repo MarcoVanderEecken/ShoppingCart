@@ -8,7 +8,7 @@
                 <br> Checking if user logged in:
                 <?php
                     if(isset($_SESSION['username'])){
-                        echo $_SESSION['username'] . " is logged in.";
+                        echo htmlspecialchars($_SESSION['username']) . " is logged in.";
                     }else{
                         echo "no user logged in.";
                     }

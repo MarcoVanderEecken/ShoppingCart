@@ -11,105 +11,124 @@
 //in case session hasn't been started, e.g. user accessed page directly.
 require_once ("requiresLogin.php");
 
-include("mainFunctions.php");
+include( "functionMain.php" );
 
 
-//Only moderator (level 1) and admin (level 2) can add items
+//Only moderator (level 1) and admin (level 2) can add student
 if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
 	//navigation header
 	$title = "Add Product";
 	include('html/baseHeader.html');
 	include('mainMenu.html');
 }else {
-	redirectPage( "index.php" );
+	redirectPage( "index" );
 	exit();
 }
 
-//check if user has submitted product
-if(isset($_POST['productName']) && isset($_POST['productDescription']) && isset($_POST['productPrice'])
-   && isset($_POST['productStock'])){//product variables have been set
+if(empty($schoolList)){//list of all schools
+	$schoolList = getAllSchools();
+}
 
-	if(!empty($_POST['productName']) && !empty($_POST['productDescription']) && !empty($_POST['productPrice'])
-	   && !empty($_POST['productStock'])){//product variables are not empty
+//check if user has previously submitted a student
+if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POST['school'])
+                                        && isset($_POST['birthDate'])){//product variables have been set
+
+	if(!empty($_POST['studentFName']) && !empty($_POST['studentSName']) && !empty($_POST['school'])){//student variables are not empty
 
 		//CHECK IF VARIABLE TYPES ARE CORRECT
-		if(is_string($_POST['productName']) && is_string($_POST['productDescription']) && is_decimal($_POST['productPrice'])
-		   && is_numeric($_POST['productStock']) && $_POST['productStock'] >= 0){
+		if(is_string($_POST['studentFName']) && is_string($_POST['studentSName']) && is_string($_POST['school'])){
+			if ($_FILES['birth_cert']['error'] !== UPLOAD_ERR_OK ) { //check if pdf file failed to upload
+				die( "File upload error: " . $_FILES['birth_cert']['error'] ); //fail to upload
+			}
+			//check if file is actually a pdf
+			$finfo = finfo_open( FILEINFO_MIME_TYPE );  //$finfo = file information
+			$mime  = finfo_file( $finfo, $_FILES['birth_cert']['tmp_name'] ); //tmp_name is temporary name on server
 
-			if(!$image = @imagecreatefromgif($_POST['productImage'])){//check if image is valid
-				//create database connection
-				include('dbConn.php');
 
-				//create prepared statement to add product
-				$sql = $conn->prepare("INSERT INTO product(productName, productDescription, productStock, productPrice) VALUES (?,?,?,?);");
+			if ( $mime == 'application/pdf') {
+				$basePath = $_SERVER['DOCUMENT_ROOT'] . '/ShoppingCart/Birth-Cert/';
+				//append something unique like e.g. day to path for keeping file in.
+				$extPath = date( 'Y-m-d' );
 
-				//bind statement variables
-				$sql->bind_param("ssid",$_POST['productName'], $_POST['productDescription'], $_POST['productStock'], $_POST['productPrice']);
+				$fullPath = $basePath . $extPath;
+
+
+				//make sure folder exists. (file to go in content /
+				if ( ! is_dir( $fullPath ) ) {
+					mkdir( $fullPath, 0777, true );
+				}
+
+				$birthDate = date('Y-m-d' , strtotime( $_POST['birthDate']));
+
+				//hash and username check
+				require("dbConn.php");
+				//first check if student with desired username exists (namely fname+sname+birth_year)
+				$sql = $conn->prepare("SELECT username FROM student WHERE username = ?;");
+				$username =  str_replace(' ', '', $_POST['studentFName'] . $_POST['studentSName'] . strtok($birthDate, '-'));
+				$sql->bind_param("s", $username);
 				$sql->execute();
+				$i = 1;
+				$checkedUsername = null;
+				while($sql->fetch() != 0){//while username already taken
+					$checkedUsername = $username . $i;
+					$sql->bind_param("s", $checkedUsername); //updated check.
+					$sql->execute();
+					$i++;
+				}
+				$sql->close();
+				//set username to checked username if not null.
+				if(isset($checkedUsername)) $username = $checkedUsername;
+
+				$hash = password_hash($username, PASSWORD_DEFAULT);
+				while(strpos($hash, '/')){//do not allow / in hash so no path issues.
+					$hash = password_hash($username, PASSWORD_DEFAULT);
+				}
+
+				//get file extension
+				$ext = pathinfo( $_FILES['birth_cert']['name'], PATHINFO_EXTENSION );
+				$hash = $hash . "." .  $ext;
+
+				//move the file to the folder
+				move_uploaded_file( $_FILES['birth_cert']["tmp_name"], $fullPath . "/" . $hash );
+
+				//file got added successfully. Now create the student and associate birth certificate
+
+				//change birthdate to datetime
+
+				$birthYear = date('Y-m-d H:i:s', strtotime($_POST['birthDate']));
+				$birthDate = date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $birthDate)));
+
+
+				//create prepared statement for adding student
+				$sql = $conn->prepare("INSERT INTO student(username, fname, sname, birth_year, school) VALUES (?,?,?,?,?);");
+				//bind variables for student
+				$sql->bind_param("sssss", $username, $_POST['studentFName'], $_POST['studentSName'], $birthYear,
+					$_POST['school']);
+				if($sql->execute() == TRUE){}
+				else jsAlert("Failed to add student: " . $sql->error);
+
 				$sql->close();
 
-				//get product ID of saved file
-				$sql = "SELECT productID FROM product WHERE productName = '{$_POST['productName']}';";
-				$results = mysqli_fetch_assoc($conn->query($sql));
-				$productID = (int) $results['productID'];
+				//save pdf location:
+				$sql = $conn->prepare("INSERT INTO birth_certificate(username, type, path, hash) VALUES (?,?,?,?);");
 
-				$imgPath = 'images/products/';
-				$name = $_FILES["productImage"]["name"];
-				$temp = $_FILES["productImage"]["tmp_name"];
-				$type = $_FILES["productImage"]["type"];
-				$size = $_FILES["productImage"]["size"];
-				$error = $_FILES["productImage"]["error"];
-				$extension = pathinfo($name, PATHINFO_EXTENSION);
+				$type = 1;
+				$sql->bind_param("siss" , $username, $type, $fullPath, $hash);
+				if($sql->execute() == TRUE) {}
+				else jsAlert("Failed to add birth certificate" . $sql->error);
 
-				$imgName = $productID . "." . $extension;
-
-				//Checking file size and for any errors
-				if($error > 0){
-					//create prepared statement for deletion of product
-					$sql = "DELETE FROM product WHERE productID = '{$productID}';";
-
-					//bind statement variables for deletion of product
-					$conn->query($sql);
-					jsAlert("error uploading file! Code $error.");
-				}else if($size > 1000000){
-					//create prepared statement for deletion of product
-					$sql = "DELETE FROM product WHERE productID = '{$productID}';";
-
-					//bind statement variables for deletion of product
-					$conn->query($sql);
-					jsAlert("Image file size exceeds 2MB!");
-				}else{
-					move_uploaded_file($temp, "$imgPath$imgName");
-					jsAlert("Image uploaded successfully!");
-
-					//create prepared statement for image
-					$sql = $conn->prepare("INSERT INTO productImage(productID, imageName, imagePath) VALUES (?,?,?);");
-
-					//bind statement variables for image
-					$sql->bind_param("iss", $productID, $imgName, $imgPath);
-					$sql->execute();
-
-					//close prepared statement
-					$sql->close();
-
-				}
-				//close database connection
+				//close prepared statement
+				$sql->close();
 				$conn->close();
-			}else{//not an image
-				jsAlert("Please upload a valid image");
-//                    var_dump($_FILES);
-//                    print_r($_POST);
+				jsAlert("Student succesfully added.");
+
+			} else {
+				die( jsAlert("file type not permitted. (" . $mime . ")" ));
 			}
-		}else{//failed scrubbing
-			jsAlert("The values entered were not of the correct type. Please use the website GUI to submit a new product.");
-		}
-	}else{//end of check for product variables
-		if($_POST['productPrice'] == 0){
-			jsAlert("You cannot upload a product for free. Please enter a price greater than 0.");
-			//in case product is being given for free.
 		}
 	}
 }//end of check if post input
+
 
 //body of add a product
 include("html/addStudent.html");

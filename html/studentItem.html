@@ -6,23 +6,68 @@
                 <div class="row"><h2><?php echo $result['fname'] . " " . $result['sname'] ?></h2></div>
                 <div class="row"><span><i><?php echo $result['name']?></i></span></div>
                 <div class="row"><span>Birth Year: <?php echo date('Y/m/d', strtotime($result['birth_year'])) ?> </span></div>
+                <div class="row"><span><a href="studentBirthcertificate?username=<?= htmlspecialchars($_GET['id']) ?>">Birth Certificate</a></span></div>
 
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 table-responsive" style="padding: 1%">
                 <!-- record details right side -->
-                <div class="row"><span>THIS STUDENT HAS NOT ACHIEVED A RECORD.</span></div>
-                <!-- APPROVAL. TO BE ADDED LATER.
+                <table class="table table-striped table-bordered table-hover">
+                    <tr>
+                        <th>Record ID:</th>
+                        <th>Type:</th>
+                        <th>Record:</th>
+                        <th>Status:</th>
+                    </tr>
+                <!-- no records -->
+                <?php if($record === NULL) echo '<tr>
+                                                    <td colspan="4" class="text-center"><i>This student has not achieved a record</i></td>
+                                                </tr>'; ?>
+                <!-- does have records -->
                 <?php
-                if(!isset($_SESSION)) session_start();
+                    if($record != NULL){
+                        //echo first result
+                        ?>
+                        <tr>
+                            <td>
+                                <a href="recordItem?id=<?= htmlspecialchars($record['recordID']) ?>"><?= htmlspecialchars($record['recordID']) ?></a>
+                            </td>
+                            <td>
+                                <?= htmlspecialchars($record['type']) ?>
+                            </td>
+                            <td>
+                                <?= htmlspecialchars($record['record']) ?>  <?php if($record['record'] != '1') echo htmlspecialchars($record['unit']) . 's'; else echo htmlspecialchars($record['unit']) ?>
+                            </td>
+                            <td>
+                                <?= htmlspecialchars($record['description']) ?>
+                            </td>
+                        </tr>
 
-                if(isset($_SESSION['loggedIn'])){ //only show if user logged in
-                    //Only moderator (level 1) and admin (level 2) can add items
-                    if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
-                    include('html/productApprove.html');
+                        <?php
+                        while($record = mysqli_fetch_assoc($records)){
+                            ?>
+
+                                <tr>
+
+                                    <td>
+                                        <a href="recordItem?id=<?= htmlspecialchars($record['recordID']) ?>"><?= htmlspecialchars($record['recordID']) ?></a>
+                                    </td>
+                                    <td>
+                                        <?= htmlspecialchars($record['type']) ?>
+                                    </td>
+                                    <td>
+                                        <?= htmlspecialchars($record['record']) ?>  <?php if($record['record'] != '1') echo htmlspecialchars($record['unit']) . 's'; else echo htmlspecialchars($record['unit']) ?>
+                                    </td>
+                                    <td>
+                                        <?= htmlspecialchars($record['description']) ?>
+                                    </td>
+                                </tr>
+
+                            <?php
+                        }
+
                     }
-                }
                 ?>
-                -->
+                </table>
             </div>
 
         </div>

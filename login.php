@@ -15,7 +15,7 @@
     include('mainMenu.html');
 
     //javascript alert
-    include('mainFunctions.php');
+    include( 'functionMain.php' );
 
     if(isset($_SESSION['welcomeMessage'])){ //redirect to index page once user welcomed.
         header("Location: index");
@@ -26,19 +26,22 @@
     }
 
     function redirectUser(){
+	    include_once ('timerFunction.php');
+	    countDown(4);
         echo "
             <div class='container'>
                 <div class='jumbotron'>
-                    <meta http-equiv=\"refresh\" content='3; url=index' property=';'>
+                    <meta http-equiv=\"refresh\" content='5; url=index' property=';'>
                     Welcome {$_SESSION['username']} (Level: {$_SESSION['loggedIn']}) <br>
-                    You will be redirected in 3 seconds...
+                    You will be redirected in <span id='time'>05</span> seconds...
                 </div>
             </div>";
         $_SESSION['welcomeMessage'] = true;
     }
 
     if(!isset($_SESSION['loggedIn'])){ //don't show the login page if logged in.
-        include("html/login.html");
+	    include_once ("html/homePage.html");
+	    include_once ("html/indexFooter.html");
     }else{//Welcome user
         redirectUser();
     }
@@ -46,20 +49,25 @@
     if(isset($_POST['username']) && isset($_POST['password']) ){ //username and password given
 
             include("dbConn.php");
-            $sql = "SELECT password, level FROM login WHERE username = '{$_POST['username']}';";
+            $sql = $conn->prepare("SELECT password, level FROM login WHERE username = ?");
             try {
-                $result = $conn->query($sql);
-                $row = mysqli_fetch_row($result);
+            	$username = htmlspecialchars($_POST['username']);
+            	$sql->bind_param('s', $username);
+            	$sql->execute();
+                $result = $sql->get_result();
+                $row = $result->fetch_assoc();
                 try {
-                    if (password_verify($_POST['password'], $row[0])) {//password is correct
-                        $_SESSION['username'] = $_POST['username'];
-                        $_SESSION['loggedIn'] = $row[1];
+                    if (password_verify($_POST['password'], $row['password'])) {//password is correct
+                        $_SESSION['username'] = $username;
+                        $_SESSION['loggedIn'] = $row['level'];
                         if (isset($_POST['remember'])) {
-                            setcookie('username', $_POST['username'], time() + 60 * 60 * 24);
+                        	if($_POST['remember'] === TRUE)
+                                setcookie('username', $username, time() + strtotime("+7 days"));
+                        	else unset($_COOKIE['username']);
                         }else unset($_COOKIE['username']);
                         refreshPage();
                     } else { //incorrect password
-                        jsAlert("Incorrect password, please try again. ");
+                        jsAlert("Incorrect password or username please try again. ");
                     }
                 } catch (Exception $e) {
                     jsAlert("Username not found {$e}");
