@@ -79,7 +79,7 @@
 	}
 
 	echo "</select>
-	                </div></div>
+	                </div>
 	                <div class=\"row form-group col-sm-12\" align='center' style='padding-top:1em; padding-bottom: 1em'>
 	                <button type='submit' class='btn-primary'>Search</button>
 	                </div>
