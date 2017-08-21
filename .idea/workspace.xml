@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/Add a moderator user.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/Add a record.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/Add a school.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/Add a sport.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/Add a student.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/Add a teacher user.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/Approve a record.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/Login.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/View all records.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/View all schools.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/Viewing all students.mp4" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/video/Viewing all students.mp4" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/helpPage.css" afterPath="$PROJECT_DIR$/css/helpPage.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/help.html" afterPath="$PROJECT_DIR$/html/help.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/indexBody.html" afterPath="$PROJECT_DIR$/html/indexBody.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/toDo.txt" afterPath="$PROJECT_DIR$/toDo.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -126,8 +115,28 @@
       <file leaf-file-name="help.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/help.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="77" lean-forward="false" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="77" />
+            <state relative-caret-position="493">
+              <caret line="116" column="54" lean-forward="false" selection-start-line="116" selection-start-column="54" selection-end-line="116" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpPage.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/helpPage.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopcart.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/shopcart.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="130" column="31" lean-forward="true" selection-start-line="130" selection-start-column="31" selection-end-line="130" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -203,7 +212,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b9cd9c55-753e-44f8-a94d-c3e36f7bb654/console_5.sql" />
         <option value="$PROJECT_DIR$/studentBirthcertificate.php" />
         <option value="$PROJECT_DIR$/css/shopcart.css" />
-        <option value="$PROJECT_DIR$/css/helpPage.css" />
         <option value="$PROJECT_DIR$/html/addModerator.html" />
         <option value="$PROJECT_DIR$/html/addRecord.html" />
         <option value="$PROJECT_DIR$/html/addSchool.html" />
@@ -226,6 +234,7 @@
         <option value="$PROJECT_DIR$/html/recordItem.html" />
         <option value="$PROJECT_DIR$/toDo.txt" />
         <option value="$PROJECT_DIR$/html/indexBody.html" />
+        <option value="$PROJECT_DIR$/css/helpPage.css" />
         <option value="$PROJECT_DIR$/html/help.html" />
       </list>
     </option>
@@ -237,11 +246,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1992" />
-    <option name="y" value="123" />
-    <option name="width" value="1546" />
-    <option name="height" value="830" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="29" />
+    <option name="y" value="-21" />
+    <option name="width" value="1484" />
+    <option name="height" value="795" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -342,6 +351,11 @@
             <path>
               <item name="ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
               <item name="ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShoppingCart" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="ShoppingCart" type="b2602c69:ProjectViewProjectNode" />
@@ -640,14 +654,7 @@
       <workItem from="1503129253010" duration="14842000" />
       <workItem from="1503252159432" duration="1468000" />
       <workItem from="1503308315824" duration="103000" />
-      <workItem from="1503314889368" duration="10375000" />
-    </task>
-    <task id="LOCAL-00071" summary="Version 0.7.2 update&#10;- Student List display&#10;- Student Item display&#10;- First search option of school &gt; Change to sort by school/all&#10;- To Add: option for ascending or descending&#10;- NOTE THAT THERE IS NO RECORD TABLE YET">
-      <created>1502121151382</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1502121151382</updated>
+      <workItem from="1503314889368" duration="11547000" />
     </task>
     <task id="LOCAL-00072" summary="Version 0.7.3 update&#10;- added htcacces file, redirects to php version of page">
       <created>1502128138118</created>
@@ -985,11 +992,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503335420190</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="Version 0.9.6 update &#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records">
+      <created>1503336968464</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1503336968464</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286614000" />
+    <option name="totallyTimeSpent" value="287786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1001,10 +1015,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1992" y="123" width="1546" height="830" extended-state="0" />
+    <frame x="-8" y="-8" width="1552" height="840" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16958277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1689008" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252841" sideWeight="0.49677765" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252841" sideWeight="0.50322235" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.34115282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1097,7 +1111,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version 0.7.2 update&#10;- Student List display&#10;- Student Item display&#10;- First search option of school &gt; Change to sort by school/all&#10;- To Add: option for ascending or descending&#10;- NOTE THAT THERE IS NO RECORD TABLE YET" />
     <MESSAGE value="Version 0.7.3 update&#10;- added htcacces file, redirects to php version of page" />
     <MESSAGE value="Version 0.7.4 update&#10;- add student added. Still needs to be modified to allow pdf upload." />
     <MESSAGE value="Version 0.7.5 update&#10;- added function for pdf upload. Function needs modification as it is based on the IT Department site.&#10;- need to modify student upload still&#10;- need to modify search funtion on student list" />
@@ -1122,7 +1135,8 @@
     <MESSAGE value="Version 0.9.4 update&#10;- added footer and comments on footer scripts&#10;- student item page records now list status" />
     <MESSAGE value="Version 0.9.5 update &#10;-added school search in records" />
     <MESSAGE value="Version 0.9.6 update &#10;- cleaned up record item&#10;- added school search in records" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.9.6 update &#10;- cleaned up record item&#10;- added school search in records" />
+    <MESSAGE value="Version 0.9.6 update &#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.9.6 update &#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1131,13 +1145,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/baseHeader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/homePage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-245">
@@ -1309,14 +1316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/shopcart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1877">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1538,10 +1537,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/shopcart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="130" column="31" lean-forward="true" selection-start-line="130" selection-start-column="31" selection-end-line="130" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/helpPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/help.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="77" lean-forward="false" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="77" />
+        <state relative-caret-position="493">
+          <caret line="116" column="54" lean-forward="false" selection-start-line="116" selection-start-column="54" selection-end-line="116" selection-end-column="54" />
           <folding />
         </state>
       </provider>
