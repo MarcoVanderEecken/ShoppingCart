@@ -1,9 +1,9 @@
-<div class="row">
+<b class="row">
 
     <?php
         //if record item has already been approved
-        if($result['approved'] == 2) echo "result has been approved";
-        elseif($result['approved'] < 0) echo "result has been declined";
+        if($result['approved'] == 2) echo "<b>The result has been approved</b>";
+        elseif($result['approved'] < 0) echo "<b>The result has been declined</b>";
         else {
             ?>
             <span>
@@ -24,5 +24,8 @@
             <?php
         }
     ?>
+    <br>
+    <br>
+    <a href="recordsList" style="color:black"><button> Return to record list</button></a>
 
 </div>

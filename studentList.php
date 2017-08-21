@@ -75,13 +75,20 @@
 	if(isset($_GET['school'])){
 		if(in_array($_GET['school'], $schoolsList)){//make sure value exists in selected option.
 			if($_GET['school'] =='*'){
-				$sql = "SELECT username, school, fname, sname, birth_year FROM student ORDER BY {$order}";
+				$sql = "SELECT student.username, student.school, student.fname, student.sname, student.birth_year, school.name 
+						FROM student 
+						LEFT JOIN school ON student.school = school.abr ORDER BY {$order}";
 			}else{
-				$sql = "SELECT username, school, fname, sname, birth_year FROM student WHERE school = '{$_GET['school']}' ORDER BY {$order}";
+				$sql = "SELECT student.username, student.school, student.fname, student.sname, student.birth_year, school.name 
+						FROM student 
+						LEFT JOIN school ON student.school = school.abr 
+						WHERE school = '{$_GET['school']}' ORDER BY {$order}";
 			}
 		}
 	}else{
-		$sql = "SELECT username, school, fname, sname, birth_year FROM student ORDER BY {$order}";
+		$sql = "SELECT student.username, student.school, student.fname, student.sname, student.birth_year, school.name 
+				FROM student 
+				LEFT JOIN school ON student.school = school.abr ORDER BY {$order}";
 	}
 
 	//if page has been set, limit max number of records. (6 per page)

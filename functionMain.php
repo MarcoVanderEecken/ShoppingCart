@@ -102,7 +102,7 @@
 	function getRecordItem($recID){
 		//set up statement for: get product name, description, price and current stock
 		require("dbConn.php");
-		$sql = "SELECT r.recordID, r.username, r.recordDate, r.approved, sport_id, record, sp.type, sp.unit 
+		$sql = "SELECT r.recordID, r.username, r.recordDate, r.approved, sport_id, record, sp.type, sp.unit, st.fname, st.sname 
 				FROM record r, sport sp, student st
 				WHERE r.username = st.username AND r.sport_id = sp.id AND r.recordID = '{$recID}';";
 		//save query result
