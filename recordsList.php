@@ -23,9 +23,12 @@
 	//connect to database to fetch products.
 	include("dbConn.php");
 
-	//get schools.
+	//get sport.
 	$sql = "SELECT sport.type FROM sport ORDER BY sport.type;";
 	$results = $conn->query($sql);
+	//get schools.
+	$sql2 = "SELECT name, abr FROM school ORDER BY name;";
+	$results2 = $conn->query($sql2);
 
 	//container for all.
 	echo "<div class='container'>";
@@ -59,6 +62,25 @@
 	}
 
 	echo "</select>
+        <label style='color:white'>School: </label>
+	                <select name='school'>
+						<option value='*' selected='selected'> Any</option>";
+
+	$schoolsList = array();
+	array_push($schoolsList, '*'); //add the any option
+
+	while($row = mysqli_fetch_assoc($results2)){
+		if($row['abr'] == $_GET['school']){
+			echo "<option value='". htmlspecialchars(htmlspecialchars($row['abr'])) ."' selected='selected'>" . htmlspecialchars($row['abr']) . " - " . htmlspecialchars($row['name']) . "</option>";
+		}else {
+			echo "<option value='" . htmlspecialchars( htmlspecialchars( $row['abr'] ) ) . "'>" . htmlspecialchars( $row['abr'] ) . " - " . htmlspecialchars( $row['name'] ) . "</option>";
+		}
+		array_push($schoolsList, $row['abr']);
+	}
+
+	echo "</select>
+	                </div></div>
+	                <div class=\"row form-group col-sm-12\" align='center' style='padding-top:1em; padding-bottom: 1em'>
 	                <button type='submit' class='btn-primary'>Search</button>
 	                </div>
 	            </div>
@@ -66,27 +88,49 @@
 
 
 	$order = "sport.type";
-	if(isset($_GET['sport'])){//search option used
-		if(in_array($_GET['sport'], $sportTypes)){//make sure no injection, only allowed options.
-			if($_GET['sport'] == '*'){//the any option. Mysqli does not like * options.
-				$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID 
+	if(isset($_GET['sport']) && isset($_GET['school'])) {//search option used
+        if ((in_array($_GET['sport'], $sportTypes)) === TRUE && (in_array($_GET['school'], $schoolsList)) ) {//make sure no injection, only allowed options.
+
+            if (TRUE) {
+
+
+                if ($_GET['sport'] == '*' && $_GET['school']== '*') {//the any option. Mysqli does not like * options.
+                    $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name
 					FROM record 
 					LEFT JOIN sport ON record.sport_id = sport.id 
 					LEFT JOIN student ON record.username = student.username
+					LEFT JOIN school ON student.school = school.abr
 					ORDER BY {$order}";
-			}else {
-				$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID 
+                } elseif($_GET['sport'] == '*') {
+                    $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
 				FROM record 
 				LEFT JOIN sport ON record.sport_id = sport.id 
 				LEFT JOIN student ON record.username = student.username
+				LEFT JOIN school ON student.school = school.abr
+				WHERE school.abr = '{$_GET['school']}' ORDER BY school.name";
+                } elseif($_GET['school'] == '*') {
+                    $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
+				FROM record 
+				LEFT JOIN sport ON record.sport_id = sport.id 
+				LEFT JOIN student ON record.username = student.username
+				LEFT JOIN school ON student.school = school.abr
 				WHERE sport.type = '{$_GET['sport']}' ORDER BY {$order}";
-			}
-		}
-	}else{//first time
-		$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID 
+                }else {
+                    $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
+				FROM record 
+				LEFT JOIN sport ON record.sport_id = sport.id 
+				LEFT JOIN student ON record.username = student.username
+				LEFT JOIN school ON student.school = school.abr
+				WHERE sport.type = '{$_GET['sport']}' AND school.abr = '{$_GET['school']}' ORDER BY {$order}";
+                }
+            }
+        }
+    }else{//first time
+		$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
 					FROM record 
 					LEFT JOIN sport ON record.sport_id = sport.id 
 					LEFT JOIN student ON record.username = student.username
+					LEFT JOIN school ON student.school = school.abr
 					ORDER BY {$order}";
 	}
 
@@ -147,8 +191,8 @@
 			";
 
 	//Need to check if variable set before so we don't clear get.
-	if(isset($_GET['sport'])){
-		$prefix = "?sport=" . $_GET['sport'] . "&page=";
+	if(isset($_GET['sport']) && isset($_GET['school'])){
+		$prefix = "?sport=" . $_GET['sport'] . "&school=" . $_GET['school']. "&page=";
 
 	}else $prefix = '?page=';
 
