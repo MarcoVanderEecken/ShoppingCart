@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb78f806-8ee5-4bd8-b45e-9c65d6fb2e35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recordLog.php" afterPath="$PROJECT_DIR$/recordLog.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,8 +53,8 @@
       <file leaf-file-name="recordLog.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recordLog.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="208" column="41" lean-forward="true" selection-start-line="208" selection-start-column="41" selection-end-line="208" selection-end-column="41" />
+            <state relative-caret-position="221">
+              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -649,14 +648,7 @@
       <workItem from="1503129253010" duration="14842000" />
       <workItem from="1503252159432" duration="1468000" />
       <workItem from="1503308315824" duration="103000" />
-      <workItem from="1503314889368" duration="13999000" />
-    </task>
-    <task id="LOCAL-00079" summary="Version 0.7.7 update&#10;- modified input type css for max-width for phone screens&#10;- added record list and item and search function with option fo any&#10;- add record and add student HTML added.&#10;- Need to still verify input and add to db&#10;- Need to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval">
-      <created>1502385864078</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1502385864078</updated>
+      <workItem from="1503314889368" duration="14058000" />
     </task>
     <task id="LOCAL-00080" summary="Version 0.7.9 update&#10;- student now added to db. Birth certificate also no / in hash file path&#10;- Need to add drop-down functionality for school list (add student) and student username (add record)&#10;- Need to still add add teacher/mod &#10;- Need to still add log support&#10;- Need to still add approval">
       <created>1502393520873</created>
@@ -994,11 +986,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503340568963</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Version 0.9.7 update &#10;- record log status reflects approved/declined/awaiting moderation&#10;- help has been completed.&#10;- added videos for help&#10;- cleaned up record item&#10;- added school search in records">
+      <created>1503340590570</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1503340590571</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290238000" />
+    <option name="totallyTimeSpent" value="290297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1577,8 +1576,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recordLog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="208" column="41" lean-forward="true" selection-start-line="208" selection-start-column="41" selection-end-line="208" selection-end-column="41" />
+        <state relative-caret-position="221">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding />
         </state>
       </provider>
