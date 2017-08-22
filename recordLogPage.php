@@ -62,7 +62,7 @@
 		echo "<td> {$value->getSportType()}</td>";
 		echo "<td> <a href='recordItem?id={$value->getRecordID()}'> {$value->getRecord()} </a></td>";
 		echo "<td> {$value->getApprovedDesc()}</td>";
-		echo "<td> {$value->getRecordDate()}</td>";
+		echo "<td>" . date('dS M Y', strtotime($value->getRecordDate())) . "</td>";
 		echo "</tr>";
 	}
 
