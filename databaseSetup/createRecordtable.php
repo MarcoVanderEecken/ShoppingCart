@@ -13,7 +13,8 @@ $sql =
 		sport_id int null,
 		record varchar(50) null,
 		approved INT REFERENCES recordStatus(status) default '1' null,
-		recordDate datetime default CURRENT_TIMESTAMP not null
+		recordDate datetime default CURRENT_TIMESTAMP not null,
+		recordEvent INT REFERENCES `event`(event_id) default '1' null
 	)
 	;
 	

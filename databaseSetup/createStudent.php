@@ -16,7 +16,8 @@ $sql =
             school VARCHAR(10) REFERENCES School(abr),
             fname TEXT,
             sname TEXT,
-            birth_year TIMESTAMP
+            birth_year TIMESTAMP,
+            gender BOOLEAN REFERENCES Gender(gender_id)
             )";
 
 if($conn->query($sql) === TRUE){
@@ -26,8 +27,8 @@ if($conn->query($sql) === TRUE){
 echo "<br>Starting value insertion <br>";
 
 //do value insertion.
-$sql = "INSERT INTO Student (username, school, fname, sname, birth_year)
-                    VALUES ('firststudent', 'dsk', 'First', 'Student', NOW())"; //note use of '' for literal
+$sql = "INSERT INTO Student (username, school, fname, sname, birth_year, gender)
+                    VALUES ('firststudent', 'dsk', 'First', 'Student', NOW(), TRUE)"; //note use of '' for literal
 if($conn->query($sql) === TRUE){
 	echo "<br>school dsk created";
 }else echo "<br>Failed to create dsk " . $conn->error;
