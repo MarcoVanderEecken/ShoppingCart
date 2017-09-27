@@ -32,6 +32,9 @@
 	//get gender.
 	$sql3 = "SELECT gender.ismale, gender.gender_description FROM gender ORDER BY ismale;";
 	$results3 = $conn->query($sql3);
+	//get gender.
+	$sql4 = "SELECT event.event_id, event.event_description, event.event_start, event.event_end, event.event_host FROM event ORDER BY event.event_end DESC, event.event_start;";
+	$results4 = $conn->query($sql4);
 
 	//container for all.
 	echo "<div class='container'>";
@@ -104,6 +107,28 @@
 
 	echo "</select>
 	                </div>
+	                <div class=\"form-group col-sm-12\" align='center'>
+        <label style='color:white'>Event: </label>
+	                <select name='event'>
+						<option value='*' selected='selected'> Any</option>";
+
+	$eventList = array();
+	array_push($eventList, '*'); //add the any option
+
+	while($row = mysqli_fetch_assoc($results4)){
+		if($row['event_id'] == $_GET['event']){
+			echo "<option value='". htmlspecialchars(htmlspecialchars($row['event_id'])) ."' selected='selected'>" .
+			     htmlspecialchars($row['event_description'] . " (" . $row['event_start'] . " - " . $row['event_end']) . ")</option>";
+
+		}else {
+			echo "<option value='". htmlspecialchars(htmlspecialchars($row['event_id'])) ."'>" .
+			     htmlspecialchars($row['event_description'] . " (" . $row['event_start'] . " - " . $row['event_end']) . ")</option>";
+		}
+		array_push($eventList, $row['abr']);
+	}
+
+	echo "</select>
+	                </div>
 	                <div class=\"row form-group col-sm-12\" align='center' style='padding-top:1em; padding-bottom: 1em'>
 	                <button type='submit' class='btn-primary'>Search</button>
 	                </div>
@@ -157,34 +182,38 @@
 	//setting default variables for SQL Query
 	$order = "type";
 	$itemsToSelect = ['sport.type', 'sport.unit', 'record.username', 'record.record', 'student.fname', 'student.sname',
-		'student.school', 'student.birth_year', 'record.recordID', 'school.name', 'gender.gender_description'];
+		'student.school', 'student.birth_year', 'record.recordID', 'school.name', 'gender.gender_description', 'event.event_description'];
 	$defaultJoin = ['sport ON record.sport_id = sport.id ', 'student ON record.username = student.username',
-		'school ON student.school = school.abr', 'gender ON student.gender = gender.ismale'];
+		'school ON student.school = school.abr', 'gender ON student.gender = gender.ismale', 'event ON record.recordEvent = event.event_id'];
 	$defaultTable = 'record';
 
 	if(isset($_GET['sport'], $_GET['school'], $_GET['gender'])) {//search option used
 
-        if ((in_array($_GET['sport'], $sportTypes)) === TRUE && (in_array($_GET['school'], $schoolsList)) ) {//make sure no injection, only allowed options.
+		$schoolSearch = ["school.abr" => $_GET['school']];
+		$genderSearch = ['gender.ismale' => $_GET['gender']];
+		$sportSearch = ['sport.type' => $_GET['sport']];
+		$eventSearch = ['event.event_id' => $_GET['event']];
 
-            if (TRUE) {
-                if ($_GET['sport'] == '*' && $_GET['school']== '*' && $_GET['gender']== '*') {//the any option. Mysqli does not like * options.
-	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin);
-                } elseif($_GET['sport'] == '*' && $_GET['gender'] == '*') {
-	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ["school.abr" => $_GET['school']], ['school.name']);
-                } elseif($_GET['school'] == '*' && $_GET['gender'] == '*') {
-	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['sport.type' => $_GET['sport']], [$order]);
-                } elseif($_GET['school'] == '*' && $_GET['sport'] == '*') {
-	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['gender.ismale' => $_GET['gender']], [$order]);
-                } elseif($_GET['sport'] == '*') {
-	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['school.abr' => $_GET['school'], 'gender.ismale' => $_GET['gender']], [$order]);
-                } elseif($_GET['school'] == '*') {
-	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['sport.type' => $_GET['sport'], 'gender.ismale' => $_GET['gender']], [$order]);
-                } elseif($_GET['gender'] == '*') {
-	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['sport.type' => $_GET['sport'], 'school.abr' => $_GET['school']], [$order]);
-                }else {
-	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['sport.type' => $_GET['sport'], "school.abr" => $_GET['school'], 'gender.ismale' => $_GET['gender']], [$order]);
-                }
-            }
+        if ((in_array($_GET['sport'], $sportTypes)) === TRUE && (in_array($_GET['school'], $schoolsList)) && (in_array($_GET['event'], $schoolsList)) ) {//make sure no injection, only allowed options.
+
+	        $where = array();
+
+	        //only add to where clause if not default value
+	        if($_GET['school'] !== '*'){
+	        	$where = array_merge($where, $schoolSearch);
+	        }
+	        if($_GET['gender'] !== '*'){
+		        $where = array_merge($where, $genderSearch);
+	        }
+	        if($_GET['sport'] !== '*'){
+		        $where = array_merge($where, $sportSearch);
+	        }
+	        if($_GET['event'] !== '*'){
+		        $where = array_merge($where, $eventSearch);
+	        }
+
+	        if(empty($where)) $where = false; //set to false so that it is not added to query
+	        $sql = doQuery($itemsToSelect,$defaultTable,$defaultJoin, $where);
         }
     }else{//first time
 		$sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin);
