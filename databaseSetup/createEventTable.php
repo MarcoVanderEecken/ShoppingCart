@@ -28,7 +28,7 @@ echo "<br>Starting value insertion <br>";
 //do value insertion.
 $timestamp       = date("Y-m-d H:i:s");
 $futureTimestamp = date("Y-m-d H:i:s", strtotime( $timestamp + strtotime('+ 1 week')));
-$sql             = "INSERT INTO Event (event_descrption, event_start, event_end, event_host)
+$sql             = "INSERT INTO Event (event_description, event_start, event_end, event_host)
                     VALUES ('the first event', $timestamp, $futureTimestamp, 'dsk')"; //note use of '' for literal
 if($conn->query($sql) === TRUE){
 	echo "<br>First event added";

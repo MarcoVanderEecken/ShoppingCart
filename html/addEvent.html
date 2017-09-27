@@ -1,0 +1,56 @@
+<!-- body of add student -->
+<div class="container">
+    <!--DatePicker -->
+    <script src="https://code.jquery.com/jquery-1.10.0.js"></script>
+    <script src="https://afarkas.github.io/webshim/js-webshim/minified/polyfiller.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script>
+        webshims.polyfill('forms forms-ext');
+        $(document).ready(function() {
+            $(".school-list").select2();
+        });
+    </script>
+    <!--/DatePicker-->
+    <div class="jumbotron">
+        <h2> Add an event: </h2>
+        <br>
+        <form method="Post" name="addEventForm" action="eventAdd.php" enctype="multipart/form-data">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>Event Name: </td>
+                    <td><input type="text" placeholder="Enter the event's name" name="eventDescription" required></td>
+                </tr>
+                <tr>
+                    <td>Starting Date: </td>
+                    <td><input type="date" name="eventStartDate" value="<?= htmlspecialchars(date('Y-m-j')) ?>" required></td>
+                </tr>
+                <tr>
+                    <td>Ending Date: </td>
+                    <td><input type="date" name="eventEndDate" required></td>
+                </tr>
+                <tr>
+                    <td>Event Host: </td>
+                    <td>
+                        <select name="school"  class="school-list" required>
+                            <?php
+                                while($school = mysqli_fetch_assoc($schoolList)){
+                                    echo "<option value ='" . htmlspecialchars($school['abr']) . "'> " . htmlspecialchars($school['name']) . "</option>";
+                                }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:25%;">
+                        <input type="reset" value="Clear Fields">
+                        <input type="submit" value="Add Event">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<!-- end of add student body -->

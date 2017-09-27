@@ -28,15 +28,18 @@ if(empty($studentList)){
 	//result list of all students
 	$studentList = getAllStudents();
 }
+if(empty($eventList)){
+	//result list of all students
+	$eventList = getAllEvents();
+}
 
 
 //check if user has submitted product
-do if(isset($_POST['studentUsername']) && isset($_POST['recordDate']) && isset($_POST['sportType'])
-   && isset($_POST['record'])){//product variables have been set
+do if(isset($_POST['studentUsername'], $_POST['recordDate'], $_POST['sportType'], $_POST['record'], $_POST['event'])){//product variables have been set
 
 
 		//CHECK IF VARIABLE TYPES ARE CORRECT
-		if(is_string($_POST['studentUsername']) && validateDate($_POST['recordDate'])  && is_numeric($_POST['sportType'])
+		if(is_string($_POST['studentUsername']) && validateDate($_POST['recordDate']) && is_numeric($_POST['sportType']) && is_numeric($_POST['event'])
 		   && is_numeric($_POST['record'])){
 
 			require ("dbConn.php");
@@ -76,8 +79,8 @@ do if(isset($_POST['studentUsername']) && isset($_POST['recordDate']) && isset($
 			$recordDate = date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $_POST['recordDate'])));
 
 			//add the record to the database.
-			$sql = $conn->prepare("INSERT INTO record(username, sport_id, record, recordDate) VALUES (?,?,?,?);");
-			$sql->bind_param("siis", $username, $sportID, $_POST['record'], $recordDate);
+			$sql = $conn->prepare("INSERT INTO record(username, sport_id, record, recordDate, recordEvent) VALUES (?,?,?,?,?);");
+			$sql->bind_param("siisi", $username, $sportID, $_POST['record'], $recordDate, $_POST['event']);
 			echo $sql->error;
 			$sql->execute();
 

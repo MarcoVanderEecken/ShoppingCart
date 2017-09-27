@@ -131,9 +131,15 @@
      background-color: #320a13;
 }
 
-.recordInput{
-    width: 165px;
+input {
+    width: 25rem;
+}
 
+input[type='radio']{
+    width: auto;
+}
+select {
+    width: 25rem;
 }
 
 .form-rounded {

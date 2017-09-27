@@ -17,7 +17,7 @@ include( "functionMain.php" );
 //Only moderator (level 1) and admin (level 2) can add student
 if($_SESSION['loggedIn'] == 1 || $_SESSION['loggedIn'] == 2){
 	//navigation header
-	$title = "Add Student";
+	$title = "Add Event";
 	include('html/baseHeader.html');
 	include('mainMenu.html');
 }else {
@@ -30,14 +30,13 @@ if(empty($schoolList)){//list of all schools
 }
 
 //check if user has previously submitted a student
-if(isset($_POST['studentFName'], $_POST['studentSName'], $_POST['school'], $_POST['birthDate'], $_POST['studentGender'])){//product variables have been set
+if(isset($_POST['studentFName']) && isset($_POST['studentSName']) && isset($_POST['school'])
+                                        && isset($_POST['birthDate'])){//product variables have been set
 
 	if(!empty($_POST['studentFName']) && !empty($_POST['studentSName']) && !empty($_POST['school'])){//student variables are not empty
 
 		//CHECK IF VARIABLE TYPES ARE CORRECT
-		if(is_string($_POST['studentFName']) && is_string($_POST['studentSName']) && is_string($_POST['school'])
-		   && ($_POST['studentGender'] === 'TRUE' || $_POST['studentGender'] === 'FALSE')){
-
+		if(is_string($_POST['studentFName']) && is_string($_POST['studentSName']) && is_string($_POST['school'])){
 			if ($_FILES['birth_cert']['error'] !== UPLOAD_ERR_OK ) { //check if pdf file failed to upload
 				die( "File upload error: " . $_FILES['birth_cert']['error'] ); //fail to upload
 			}
@@ -99,14 +98,12 @@ if(isset($_POST['studentFName'], $_POST['studentSName'], $_POST['school'], $_POS
 				$birthYear = date('Y-m-d H:i:s', strtotime($_POST['birthDate']));
 				$birthDate = date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $birthDate)));
 
-				//convert student gender to 0 or 1 in case of later changes to value of radio buttons (maybe for clarity or obfuscation)
-				$gender = $_POST['studentGender'] === 'TRUE' ? 1 : 0;
 
 				//create prepared statement for adding student
-				$sql = $conn->prepare("INSERT INTO student(username, fname, sname, birth_year, school, gender) VALUES (?,?,?,?,?,?);");
+				$sql = $conn->prepare("INSERT INTO student(username, fname, sname, birth_year, school) VALUES (?,?,?,?,?);");
 				//bind variables for student
-				$sql->bind_param("sssssi", $username, $_POST['studentFName'], $_POST['studentSName'], $birthYear,
-					$_POST['school'], $gender);
+				$sql->bind_param("sssss", $username, $_POST['studentFName'], $_POST['studentSName'], $birthYear,
+					$_POST['school']);
 				if($sql->execute() == TRUE){}
 				else jsAlert("Failed to add student: " . $sql->error);
 
@@ -131,10 +128,8 @@ if(isset($_POST['studentFName'], $_POST['studentSName'], $_POST['school'], $_POS
 		}
 	}
 }//end of check if post input
-echo "<pre>";
-var_dump($_POST);
-echo "</pre>";
+
 
 //body of add a product
-include("html/addStudent.html");
+include("html/addEvent.html");
 include("html/indexFooter.html");

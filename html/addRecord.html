@@ -9,7 +9,7 @@
 
         webshims.polyfill('forms forms-ext');
         $(document).ready(function() {
-            $(".js-example-basic-single").select2();
+            $(".select-list").select2();
         });
     </script>
     <!--/DatePicker-->
@@ -22,16 +22,13 @@
                 <tr>
                     <td>Student Username: </td>
                     <td>
-                        <!--<input type="text" placeholder="student username" name="studentUsername" list="students" required/>-->
-                        <!--<datalist id="students">-->
-                            <select name="studentUsername" class="js-example-basic-single" required>
-                                <?php
-                                    while($student = mysqli_fetch_assoc($studentList)){
-                                        echo "<option value ='" . htmlspecialchars($student['username']) . "'> " . htmlspecialchars($student['username']) . "</option>";
-                                    }
-                                ?>
-                            </select>
-                        <!--</datalist>-->
+                        <select name="studentUsername" class="select-list" required>
+                            <?php
+                                while($student = mysqli_fetch_assoc($studentList)){
+                                    echo "<option value ='" . htmlspecialchars($student['username']) . "'> " . htmlspecialchars($student['username']) . "</option>";
+                                }
+                            ?>
+                        </select>
                     </td>
 
                 </tr>
@@ -43,16 +40,25 @@
                 <tr>
                     <td>Sport: </td>
                     <td>
-                    <!--<input type="text" placeholder="Enter sport" name="sportType" list="sportType" required>-->
-                    <!--<datalist id="sportType">-->
-                        <select name="sportType" class="js-example-basic-single" required>
+                        <select name="sportType" class="select-list" required>
                             <?php
                                     while($sportCat = mysqli_fetch_assoc($sportsCats)){
                                         echo "<option value ='" . htmlspecialchars($sportCat['id']) . "'> " . htmlspecialchars($sportCat['type']) . "</option>";
                             }
                             ?>
                         </select>
-                    <!--</datalist>-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Event: </td>
+                    <td>
+                        <select name="event" class="select-list" required>
+                            <?php
+                                    while($eventItem = mysqli_fetch_assoc($eventList)){
+                                        echo "<option value ='" . htmlspecialchars($eventItem['event_id']) . "'> " . htmlspecialchars($eventItem['event_description']) . "</option>";
+                            }
+                            ?>
+                        </select>
                     </td>
                 </tr>
                 <tr>

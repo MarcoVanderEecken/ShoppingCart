@@ -29,6 +29,9 @@
 	//get schools.
 	$sql2 = "SELECT name, abr FROM school ORDER BY name;";
 	$results2 = $conn->query($sql2);
+	//get gender.
+	$sql3 = "SELECT gender.ismale, gender.gender_description FROM gender ORDER BY ismale;";
+	$results3 = $conn->query($sql3);
 
 	//container for all.
 	echo "<div class='container'>";
@@ -45,6 +48,25 @@
 			<form class='navbar-form navbar navbar-inverse ". htmlspecialchars($isUserAdmin) ."' method='get' action='#' style='width:70%; margin: auto auto 1em auto;'>
 				<div class='row'>
 					<div class=\"form-group col-sm-12\" align='center' style='padding-top:1em'>
+					<label style='color:white'>Gender: </label>
+	                <select name='gender'>
+						<option value='*' selected='selected'> Any</option>";
+
+						$schoolsList = array();
+						array_push($schoolsList, '*'); //add the any option
+
+						while($row = mysqli_fetch_assoc($results3)){
+							if($row['ismale'] == $_GET['gender']){
+								echo "<option value='". htmlspecialchars(htmlspecialchars($row['ismale'])) ."' selected='selected'>" . htmlspecialchars($row['gender_description']) . "</option>";
+							}else {
+								echo "<option value='". htmlspecialchars(htmlspecialchars($row['ismale'])) ."'>" . htmlspecialchars($row['gender_description']) . "</option>";
+							}
+							array_push($schoolsList, $row['ismale']);
+						}
+
+						echo "</select>
+					
+					
 					<label style='color:white'>Sport: </label>
 	                <select name='sport'>
 	                <option value='*' selected='selected'> Any </option>";
@@ -62,6 +84,8 @@
 	}
 
 	echo "</select>
+					</div>
+					<div class=\"form-group col-sm-12\" align='center'>
         <label style='color:white'>School: </label>
 	                <select name='school'>
 						<option value='*' selected='selected'> Any</option>";
@@ -86,52 +110,84 @@
 	            </div>
 			</form>";
 
+	/** SQL Query
+	 *
+	 * @param $select array
+	 * @param $table string
+	 * @param $joins array as a full string.
+	 * @param $where boolean|array
+	 * @param $orderby boolean|string
+	 *
+	 * @return string
+	 */
+	function doQuery($select, $table, $joins, $where = false, $orderby = false){
+		$query = "SELECT " . implode(',', $select);
+		$query .= " FROM " . $table;
 
-	$order = "sport.type";
-	if(isset($_GET['sport']) && isset($_GET['school'])) {//search option used
+		foreach($joins as $value){
+			$query .= " LEFT JOIN " . $value;
+		}
+
+		if($where !== FALSE){
+			$query .= " WHERE " . implodeWhere($where)/*implode("' AND '", $where)*/;
+		}
+
+		if($orderby !== FALSE){
+			$query .= " ORDER BY " . implode(' , ', $orderby);
+		}
+
+		return $query;
+	}
+
+	/** Returns array of where of key => value as value = (key = 'value')
+	 * Based on: https://stackoverflow.com/questions/11427398/how-to-implode-array-with-key-and-value-without-foreach-in-php
+	 * @param $where array
+	 *
+	 * @return mixed array
+	 */
+	function implodeWhere($where){
+		return implode(' AND ', array_map(
+			function ($v, $k) { return sprintf("%s='%s'", $k, $v); },
+			$where,
+			array_keys($where)
+		));
+	}
+
+
+	//setting default variables for SQL Query
+	$order = "type";
+	$itemsToSelect = ['sport.type', 'sport.unit', 'record.username', 'record.record', 'student.fname', 'student.sname',
+		'student.school', 'student.birth_year', 'record.recordID', 'school.name', 'gender.gender_description'];
+	$defaultJoin = ['sport ON record.sport_id = sport.id ', 'student ON record.username = student.username',
+		'school ON student.school = school.abr', 'gender ON student.gender = gender.ismale'];
+	$defaultTable = 'record';
+
+	if(isset($_GET['sport'], $_GET['school'], $_GET['gender'])) {//search option used
+
         if ((in_array($_GET['sport'], $sportTypes)) === TRUE && (in_array($_GET['school'], $schoolsList)) ) {//make sure no injection, only allowed options.
 
             if (TRUE) {
-
-
-                if ($_GET['sport'] == '*' && $_GET['school']== '*') {//the any option. Mysqli does not like * options.
-                    $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name
-					FROM record 
-					LEFT JOIN sport ON record.sport_id = sport.id 
-					LEFT JOIN student ON record.username = student.username
-					LEFT JOIN school ON student.school = school.abr
-					ORDER BY {$order}";
+                if ($_GET['sport'] == '*' && $_GET['school']== '*' && $_GET['gender']== '*') {//the any option. Mysqli does not like * options.
+	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin);
+                } elseif($_GET['sport'] == '*' && $_GET['gender'] == '*') {
+	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ["school.abr" => $_GET['school']], ['school.name']);
+                } elseif($_GET['school'] == '*' && $_GET['gender'] == '*') {
+	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['sport.type' => $_GET['sport']], [$order]);
+                } elseif($_GET['school'] == '*' && $_GET['sport'] == '*') {
+	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['gender.ismale' => $_GET['gender']], [$order]);
                 } elseif($_GET['sport'] == '*') {
-                    $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
-					FROM record 
-					LEFT JOIN sport ON record.sport_id = sport.id 
-					LEFT JOIN student ON record.username = student.username
-					LEFT JOIN school ON student.school = school.abr
-					WHERE school.abr = '{$_GET['school']}' ORDER BY school.name";
+	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['school.abr' => $_GET['school'], 'gender.ismale' => $_GET['gender']], [$order]);
                 } elseif($_GET['school'] == '*') {
-                    $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
-					FROM record 
-					LEFT JOIN sport ON record.sport_id = sport.id 
-					LEFT JOIN student ON record.username = student.username
-					LEFT JOIN school ON student.school = school.abr
-					WHERE sport.type = '{$_GET['sport']}' ORDER BY {$order}";
+	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['sport.type' => $_GET['sport'], 'gender.ismale' => $_GET['gender']], [$order]);
+                } elseif($_GET['gender'] == '*') {
+	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['sport.type' => $_GET['sport'], 'school.abr' => $_GET['school']], [$order]);
                 }else {
-                    $sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
-					FROM record 
-					LEFT JOIN sport ON record.sport_id = sport.id 
-					LEFT JOIN student ON record.username = student.username
-					LEFT JOIN school ON student.school = school.abr
-					WHERE sport.type = '{$_GET['sport']}' AND school.abr = '{$_GET['school']}' ORDER BY {$order}";
+	                $sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin, ['sport.type' => $_GET['sport'], "school.abr" => $_GET['school'], 'gender.ismale' => $_GET['gender']], [$order]);
                 }
             }
         }
     }else{//first time
-		$sql = "SELECT sport.type, sport.unit, record.username, record.record, student.fname, student.sname, student.school, student.birth_year, record.recordID, school.name 
-					FROM record 
-					LEFT JOIN sport ON record.sport_id = sport.id 
-					LEFT JOIN student ON record.username = student.username
-					LEFT JOIN school ON student.school = school.abr
-					ORDER BY {$order}";
+		$sql =  doQuery($itemsToSelect,$defaultTable,$defaultJoin);
 	}
 
 	//if page has been set, limit max number of records. (6 per page)

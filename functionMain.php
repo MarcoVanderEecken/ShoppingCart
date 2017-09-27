@@ -66,8 +66,11 @@
     function getStudent($itemID){
         //set up statement for: get product name, description, price and current stock
         require("dbConn.php");
-        $sql = "SELECT username, school, school.name, fname, sname, birth_year 
-				FROM student INNER JOIN school ON student.school = school.abr WHERE username='{$itemID}';";
+        $sql = "SELECT username, school, school.name, fname, sname, birth_year, gender.gender_description 
+				FROM student 
+				INNER JOIN school ON student.school = school.abr 
+				INNER JOIN gender ON student.gender = gender.ismale 
+				WHERE username='{$itemID}';";
         //save query result
         $result = array();
         if (isset($conn)) {
@@ -157,6 +160,21 @@
 		//set up statement for: get product name, description, price and current stock
 		require("dbConn.php");
 		$sql = "SELECT sport.id, sport.type FROM sport ORDER BY sport.type DESC;";
+		//save query result
+		$result = array();
+		if (isset($conn)) {
+			$result = $conn->query($sql);
+			$conn->close();
+		}
+		return $result;
+	}
+	/**
+	 * @return array
+	 */
+	function getAllEvents(){
+		//set up statement for: get product name, description, price and current stock
+		require("dbConn.php");
+		$sql = "SELECT event_id, event_description, event_start, event_end, event_host FROM event ORDER BY event.event_end DESC, event.event_start;";
 		//save query result
 		$result = array();
 		if (isset($conn)) {
