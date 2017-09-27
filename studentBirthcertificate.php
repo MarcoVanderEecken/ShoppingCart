@@ -33,6 +33,10 @@
 
 		$rows = $sql->get_result();
 
+		//define variables in case.
+		$path = NULL;
+		$hash = NULL;
+
 		while ( $row = $rows->fetch_assoc() ) {
 			$path = $row['path'];
 			$hash = $row['hash'];
