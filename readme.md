@@ -18,9 +18,8 @@ Download the repository and host using <a href="http://www.wampserver.com/en/">W
 Once installed, move the project files to the relevant folder and navigate to 
 localhost/ShoppingCart, you may have to add the port to localhost.
 <br><br>
-Once you can access ShoppingCart/index.php, please use the Setup/Create Database
- and then the CreateTable to create the database and tables required for the shopping cart.
- Dummy data will also be included.
+Please use the SQL file in databasesetup/shoppingcart.sql and name your database shoppingcart.sql
+If you wish to call the database something else, please change the select_db statement in dbConn.php line 11 to the designated name. 
  
  <br>
  <h4> Default users and password:</h4>
