@@ -55,8 +55,8 @@
 	                <select name='gender'>
 						<option value='*' selected='selected'> Any</option>";
 
-						$schoolsList = array();
-						array_push($schoolsList, '*'); //add the any option
+						$genderList = array();
+						array_push($genderList, '*'); //add the any option
 
 						while($row = mysqli_fetch_assoc($results3)){
 							if($row['ismale'] == $_GET['gender']){
@@ -64,7 +64,7 @@
 							}else {
 								echo "<option value='". htmlspecialchars(htmlspecialchars($row['ismale'])) ."'>" . htmlspecialchars($row['gender_description']) . "</option>";
 							}
-							array_push($schoolsList, $row['ismale']);
+							array_push($genderList, $row['ismale']);
 						}
 
 						echo "</select>
@@ -124,7 +124,7 @@
 			echo "<option value='". htmlspecialchars(htmlspecialchars($row['event_id'])) ."'>" .
 			     htmlspecialchars($row['event_description'] . " (" . $row['event_start'] . " - " . $row['event_end']) . ")</option>";
 		}
-		array_push($eventList, $row['abr']);
+		array_push($eventList, $row['event_id']);
 	}
 
 	echo "</select>
@@ -187,16 +187,18 @@
 		'school ON student.school = school.abr', 'gender ON student.gender = gender.ismale', 'event ON record.recordEvent = event.event_id'];
 	$defaultTable = 'record';
 
-	if(isset($_GET['sport'], $_GET['school'], $_GET['gender'])) {//search option used
+	if(isset($_GET['sport'], $_GET['school'], $_GET['gender'], $_GET['event'])) {//search option used
+
 
 		$schoolSearch = ["school.abr" => $_GET['school']];
 		$genderSearch = ['gender.ismale' => $_GET['gender']];
 		$sportSearch = ['sport.type' => $_GET['sport']];
 		$eventSearch = ['event.event_id' => $_GET['event']];
 
-        if ((in_array($_GET['sport'], $sportTypes)) === TRUE && (in_array($_GET['school'], $schoolsList)) && (in_array($_GET['event'], $schoolsList)) ) {//make sure no injection, only allowed options.
 
+        if ((in_array($_GET['sport'], $sportTypes)) === TRUE && (in_array($_GET['school'], $schoolsList)) && (in_array($_GET['event'], $eventList))) {//make sure no injection, only allowed options.
 	        $where = array();
+
 
 	        //only add to where clause if not default value
 	        if($_GET['school'] !== '*'){
@@ -231,11 +233,14 @@
 		$currentPage = 1;
 	}
 
+
+
 	//get amount fo student list products
 	$numResults = mysqli_num_rows($conn->query($sql));
 
 	//calculate offset
 	$offset = floor($currentPage * $maxResPage - $maxResPage);
+
 
 	//add the limit
 	$sql = $sql . " LIMIT " . $maxResPage . " OFFSET " . $offset;

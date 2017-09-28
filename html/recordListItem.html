@@ -4,7 +4,7 @@
             <?php echo "<a href='recordItem?id={$result['recordID']}'" . ">" .  htmlspecialchars($result['fname']) . " " .  htmlspecialchars($result['sname']) ?> <?php echo "</a>" ?>
         </div>
         <div class="panel-body">
-            <div style="overflow-y:auto; height: 3rem;"> School: <?= htmlspecialchars($result['name']) ?></div>
+            <div style="overflow-y:auto; height: 5rem;"> School: <?= htmlspecialchars($result['name']) ?></div>
             <div style="overflow-y:auto; height: 3rem;"> Sport: <?= htmlspecialchars($result['type']) ?></div>
             <div style="overflow-y:auto; height: 3rem;"> Record: <?= htmlspecialchars($result['record']) ?> <?php if($result['record'] != '1') echo htmlspecialchars($result['unit']) . 's'; else echo htmlspecialchars($result['unit']) ?></div>
             <div style="overflow-y:auto; height: 3rem;"> Gender: <?= htmlspecialchars($result['gender_description']) ?></div>
